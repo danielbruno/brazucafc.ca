@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brazuca FC — Site em construção</title>
+<meta name="description" content="O site do Brazuca FC está em construção. Estamos construindo algo grande para representar nossa paixão pelo futebol e pelo Brasil.">
+<meta name="theme-color" content="#0a0d0a">
+<link rel="canonical" href="https://brazucafc.ca/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brazuca FC">
+<meta property="og:title" content="Brazuca FC — Site em construção">
+<meta property="og:description" content="Estamos construindo algo grande para representar nossa paixão pelo futebol e pelo Brasil.">
+<meta property="og:url" content="https://brazucafc.ca/">
+<meta property="og:image" content="https://brazucafc.ca/assets/brazuca-wip.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --bg:#0a0d0a;
+    --ink:#f2f2ef;
+    --muted:#9aa39a;
+    --yellow:#f5c518;
+    --green:#1e8a3c;
+    /* keep the art within the viewport: 1402/1122 = 1.2496 aspect ratio */
+    --hero-w:min(1100px, 100%, calc(62vh * 1.2496));
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(20px,4vw,36px);
+    padding:clamp(20px,5vw,56px) clamp(16px,4vw,40px);
+    background:
+      radial-gradient(120% 90% at 50% 0%, #14200f 0%, var(--bg) 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    text-align:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .visually-hidden{
+    position:absolute;width:1px;height:1px;margin:-1px;padding:0;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+  }
+  .hero{
+    width:var(--hero-w);
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid rgba(245,197,24,.28);
+    box-shadow:0 24px 70px rgba(0,0,0,.65);
+    background:#0d100c;
+    animation:rise .7s ease-out both;
+  }
+  .hero img{display:block;width:100%;height:auto}
+  .stripe{
+    display:flex;
+    width:var(--hero-w);
+    height:5px;
+    border-radius:999px;
+    overflow:hidden;
+    margin-top:-10px;
+    opacity:.85;
+  }
+  .stripe span{flex:1}
+  .stripe span:nth-child(1){background:var(--green)}
+  .stripe span:nth-child(2){background:var(--yellow)}
+  .stripe span:nth-child(3){background:var(--green)}
+  .copy{max-width:56ch;display:grid;gap:14px}
+  .badge{
+    justify-self:center;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 16px;
+    border:1px solid rgba(245,197,24,.35);
+    border-radius:999px;
+    color:var(--yellow);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+  }
+  .badge::before{
+    content:"";
+    width:8px;height:8px;border-radius:50%;
+    background:var(--yellow);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  .copy p{
+    margin:0;
+    font-size:clamp(.98rem,2.4vw,1.1rem);
+    line-height:1.65;
+    color:var(--muted);
+  }
+  .copy p strong{color:var(--ink);font-weight:600}
+  footer{
+    color:#5d665d;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  footer b{color:var(--yellow);font-weight:700;letter-spacing:.12em}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+  <h1 class="visually-hidden">Brazuca FC — o site está em construção</h1>
+
+  <main class="hero">
+    <img src="assets/brazuca-wip.jpg"
+         srcset="assets/brazuca-wip-800.jpg 800w, assets/brazuca-wip.jpg 1402w"
+         sizes="(max-width: 1100px) 100vw, 1100px"
+         width="1402" height="1122"
+         alt="Mascote tucano do Brazuca FC, de capacete de obra e camisa BRZ, desenhando o novo site do clube. Texto: O site do Brazuca está em construção.">
+  </main>
+  <div class="stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <section class="copy">
+    <span class="badge">Em construção</span>
+    <p>Estamos construindo algo grande para representar nossa paixão pelo <strong>futebol</strong> e pelo <strong>Brasil</strong>. Volte em breve.</p>
+  </section>
+
+  <footer><b>Brazuca FC</b> &middot; brazucafc.ca</footer>
+</body>
+</html>
