@@ -130,6 +130,83 @@
   }
   .contact a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
   .contact svg{width:17px;height:17px;flex:none;fill:currentColor}
+  .sponsors{
+    width:min(1100px,100%);
+    display:grid;
+    gap:22px;
+    margin-top:clamp(14px,3vw,26px);
+    padding-top:clamp(24px,4vw,38px);
+    border-top:1px solid rgba(242,242,239,.1);
+  }
+  .sponsors-head{display:grid;gap:8px}
+  .sponsors-head h2{
+    margin:0;
+    font-size:clamp(1.05rem,2.6vw,1.3rem);
+    font-weight:800;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .sponsors-head span{
+    font-size:.72rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--yellow);
+  }
+  .sponsor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
+  }
+  .sponsor{
+    display:grid;
+    gap:14px;
+    justify-items:center;
+    padding:26px 22px;
+    border:1px solid rgba(242,242,239,.12);
+    border-radius:12px;
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .sponsor:hover{border-color:rgba(245,197,24,.4);transform:translateY(-2px)}
+  .sponsor-mark{height:74px;display:flex;align-items:center}
+  .sponsor-mark svg{height:100%;width:auto}
+  .sponsor-name{
+    font-size:1.12rem;
+    font-weight:600;
+    letter-spacing:.01em;
+    line-height:1.25;
+  }
+  .sponsor-name .lvl{color:#e0393b;font-weight:500}
+  .sponsor-name .ll{color:#3fae63;font-weight:400;letter-spacing:.09em}
+  .sponsor-role{
+    font-size:.65rem;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:#7d857d;
+    margin-top:-8px;
+  }
+  .sponsor p{
+    margin:0;
+    font-size:.92rem;
+    line-height:1.6;
+    color:var(--muted);
+    max-width:42ch;
+  }
+  .sponsor-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .sponsor-links a{
+    font-size:.82rem;
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    padding:7px 14px;
+    border:1px solid rgba(242,242,239,.16);
+    border-radius:999px;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .sponsor-links a:hover,
+  .sponsor-links a:focus-visible{border-color:var(--yellow);color:var(--yellow)}
+  .sponsor-links a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
   footer{
     color:#5d665d;
     font-size:.78rem;
@@ -171,6 +248,53 @@
       celoludolf@me.com
     </a>
   </nav>
+
+  <section class="sponsors" aria-labelledby="patrocinadores">
+    <div class="sponsors-head">
+      <h2 id="patrocinadores">Nossos patrocinadores</h2>
+      <span>Winter League 26/27</span>
+    </div>
+
+    <div class="sponsor-grid">
+      <article class="sponsor">
+        <div class="sponsor-mark">
+          <svg viewBox="0 0 150 108" role="img" aria-label="Logo da Build lvl Construction">
+            <g fill="none" stroke="#f2f2ef" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M14 100V47L58 12l78 88"/>
+              <path d="M14 100h122"/>
+              <path d="M30 34.5V18h11v7.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="sponsor-name">Build<span class="lvl">lvl</span> Construction</div>
+        <div class="sponsor-role">Primeiro patrocinador</div>
+        <p>Construção com mais de 18 anos de experiência: renovações, decks, framing, reparos estruturais, paisagismo, acabamentos e remoção de neve.</p>
+      </article>
+
+      <article class="sponsor">
+        <div class="sponsor-mark">
+          <svg viewBox="0 0 150 108" role="img" aria-label="Logo de Lucas Lima Personal Real Estate Corporation">
+            <path d="M10 62 75 16l65 46" fill="none" stroke="#f2f2ef" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+            <g fill="#f2f2ef">
+              <rect x="57" y="66" width="10" height="10" rx="1.5"/>
+              <rect x="70" y="66" width="10" height="10" rx="1.5"/>
+              <rect x="83" y="66" width="10" height="10" rx="1.5"/>
+              <rect x="57" y="79" width="10" height="10" rx="1.5"/>
+              <rect x="70" y="79" width="10" height="10" rx="1.5"/>
+              <rect x="83" y="79" width="10" height="10" rx="1.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="sponsor-name"><span class="ll">LUCAS LIMA</span></div>
+        <div class="sponsor-role">Personal Real Estate Corporation</div>
+        <p>Especialista no mercado imobiliário de Vancouver e região, ajudando famílias e investidores a encontrarem o lar dos sonhos.</p>
+        <div class="sponsor-links">
+          <a href="https://lucaslimarealtor.com" target="_blank" rel="noopener">lucaslimarealtor.com</a>
+          <a href="https://www.instagram.com/soldbylucaslima/" target="_blank" rel="noopener">@soldbylucaslima</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <footer><b>Brazuca FC</b> &middot; brazucafc.ca</footer>
 </body>
