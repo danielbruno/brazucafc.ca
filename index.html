@@ -25,7 +25,7 @@
     --yellow:#f5c518;
     --green:#1e8a3c;
     /* keep the art within the viewport: 1402/1122 = 1.2496 aspect ratio */
-    --hero-w:min(1100px, 100%, calc(62vh * 1.2496));
+    --hero-w:min(1100px, 100%, calc(54vh * 1.2496));
   }
   *{box-sizing:border-box}
   body{
@@ -100,6 +100,36 @@
     color:var(--muted);
   }
   .copy p strong{color:var(--ink);font-weight:600}
+  .contact{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+  .contact a{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:10px 18px;
+    border:1px solid rgba(242,242,239,.16);
+    border-radius:999px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:.9rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    background:rgba(255,255,255,.03);
+    transition:border-color .2s ease, color .2s ease, background .2s ease, transform .2s ease;
+  }
+  .contact a:hover,
+  .contact a:focus-visible{
+    border-color:var(--yellow);
+    color:var(--yellow);
+    background:rgba(245,197,24,.08);
+    transform:translateY(-1px);
+  }
+  .contact a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+  .contact svg{width:17px;height:17px;flex:none;fill:currentColor}
   footer{
     color:#5d665d;
     font-size:.78rem;
@@ -130,6 +160,17 @@
     <span class="badge">Em construção</span>
     <p>Estamos construindo algo grande para representar nossa paixão pelo <strong>futebol</strong> e pelo <strong>Brasil</strong>. Volte em breve.</p>
   </section>
+
+  <nav class="contact" aria-label="Contato">
+    <a href="https://www.instagram.com/fc.brazucas/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+      @fc.brazucas
+    </a>
+    <a href="mailto:celoludolf@me.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 4.76-8-4.76V6l8 4.76L20 6v2.24Z"/></svg>
+      celoludolf@me.com
+    </a>
+  </nav>
 
   <footer><b>Brazuca FC</b> &middot; brazucafc.ca</footer>
 </body>
