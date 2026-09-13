@@ -377,7 +377,6 @@
           <section class="squad-group" aria-labelledby="group-${esc(group.id)}">
             <header class="squad-group-head">
               <h2 id="group-${esc(group.id)}">${esc(group.title)}</h2>
-              <span class="pill pill--green" lang="pt-BR">${esc(group.label)}</span>
               <span class="squad-count">${group.players.length} ${group.players.length === 1 ? 'player' : 'players'}</span>
             </header>
             <div class="players">${group.players.map(p => playerCard(p, group)).join('')}</div>

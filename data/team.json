@@ -10,7 +10,6 @@
     {
       "id": "goalkeepers",
       "title": "Goalkeepers",
-      "label": "Goleiros",
       "role": "Goalkeeper",
       "players": [
         {
@@ -24,7 +23,6 @@
     {
       "id": "defenders",
       "title": "Defenders",
-      "label": "Zagueiros",
       "role": "Centre-back",
       "players": [
         {
@@ -57,7 +55,6 @@
     {
       "id": "full-backs",
       "title": "Full-Backs",
-      "label": "Laterais",
       "role": "Full-back",
       "players": [
         {
@@ -95,7 +92,6 @@
     {
       "id": "defensive-midfielders",
       "title": "Defensive Midfielders",
-      "label": "Volantes",
       "role": "Defensive midfielder",
       "players": [
         {
@@ -121,7 +117,6 @@
     {
       "id": "attacking-midfielders",
       "title": "Attacking Midfielders",
-      "label": "Meias",
       "role": "Attacking midfielder",
       "players": [
         {
@@ -154,7 +149,6 @@
     {
       "id": "forwards",
       "title": "Forwards",
-      "label": "Atacantes",
       "role": "Forward",
       "players": [
         {
