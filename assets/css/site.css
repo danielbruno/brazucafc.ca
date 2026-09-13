@@ -228,26 +228,26 @@ h1, h2, h3 {
 }
 .pitch-lines { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; opacity: .06; pointer-events: none; }
 .hero-inner {
-  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center;
-  gap: clamp(24px, 5vw, 64px); padding-block: clamp(56px, 9vw, 116px);
+  display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); align-items: center;
+  gap: clamp(16px, 4vw, 48px); padding-block: clamp(32px, 7vw, 96px);
 }
-.hero-title { margin-top: 18px; font-size: clamp(3.6rem, 10.5vw, 7.8rem); line-height: .9; letter-spacing: .02em; }
+.hero-title { margin-top: 12px; font-size: clamp(3rem, 7vw, 5.6rem); line-height: .95; letter-spacing: .02em; }
 .hero-title span { color: var(--yellow); }
 .hero-tagline {
-  margin-top: 16px; font-family: var(--font-display); font-size: clamp(1.7rem, 4.3vw, 3rem);
+  margin-top: 10px; font-family: var(--font-display); font-size: clamp(1.35rem, 3vw, 2.2rem);
   font-weight: 600; font-style: italic; line-height: 1.05; text-transform: uppercase; color: var(--yellow);
 }
-.hero-sub { margin-top: 22px; max-width: 46ch; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.12rem); }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.hero-art { position: relative; justify-self: center; width: min(460px, 100%); }
+.hero-sub { margin-top: 14px; max-width: 58ch; color: var(--muted); font-size: clamp(.95rem, 1.4vw, 1.05rem); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.hero-art { position: relative; justify-self: center; width: min(340px, 100%); }
 .hero-art::before {
   content: ""; position: absolute; inset: 6%; z-index: -1; border-radius: 50%;
   background: radial-gradient(circle, rgba(245, 197, 24, .2), transparent 65%);
 }
-.hero-art img { width: 100%; filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .6)); }
+.hero-art img { width: 100%; filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .6)); }
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-art { order: -1; justify-self: start; width: min(240px, 62%); }
+  .hero-art { order: -1; justify-self: start; width: min(96px, 28%); }
 }
 
 .features { background: var(--bg-2); border-bottom: 1px solid var(--line); }
