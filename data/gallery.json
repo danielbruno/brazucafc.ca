@@ -1,0 +1,17 @@
+{
+  "albums": [
+    {
+      "id": "squad",
+      "title": "The Squad",
+      "description": "Team photos from the FVSL Masters season.",
+      "photos": [
+        {
+          "src": "assets/img/gallery/squad-white-kit.jpg",
+          "thumb": "assets/img/gallery/squad-white-kit-800.jpg",
+          "alt": "Brazuca FC squad in white kits, arms around each other on the pitch under the floodlights",
+          "caption": "Under the lights in the white kit"
+        }
+      ]
+    }
+  ]
+}

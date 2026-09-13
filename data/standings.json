@@ -1,0 +1,94 @@
+{
+  "updatedAt": "2026-09-13T02:24:46.377Z",
+  "team": "Brazuca FC",
+  "season": "2026/27",
+  "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
+  "division": "Masters 3 (Fall)",
+  "pool": "A",
+  "rows": [
+    {
+      "pos": 1,
+      "team": "AC Fury",
+      "gp": 1,
+      "w": 1,
+      "d": 0,
+      "l": 0,
+      "gf": 5,
+      "ga": 0,
+      "gd": 5,
+      "pts": 3
+    },
+    {
+      "pos": 2,
+      "team": "Albion Legacy FC",
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
+    },
+    {
+      "pos": 3,
+      "team": "Brazuca FC",
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
+    },
+    {
+      "pos": 4,
+      "team": "LUSA Heat",
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
+    },
+    {
+      "pos": 5,
+      "team": "Ridge Meadows Chargers",
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
+    },
+    {
+      "pos": 6,
+      "team": "Ridge Meadows Gunners",
+      "gp": 0,
+      "w": 0,
+      "d": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
+    },
+    {
+      "pos": 7,
+      "team": "Poco FC Revolution",
+      "gp": 1,
+      "w": 0,
+      "d": 0,
+      "l": 1,
+      "gf": 0,
+      "ga": 5,
+      "gd": -5,
+      "pts": 0
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "season": "2026/27",
+  "coach": {
+    "name": "Fumaça",
+    "role": "Head Coach",
+    "bio": "The voice on the touchline. If you hear “Vamoooo Brazucaaaa!” from across the park, you’ve found him.",
+    "photo": "assets/img/squad/fumaca.jpg"
+  },
+  "groups": [
+    {
+      "id": "goalkeepers",
+      "title": "Goalkeepers",
+      "label": "Goleiros",
+      "role": "Goalkeeper",
+      "players": [
+        {
+          "name": "Tiago",
+          "number": 1,
+          "slug": "tiago",
+          "photo": "assets/img/squad/tiago.jpg"
+        }
+      ]
+    },
+    {
+      "id": "defenders",
+      "title": "Defenders",
+      "label": "Zagueiros",
+      "role": "Centre-back",
+      "players": [
+        {
+          "name": "Dani",
+          "number": 3,
+          "slug": "dani",
+          "captain": true,
+          "photo": "assets/img/squad/dani.jpg"
+        },
+        {
+          "name": "Vini",
+          "number": 12,
+          "slug": "vini",
+          "photo": "assets/img/squad/vini.jpg"
+        },
+        {
+          "name": "Renan",
+          "number": 4,
+          "slug": "renan",
+          "photo": "assets/img/squad/renan.jpg"
+        },
+        {
+          "name": "Eliel",
+          "number": 14,
+          "slug": "eliel",
+          "photo": "assets/img/squad/eliel.jpg"
+        }
+      ]
+    },
+    {
+      "id": "full-backs",
+      "title": "Full-Backs",
+      "label": "Laterais",
+      "role": "Full-back",
+      "players": [
+        {
+          "name": "Leo",
+          "number": 2,
+          "slug": "leo",
+          "photo": "assets/img/squad/leo.jpg"
+        },
+        {
+          "name": "Claudio Comunale",
+          "number": 17,
+          "slug": "comunale",
+          "photo": "assets/img/squad/comunale.jpg"
+        },
+        {
+          "name": "Jeff",
+          "number": 6,
+          "slug": "jeff",
+          "photo": "assets/img/squad/jeff.jpg"
+        },
+        {
+          "name": "Tom",
+          "number": 25,
+          "slug": "tom",
+          "photo": "assets/img/squad/tom.jpg"
+        },
+        {
+          "name": "Ryan",
+          "number": 21,
+          "slug": "ryan",
+          "photo": "assets/img/squad/ryan.jpg"
+        }
+      ]
+    },
+    {
+      "id": "defensive-midfielders",
+      "title": "Defensive Midfielders",
+      "label": "Volantes",
+      "role": "Defensive midfielder",
+      "players": [
+        {
+          "name": "Alison",
+          "number": 10,
+          "slug": "alison",
+          "photo": "assets/img/squad/alison.jpg"
+        },
+        {
+          "name": "Giga",
+          "number": 22,
+          "slug": "giga",
+          "photo": "assets/img/squad/giga.jpg"
+        },
+        {
+          "name": "Vitor",
+          "number": 5,
+          "slug": "vitor",
+          "photo": "assets/img/squad/vitor.jpg"
+        }
+      ]
+    },
+    {
+      "id": "attacking-midfielders",
+      "title": "Attacking Midfielders",
+      "label": "Meias",
+      "role": "Attacking midfielder",
+      "players": [
+        {
+          "name": "Diego",
+          "number": 8,
+          "slug": "diego",
+          "captain": true,
+          "photo": "assets/img/squad/diego.jpg"
+        },
+        {
+          "name": "Henrique",
+          "number": 19,
+          "slug": "henrique",
+          "photo": "assets/img/squad/henrique.jpg"
+        },
+        {
+          "name": "Felipe",
+          "number": 23,
+          "slug": "felipe",
+          "photo": "assets/img/squad/felipe.jpg"
+        },
+        {
+          "name": "Igor",
+          "number": 16,
+          "slug": "igor",
+          "photo": "assets/img/squad/igor.jpg"
+        }
+      ]
+    },
+    {
+      "id": "forwards",
+      "title": "Forwards",
+      "label": "Atacantes",
+      "role": "Forward",
+      "players": [
+        {
+          "name": "Gabriel",
+          "aka": "Paulo Bayer",
+          "number": 9,
+          "slug": "gabriel",
+          "photo": "assets/img/squad/gabriel.jpg"
+        },
+        {
+          "name": "Sam",
+          "number": 7,
+          "slug": "sam",
+          "photo": "assets/img/squad/sam.jpg"
+        },
+        {
+          "name": "Hulk",
+          "number": 11,
+          "slug": "hulk",
+          "photo": "assets/img/squad/hulk.jpg"
+        },
+        {
+          "name": "Marcelo",
+          "number": 20,
+          "slug": "marcelo",
+          "photo": "assets/img/squad/marcelo.jpg"
+        }
+      ]
+    }
+  ]
+}
