@@ -1,0 +1,56 @@
+{
+  "Karina Leblanc": {
+    "name": "Karina LeBlanc Synthetic Field (Merkley Park)",
+    "address": "20805 123 Ave, Maple Ridge, BC V2X 4B4",
+    "city": "Maple Ridge",
+    "url": "https://www.google.com/maps/place/Karina+LeBlanc+Synthetic+Field/@49.2264358,-122.6122747,15z/data=!4m5!3m4!1s0x0:0xb0d5e554e8d638ab!8m2!3d49.2264358!4d-122.6122747"
+  },
+  "Gates 3": {
+    "name": "Gates Park (Field #3)",
+    "address": "2300 Reeve St, Port Coquitlam, BC V3C 6C5",
+    "city": "Port Coquitlam",
+    "url": "https://maps.app.goo.gl/c9ddJLWrW7MNEw1D7"
+  },
+  "Cloverdale 4": {
+    "name": "Cloverdale Athletic Park (Field #4)",
+    "address": "6410 168 St, Surrey, BC V3S 3F4",
+    "city": "Surrey",
+    "url": "https://maps.app.goo.gl/xV1VniE9wyrhW2rs8"
+  },
+  "Golden Ears": {
+    "name": "Golden Ears Field",
+    "address": "Maple Ridge, BC",
+    "city": "Maple Ridge",
+    "url": "https://maps.app.goo.gl/sDVump5gJqiLoLDC7"
+  },
+  "Albion": {
+    "name": "Golden Ears Field",
+    "address": "Maple Ridge, BC",
+    "city": "Maple Ridge",
+    "url": "https://maps.app.goo.gl/sDVump5gJqiLoLDC7"
+  },
+  "Albion Sportplex": {
+    "name": "Golden Ears Field",
+    "address": "Maple Ridge, BC",
+    "city": "Maple Ridge",
+    "url": "https://maps.app.goo.gl/sDVump5gJqiLoLDC7"
+  },
+  "Central": {
+    "name": "Burnaby Central Secondary Turf",
+    "address": "6011 Deer Lake Pkwy, Burnaby, BC V5G 0A9",
+    "city": "Burnaby",
+    "url": "https://maps.google.ca/maps?q=burnaby+central+secondary"
+  },
+  "Willoughby NE 3": {
+    "name": "Willoughby Community Park (NE Turf 3)",
+    "address": "7755 202 St, Langley, BC V2Y 3J4",
+    "city": "Langley",
+    "url": "https://maps.app.goo.gl/CU8RMNmj3q5nFo93A"
+  },
+  "Willoughby 3": {
+    "name": "Willoughby Community Park (NE Turf 3)",
+    "address": "7755 202 St, Langley, BC V2Y 3J4",
+    "city": "Langley",
+    "url": "https://maps.app.goo.gl/CU8RMNmj3q5nFo93A"
+  }
+}

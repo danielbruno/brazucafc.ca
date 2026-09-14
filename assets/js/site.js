@@ -35,7 +35,68 @@
     pin: svg('<path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>'),
     moon: svg('<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'),
     trophy: svg('<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/>'),
+    external: svg('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
   };
+
+  const FIELDS_HASH = {
+    'Karina Leblanc': {
+      name: 'Karina LeBlanc Synthetic Field (Merkley Park)',
+      address: '20805 123 Ave, Maple Ridge, BC V2X 4B4',
+      url: 'https://www.google.com/maps/place/Karina+LeBlanc+Synthetic+Field/@49.2264358,-122.6122747,15z/data=!4m5!3m4!1s0x0:0xb0d5e554e8d638ab!8m2!3d49.2264358!4d-122.6122747',
+    },
+    'Gates 3': {
+      name: 'Gates Park (Field #3)',
+      address: '2300 Reeve St, Port Coquitlam, BC V3C 6C5',
+      url: 'https://maps.app.goo.gl/c9ddJLWrW7MNEw1D7',
+    },
+    'Cloverdale 4': {
+      name: 'Cloverdale Athletic Park (Field #4)',
+      address: '6410 168 St, Surrey, BC V3S 3F4',
+      url: 'https://maps.app.goo.gl/xV1VniE9wyrhW2rs8',
+    },
+    'Golden Ears': {
+      name: 'Golden Ears Field',
+      address: 'Maple Ridge, BC',
+      url: 'https://maps.app.goo.gl/sDVump5gJqiLoLDC7',
+    },
+    'Albion': {
+      name: 'Golden Ears Field',
+      address: 'Maple Ridge, BC',
+      url: 'https://maps.app.goo.gl/sDVump5gJqiLoLDC7',
+    },
+    'Albion Sportplex': {
+      name: 'Golden Ears Field',
+      address: 'Maple Ridge, BC',
+      url: 'https://maps.app.goo.gl/sDVump5gJqiLoLDC7',
+    },
+    'Central': {
+      name: 'Burnaby Central Secondary Turf',
+      address: '6011 Deer Lake Pkwy, Burnaby, BC V5G 0A9',
+      url: 'https://maps.google.ca/maps?q=burnaby+central+secondary',
+    },
+    'Willoughby NE 3': {
+      name: 'Willoughby Community Park (NE Turf 3)',
+      address: '7755 202 St, Langley, BC V2Y 3J4',
+      url: 'https://maps.app.goo.gl/CU8RMNmj3q5nFo93A',
+    },
+    'Willoughby 3': {
+      name: 'Willoughby Community Park (NE Turf 3)',
+      address: '7755 202 St, Langley, BC V2Y 3J4',
+      url: 'https://maps.app.goo.gl/CU8RMNmj3q5nFo93A',
+    },
+  };
+
+  function fieldLink(fieldName, fieldsData, options = {}) {
+    if (!fieldName) return '';
+    const dict = fieldsData || FIELDS_HASH;
+    const info = dict[fieldName];
+    const url = info ? info.url : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fieldName + ' Fraser Valley BC')}`;
+    const addressHint = info ? ` (${info.address})` : '';
+    const title = `Open ${fieldName}${addressHint} in Google Maps`;
+    const tagClass = options.className || 'fixture-field fixture-field--link';
+
+    return `<a href="${esc(url)}" target="_blank" rel="noopener" class="${esc(tagClass)}" title="${esc(title)}">${ICONS.pin}<span>${esc(fieldName)}</span>${ICONS.external}</a>`;
+  }
 
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -125,7 +186,7 @@
     return `<div class="empty-state">${esc(message)} Check the <a href="${LEAGUE_URL}" target="_blank" rel="noopener">FVSL site</a> in the meantime.</div>`;
   }
 
-  function matchCard(game, now) {
+  function matchCard(game, now, fieldsData) {
     const live = now >= game.start;
     return `
       <article class="card match-card">
@@ -141,7 +202,7 @@
         <ul class="match-details">
           <li>${ICONS.calendar}<span>${esc(fmt.long.format(game.start))}</span></li>
           <li>${ICONS.clock}<span>${esc(fmt.time.format(game.start))}</span></li>
-          <li>${ICONS.pin}<span>${esc(game.field)}</span></li>
+          <li>${fieldLink(game.field, fieldsData, { className: 'match-field-link' })}</li>
         </ul>
         <p class="match-countdown">${esc(kickoffLabel(game, now))}</p>
       </article>`;
@@ -180,14 +241,17 @@
 
   async function renderNextMatch(el) {
     try {
-      const schedule = await loadJson('data/schedule.json');
+      const [schedule, fieldsData] = await Promise.all([
+        loadJson('data/schedule.json'),
+        loadJson('data/fields.json').catch(() => FIELDS_HASH),
+      ]);
       const games = prepareGames(schedule);
       const now = Date.now();
       const next = findNext(games, now);
       let html;
       if (!next) html = seasonOverCard();
       else if (next.isBye) html = byeCard(next, games.find(g => g.start > next.start && !g.isBye));
-      else html = matchCard(next, now);
+      else html = matchCard(next, now, fieldsData);
       el.innerHTML = html + dataNote(schedule);
     } catch (err) {
       console.error(err);
@@ -234,7 +298,7 @@
     }
   }
 
-  function fixtureRow(game, now, next) {
+  function fixtureRow(game, now, next, fieldsData) {
     const over = isOver(game, now);
     const classes = ['fixture', game.isBye && 'is-bye', over && 'is-past', game === next && 'is-next'].filter(Boolean).join(' ');
     const date = `
@@ -275,7 +339,7 @@
         <div class="fixture-body">
           <span class="fixture-round">Round ${game.round} · ${game.isHome ? 'Home' : 'Away'}</span>
           <span class="fixture-teams">${name(game.home)}<em>vs</em>${name(game.away)}</span>
-          <span class="fixture-field">${ICONS.pin}${esc(game.field)}</span>
+          ${fieldLink(game.field, fieldsData)}
         </div>
         <div class="fixture-side">${side}</div>
       </li>`;
@@ -297,7 +361,10 @@
     const list = el.querySelector('[data-fixtures]');
     const buttons = $$('[data-filter]', el);
     try {
-      const schedule = await loadJson('data/schedule.json');
+      const [schedule, fieldsData] = await Promise.all([
+        loadJson('data/schedule.json'),
+        loadJson('data/fields.json').catch(() => FIELDS_HASH),
+      ]);
       const games = prepareGames(schedule);
       const now = Date.now();
       const next = findNext(games, now);
@@ -314,7 +381,7 @@
       const draw = filter => {
         const shown = games.filter(filters[filter]);
         list.innerHTML = shown.length
-          ? shown.map(game => fixtureRow(game, now, next)).join('')
+          ? shown.map(game => fixtureRow(game, now, next, fieldsData)).join('')
           : `<li class="empty-state">${empty[filter]}</li>`;
         buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
       };
