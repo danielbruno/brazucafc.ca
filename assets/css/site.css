@@ -314,6 +314,22 @@ h1, h2, h3 {
 }
 .match-details li { display: flex; align-items: center; gap: 8px; }
 .match-details svg { flex: none; width: 18px; height: 18px; color: var(--yellow); }
+.match-field-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px dotted rgba(245, 197, 24, .45);
+  transition: color .2s ease, border-color .2s ease;
+}
+.match-field-link:hover, .match-field-link:focus-visible {
+  color: var(--yellow); border-bottom-color: var(--yellow);
+}
+.match-field-link svg:last-child {
+  width: 13px; height: 13px; color: var(--muted); opacity: .7;
+  transition: transform .2s ease, opacity .2s ease, color .2s ease;
+}
+.match-field-link:hover svg:last-child, .match-field-link:focus-visible svg:last-child {
+  transform: translate(2px, -2px); opacity: 1; color: var(--yellow);
+}
 .match-countdown {
   margin-top: 16px; text-align: center; font-family: var(--font-display); font-size: .9rem;
   letter-spacing: .16em; text-transform: uppercase; color: var(--green-bright);
@@ -374,6 +390,21 @@ h1, h2, h3 {
 .fixture.is-bye .fixture-teams { color: var(--muted); }
 .fixture-field { display: flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--muted); }
 .fixture-field svg { flex: none; width: 14px; height: 14px; }
+.fixture-field--link {
+  color: var(--muted); text-decoration: none;
+  border-bottom: 1px transparent;
+  transition: color .2s ease;
+}
+.fixture-field--link svg:last-child {
+  width: 12px; height: 12px; opacity: .5;
+  transition: transform .2s ease, opacity .2s ease, color .2s ease;
+}
+.fixture-field--link:hover, .fixture-field--link:focus-visible {
+  color: var(--yellow);
+}
+.fixture-field--link:hover svg:last-child, .fixture-field--link:focus-visible svg:last-child {
+  transform: translate(2px, -2px); opacity: 1; color: var(--yellow);
+}
 .fixture-side { justify-self: end; }
 .result { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.15rem; }
 .result-badge { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; font-size: .85rem; font-weight: 700; color: #fff; }

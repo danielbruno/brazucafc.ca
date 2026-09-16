@@ -35,10 +35,22 @@
     pin: svg('<path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>'),
     moon: svg('<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'),
     trophy: svg('<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/>'),
+    external: svg('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
     calendarPlus: svg('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 13v6M9 16h6"/>'),
     download: svg('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>'),
     chevronDown: svg('<path d="M6 9l6 6 6-6"/>'),
   };
+
+  function fieldLink(fieldName, fieldsData, options = {}) {
+    if (!fieldName) return '';
+    const info = fieldsData?.[fieldName];
+    const url = info ? info.url : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fieldName + ' Fraser Valley BC')}`;
+    const addressHint = info?.address ? ` (${info.address})` : '';
+    const title = `Open ${fieldName}${addressHint} in Google Maps`;
+    const tagClass = options.className || 'fixture-field fixture-field--link';
+
+    return `<a href="${esc(url)}" target="_blank" rel="noopener" class="${esc(tagClass)}" title="${esc(title)}">${ICONS.pin}<span>${esc(fieldName)}</span>${ICONS.external}</a>`;
+  }
 
   // -------------------------------------------------------- calendar utils
 
@@ -89,28 +101,41 @@
     return `${game.home} vs ${game.away}`;
   }
 
-  function gameDetails(game) {
-    const round = game.round ? `Round ${game.round}` : '';
-    const div = game.division ? ` · ${game.division}` : '';
-    const field = game.field ? `\nField: ${game.field}` : '';
-    return `Brazuca FC ${round}${div}${field}\nhttps://brazucafc.ca/schedule.html`;
+  function gameLocation(game, fieldsData) {
+    if (!game.field) return '';
+    const info = fieldsData?.[game.field];
+    if (info?.address) return `${info.name || game.field} (${info.address})`;
+    return game.field;
   }
 
-  function googleCalendarUrl(game) {
+  function gameDetails(game, fieldsData) {
+    const round = game.round ? `Round ${game.round}` : '';
+    const div = game.division ? ` · ${game.division}` : '';
+    const info = fieldsData?.[game.field];
+    let fieldText = '';
+    if (game.field) {
+      fieldText = `\nField: ${game.field}`;
+      if (info?.address) fieldText += ` (${info.address})`;
+      if (info?.url) fieldText += `\nMap: ${info.url}`;
+    }
+    return `Brazuca FC ${round}${div}${fieldText}\nhttps://brazucafc.ca/schedule.html`;
+  }
+
+  function googleCalendarUrl(game, fieldsData) {
     const startStr = formatUtcIcalDate(game.start);
     const endStr = formatUtcIcalDate(game.start + 90 * 60 * 1000);
     const params = new URLSearchParams({
       action: 'TEMPLATE',
       text: gameTitle(game),
       dates: `${startStr}/${endStr}`,
-      details: gameDetails(game),
-      location: game.field || '',
+      details: gameDetails(game, fieldsData),
+      location: gameLocation(game, fieldsData),
       ctz: TIME_ZONE
     });
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
   }
 
-  function buildIcsDataUrl(gameOrGames) {
+  function buildIcsDataUrl(gameOrGames, fieldsData) {
     const games = Array.isArray(gameOrGames) ? gameOrGames : [gameOrGames];
     const nowStr = formatUtcIcalDate(Date.now());
 
@@ -118,8 +143,8 @@
       const startLocal = formatLocalIcalDate(game.start);
       const endLocal = formatLocalIcalDate(game.start + 90 * 60 * 1000);
       const title = gameTitle(game);
-      const details = gameDetails(game);
-      const location = game.field || '';
+      const details = gameDetails(game, fieldsData);
+      const location = gameLocation(game, fieldsData);
       const uid = `game-${game.round || '1'}-${game.start}@brazucafc.ca`;
 
       return [
@@ -149,13 +174,13 @@
     return 'data:text/calendar;charset=utf8,' + encodeURIComponent(ics);
   }
 
-  function calendarMenu(game, options = {}) {
+  function calendarMenu(game, fieldsData, options = {}) {
     const { compact = false, label = 'Add to Calendar' } = options;
     const filename = game.round
       ? `BrazucaFC-Round${game.round}.ics`
       : `BrazucaFC-Match.ics`;
-    const googleUrl = googleCalendarUrl(game);
-    const icsUrl = buildIcsDataUrl(game);
+    const googleUrl = googleCalendarUrl(game, fieldsData);
+    const icsUrl = buildIcsDataUrl(game, fieldsData);
 
     return `
       <details class="calendar-menu${compact ? ' calendar-menu--compact' : ''}">
@@ -254,11 +279,11 @@
     return `<div class="team${us ? ' team--us' : ''}">${badge}<span class="team-name">${esc(name)}</span><span class="team-side">${side}</span></div>`;
   }
 
-  function dataNote(data, upcomingGames = []) {
+  function dataNote(data, upcomingGames = [], fieldsData = {}) {
     const updated = data.updatedAt ? ` · updated ${esc(fmt.stamp.format(Date.parse(data.updatedAt)))}` : '';
     const seasonBtn = upcomingGames.length > 0
       ? `<div class="season-calendar-export">
-          <a class="btn-season-cal" href="${buildIcsDataUrl(upcomingGames)}" download="BrazucaFC-Season-2026-27.ics">
+          <a class="btn-season-cal" href="${buildIcsDataUrl(upcomingGames, fieldsData)}" download="BrazucaFC-Season-2026-27.ics">
             ${ICONS.calendarPlus} Export all upcoming games (.ics)
           </a>
          </div>`
@@ -270,7 +295,7 @@
     return `<div class="empty-state">${esc(message)} Check the <a href="${LEAGUE_URL}" target="_blank" rel="noopener">FVSL site</a> in the meantime.</div>`;
   }
 
-  function matchCard(game, now) {
+  function matchCard(game, now, fieldsData) {
     const live = now >= game.start;
     return `
       <article class="card match-card">
@@ -286,11 +311,11 @@
         <ul class="match-details">
           <li>${ICONS.calendar}<span>${esc(fmt.long.format(game.start))}</span></li>
           <li>${ICONS.clock}<span>${esc(fmt.time.format(game.start))}</span></li>
-          <li>${ICONS.pin}<span>${esc(game.field)}</span></li>
+          <li>${fieldLink(game.field, fieldsData, { className: 'match-field-link' })}</li>
         </ul>
         <div class="match-footer">
           <p class="match-countdown">${esc(kickoffLabel(game, now))}</p>
-          ${!live ? calendarMenu(game) : ''}
+          ${!live ? calendarMenu(game, fieldsData) : ''}
         </div>
       </article>`;
   }
@@ -328,15 +353,18 @@
 
   async function renderNextMatch(el) {
     try {
-      const schedule = await loadJson('data/schedule.json');
+      const [schedule, fieldsData] = await Promise.all([
+        loadJson('data/schedule.json'),
+        loadJson('data/fields.json').catch(() => ({})),
+      ]);
       const games = prepareGames(schedule);
       const now = Date.now();
       const next = findNext(games, now);
       let html;
       if (!next) html = seasonOverCard();
       else if (next.isBye) html = byeCard(next, games.find(g => g.start > next.start && !g.isBye));
-      else html = matchCard(next, now);
-      el.innerHTML = html + dataNote(schedule);
+      else html = matchCard(next, now, fieldsData);
+      el.innerHTML = html + dataNote(schedule, [], fieldsData);
     } catch (err) {
       console.error(err);
       el.innerHTML = errorState('We couldn’t load the next match right now.');
@@ -382,7 +410,7 @@
     }
   }
 
-  function fixtureRow(game, now, next) {
+  function fixtureRow(game, now, next, fieldsData) {
     const over = isOver(game, now);
     const classes = ['fixture', game.isBye && 'is-bye', over && 'is-past', game === next && 'is-next'].filter(Boolean).join(' ');
     const date = `
@@ -416,13 +444,13 @@
       side = `
         <div class="fixture-action-group">
           <span class="pill pill--yellow">${live ? 'Live now' : 'Next up'}</span>
-          ${!live ? calendarMenu(game, { compact: true, label: 'Add' }) : ''}
+          ${!live ? calendarMenu(game, fieldsData, { compact: true, label: 'Add' }) : ''}
         </div>`;
     } else {
       side = `
         <div class="fixture-action-group">
           <span class="pill">${game.isHome ? 'Home' : 'Away'}</span>
-          ${calendarMenu(game, { compact: true, label: 'Add' })}
+          ${calendarMenu(game, fieldsData, { compact: true, label: 'Add' })}
         </div>`;
     }
 
@@ -432,7 +460,7 @@
         <div class="fixture-body">
           <span class="fixture-round">Round ${game.round} · ${game.isHome ? 'Home' : 'Away'}</span>
           <span class="fixture-teams">${name(game.home)}<em>vs</em>${name(game.away)}</span>
-          <span class="fixture-field">${ICONS.pin}${esc(game.field)}</span>
+          ${fieldLink(game.field, fieldsData)}
         </div>
         <div class="fixture-side">${side}</div>
       </li>`;
@@ -454,7 +482,10 @@
     const list = el.querySelector('[data-fixtures]');
     const buttons = $$('[data-filter]', el);
     try {
-      const schedule = await loadJson('data/schedule.json');
+      const [schedule, fieldsData] = await Promise.all([
+        loadJson('data/schedule.json'),
+        loadJson('data/fields.json').catch(() => ({})),
+      ]);
       const games = prepareGames(schedule);
       const now = Date.now();
       const next = findNext(games, now);
@@ -472,7 +503,7 @@
       const draw = filter => {
         const shown = games.filter(filters[filter]);
         list.innerHTML = shown.length
-          ? shown.map(game => fixtureRow(game, now, next)).join('')
+          ? shown.map(game => fixtureRow(game, now, next, fieldsData)).join('')
           : `<li class="empty-state">${empty[filter]}</li>`;
         buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
       };
@@ -482,7 +513,7 @@
       const summary = document.querySelector('[data-season-summary]');
       if (summary) summary.innerHTML = seasonSummary(games);
       const note = el.querySelector('[data-schedule-note]');
-      if (note) note.innerHTML = dataNote(schedule, upcomingGames);
+      if (note) note.innerHTML = dataNote(schedule, upcomingGames, fieldsData);
     } catch (err) {
       console.error(err);
       list.innerHTML = `<li>${errorState('We couldn’t load the schedule right now.')}</li>`;
