@@ -6,6 +6,12 @@
       "description": "Team photos from the FVSL Masters season.",
       "photos": [
         {
+          "src": "assets/img/gallery/squad-green.jpeg",
+          "thumb": "assets/img/gallery/squad-green-800.jpg",
+          "alt": "The Brazuca FC squad in green and gold kits, together on the pitch under the floodlights",
+          "caption": "The squad in green and gold"
+        },
+        {
           "src": "assets/img/gallery/squad-white-kit.jpg",
           "thumb": "assets/img/gallery/squad-white-kit-800.jpg",
           "alt": "Brazuca FC squad in white kits, arms around each other on the pitch under the floodlights",
