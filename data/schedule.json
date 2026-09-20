@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T05:07:26.417Z",
+  "updatedAt": "2026-09-20T20:55:23.384Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -34,16 +34,16 @@
       "division": "Masters 3 (Fall)",
       "home": "Ridge Meadows Gunners",
       "away": "Brazuca FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 8,
       "field": "Karina Leblanc",
       "notes": null,
       "isBye": false,
       "isHome": false,
       "opponent": "Ridge Meadows Gunners",
-      "goalsFor": null,
-      "goalsAgainst": null,
-      "result": null
+      "goalsFor": 8,
+      "goalsAgainst": 1,
+      "result": "W"
     },
     {
       "kickoff": "2026-09-25T21:00:00-07:00",
