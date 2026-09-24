@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Spreadsheet exports dropped in the project root; the ones the site uses
+# are copied into data/source/ by hand and tracked there.
+/*.csv

@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery — Brazuca FC</title>
-  <meta name="description" content="Photos of Brazuca FC on and off the pitch.">
+  <title>Stats — Brazuca FC</title>
+  <meta name="description" content="Brazuca FC all-time goal scorers by season, plus detailed player stats from the Spring 2026 season.">
   <meta name="theme-color" content="#0a0d0a">
-  <link rel="canonical" href="https://brazucafc.ca/gallery.html">
+  <link rel="canonical" href="https://brazucafc.ca/stats.html">
   <link rel="icon" href="assets/img/crest-128.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/crest-128.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brazuca FC">
-  <meta property="og:title" content="Gallery — Brazuca FC">
-  <meta property="og:description" content="Photos of Brazuca FC on and off the pitch.">
-  <meta property="og:url" content="https://brazucafc.ca/gallery.html">
+  <meta property="og:title" content="Stats — Brazuca FC">
+  <meta property="og:description" content="Brazuca FC all-time goal scorers by season, plus detailed player stats from the Spring 2026 season.">
+  <meta property="og:url" content="https://brazucafc.ca/stats.html">
   <meta property="og:image" content="https://brazucafc.ca/assets/img/gallery/squad-green.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/stats.js" defer></script>
   <script data-goatcounter="https://brazucafc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -41,8 +42,8 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="stats.html">Stats</a></li>
-          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="stats.html" aria-current="page">Stats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -52,31 +53,63 @@
   <main id="main">
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
-        <p class="eyebrow">Gallery</p>
-        <h1 class="page-title" id="page-title">On &amp; Off <span>the Pitch</span></h1>
-        <p class="page-lead">Squad photos, matchday moments and everything in between. New albums land here as the season rolls on.</p>
+        <p class="eyebrow">Stats</p>
+        <h1 class="page-title" id="page-title">All-Time <span>Record</span></h1>
+        <p class="page-lead">Every goal the club has scored since 2024, season by season, plus the detailed numbers from the Spring 2026 campaign.</p>
       </div>
     </section>
     <div class="stripe" aria-hidden="true"><span></span><span></span><span></span></div>
 
-    <section class="section">
-      <div class="container" data-gallery>
-        <p class="skeleton">Loading photos…</p>
+    <section class="section" aria-label="Club totals">
+      <div class="container">
+        <div class="stats stats--4" data-stats-summary>
+          <p class="skeleton">Loading stats…</p>
+        </div>
       </div>
     </section>
 
-    <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
-      <img alt="">
-      <div class="lightbox-bar">
-        <p class="lightbox-caption" data-lightbox-caption></p>
-        <span class="lightbox-count" data-lightbox-count></span>
-        <div class="lightbox-controls">
-          <button class="icon-btn" type="button" data-lightbox-prev aria-label="Previous photo">‹</button>
-          <button class="icon-btn" type="button" data-lightbox-next aria-label="Next photo">›</button>
-          <button class="icon-btn" type="button" data-lightbox-close aria-label="Close photo viewer">✕</button>
+    <section class="section section--alt" aria-labelledby="scorers-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">All time</p>
+            <h2 class="section-title" id="scorers-title">Goal <span>Scorers</span></h2>
+            <p class="section-lead">Goals in every season the club has played. Cup rounds are counted separately from the league.</p>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter players">
+            <button type="button" data-stats-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-stats-filter="squad" aria-pressed="false">Squad</button>
+            <button type="button" data-stats-filter="former" aria-pressed="false">Former</button>
+          </div>
+        </div>
+        <div data-stats-scorers><p class="skeleton">Loading stats…</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="spring-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Spring 2026</p>
+            <h2 class="section-title" id="spring-title">Season <span>Detail</span></h2>
+            <p class="section-lead">Ten matches in Masters B. Minutes, assists, cards, plus-minus and MVP awards.</p>
+          </div>
+        </div>
+        <div data-stats-spring><p class="skeleton">Loading stats…</p></div>
+        <dl class="legend" data-stats-legend></dl>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="note-title">
+      <div class="container">
+        <div class="card disclaimer">
+          <h2 class="card-title" id="note-title">About these numbers</h2>
+          <p><strong>Detailed statistics have only been collected since the Spring 2026 season.</strong> Minutes played, starts, assists, goals against, cards, plus-minus and MVP awards exist for Spring 2026 onwards, and there is no equivalent record for the seasons before it.</p>
+          <p>Goals are recorded for every season the club has played: Winter 2024/25, Winter 2025/26, Spring 2026 and the current Winter 2026/27, including cup rounds. For the earlier seasons, goals are the only statistic we have.</p>
+          <p>A dash means a player was not with the club that season. Former players are marked and stay on the all-time list.</p>
         </div>
       </div>
-    </dialog>
+    </section>
   </main>
 
   <footer class="site-footer">

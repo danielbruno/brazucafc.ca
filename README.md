@@ -13,6 +13,7 @@ assets and push.
 | `about.html` | Club story, timeline, values |
 | `team.html` | Coach and players by position (rendered from `data/team.json`) |
 | `schedule.html` | Next match, full fixture list with filters, league table |
+| `stats.html` | All-time goal scorers and detailed Spring 2026 stats (rendered from `data/stats.json`) |
 | `gallery.html` | Photo albums with a lightbox (rendered from `data/gallery.json`) |
 | `contact.html` | Contact inboxes and Instagram |
 
@@ -26,6 +27,7 @@ The header and footer are repeated in each page, so change them in all six.
 | `data/schedule.json` | GitHub Action (automatic) |
 | `data/standings.json` | GitHub Action (automatic) |
 | `data/team.json` | Hand-edited |
+| `data/stats.json` | `scripts/build-stats.py` (from the spreadsheets in `data/source/`) |
 | `data/gallery.json` | Hand-edited |
 
 ### League schedule and standings
@@ -49,6 +51,28 @@ node scripts/update-league-data.mjs
 
 When the league opens a new season, update `REG_YEAR` (and `TEAM_ID` if it
 changes) at the top of the script.
+
+### Player stats
+
+`data/stats.json` is built from two spreadsheet exports kept in `data/source/`:
+
+| File | Covers |
+|---|---|
+| `goals-all-time.csv` | Goals per player per season, every season the club has played |
+| `spring-2026-player-stats.csv` | Minutes, starts, assists, cards, plus-minus and MVP — Spring 2026 only |
+
+The files spell the same people differently (nicknames, full names, typos), so
+`scripts/build-stats.py` holds a `NAMES` map that folds every spelling onto one
+player, and a `CURRENT` map linking players to their squad slug so the page can
+show their photo and number. After updating either CSV, rebuild:
+
+```bash
+python3 scripts/build-stats.py
+```
+
+The script prints the top scorers and warns when the two files disagree. Where
+they conflict on goals, the all-time goals file wins. Adding a season means
+adding a column to the goals CSV and a line to `SEASONS` in the script.
 
 ### Squad
 

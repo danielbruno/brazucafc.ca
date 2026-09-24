@@ -101,10 +101,11 @@
           "photo": "assets/img/squad/alison.jpg"
         },
         {
-          "name": "Giga",
+          "name": "Pedro Koster",
           "number": 22,
           "slug": "giga",
-          "photo": "assets/img/squad/giga.jpg"
+          "photo": "assets/img/squad/giga.jpg",
+          "aka": "Giga"
         },
         {
           "name": "Vitor",

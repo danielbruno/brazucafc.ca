@@ -1,0 +1,1060 @@
+{
+  "updatedAt": "2026-09-24T16:40:42Z",
+  "seasons": [
+    {
+      "id": "w2425",
+      "label": "Winter 2024/25",
+      "short": "24/25",
+      "type": "league"
+    },
+    {
+      "id": "w2425cup",
+      "label": "Cup 2024/25",
+      "short": "24/25 Cup",
+      "type": "cup"
+    },
+    {
+      "id": "w2526",
+      "label": "Winter 2025/26",
+      "short": "25/26",
+      "type": "league"
+    },
+    {
+      "id": "w2526cup",
+      "label": "Cup 2025/26",
+      "short": "25/26 Cup",
+      "type": "cup"
+    },
+    {
+      "id": "spring26",
+      "label": "Spring 2026",
+      "short": "Spring 26",
+      "type": "league"
+    },
+    {
+      "id": "w2627",
+      "label": "Winter 2026/27",
+      "short": "26/27",
+      "type": "league"
+    }
+  ],
+  "detailedSince": "spring26",
+  "players": [
+    {
+      "key": "hulk",
+      "name": "Hulk",
+      "slug": "hulk",
+      "number": 11,
+      "current": true,
+      "photo": "assets/img/squad/hulk.jpg",
+      "goalsBySeason": {
+        "w2425": 16,
+        "w2425cup": null,
+        "w2526": 9,
+        "w2526cup": null,
+        "spring26": 2,
+        "w2627": 1
+      },
+      "goals": 28,
+      "spring": {
+        "mp": 4,
+        "gs": 2,
+        "min": 243,
+        "mpg": 61,
+        "g": 2,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -4,
+        "mvp": 1
+      }
+    },
+    {
+      "key": "ramon-jorio",
+      "name": "Ramon Jorio",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 20,
+        "w2425cup": null,
+        "w2526": 1,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 21,
+      "spring": null
+    },
+    {
+      "key": "diego",
+      "name": "Diego Sampaio",
+      "slug": "diego",
+      "number": 8,
+      "current": true,
+      "photo": "assets/img/squad/diego.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 10,
+        "w2526cup": 1,
+        "spring26": 4,
+        "w2627": 2
+      },
+      "goals": 17,
+      "spring": {
+        "mp": 7,
+        "gs": 5,
+        "min": 555,
+        "mpg": 79,
+        "g": 4,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 11,
+        "mvp": 2
+      }
+    },
+    {
+      "key": "sam",
+      "name": "Samuel Moura",
+      "slug": "sam",
+      "number": 7,
+      "current": true,
+      "photo": "assets/img/squad/sam.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 5,
+        "w2526cup": null,
+        "spring26": 3,
+        "w2627": 1
+      },
+      "goals": 9,
+      "spring": {
+        "mp": 7,
+        "gs": 6,
+        "min": 451,
+        "mpg": 64,
+        "g": 3,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 2,
+        "plusMinus": 7,
+        "mvp": 1
+      }
+    },
+    {
+      "key": "leonardo-novais",
+      "name": "Leonardo Novais",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 7,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 7,
+      "spring": null
+    },
+    {
+      "key": "igor",
+      "name": "Igor Paiva",
+      "slug": "igor",
+      "number": 16,
+      "current": true,
+      "photo": "assets/img/squad/igor.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": 2,
+        "spring26": 1,
+        "w2627": 2
+      },
+      "goals": 5,
+      "spring": {
+        "mp": 10,
+        "gs": 8,
+        "min": 518,
+        "mpg": 52,
+        "g": 1,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 5,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "renan",
+      "name": "Renan Gouveia Jorio",
+      "slug": "renan",
+      "number": 4,
+      "current": true,
+      "photo": "assets/img/squad/renan.jpg",
+      "goalsBySeason": {
+        "w2425": 4,
+        "w2425cup": null,
+        "w2526": 1,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 5,
+      "spring": {
+        "mp": 3,
+        "gs": 0,
+        "min": 121,
+        "mpg": 40,
+        "g": 0,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 1,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "genelson-junior",
+      "name": "Genelson Junior",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 2,
+        "w2526cup": null,
+        "spring26": 2,
+        "w2627": null
+      },
+      "goals": 4,
+      "spring": {
+        "mp": 6,
+        "gs": 5,
+        "min": 408,
+        "mpg": 68,
+        "g": 2,
+        "as": 0,
+        "ga": 0,
+        "yc": 2,
+        "rc": 2,
+        "plusMinus": 3,
+        "mvp": 2
+      }
+    },
+    {
+      "key": "felipe",
+      "name": "Felipe Moreira",
+      "slug": "felipe",
+      "number": 23,
+      "current": true,
+      "photo": "assets/img/squad/felipe.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": 2,
+        "w2526": 1,
+        "w2526cup": 1,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 4,
+      "spring": {
+        "mp": 8,
+        "gs": 3,
+        "min": 267,
+        "mpg": 33,
+        "g": 0,
+        "as": 2,
+        "ga": 0,
+        "yc": 2,
+        "rc": 0,
+        "plusMinus": 2,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "alexandre-cesar",
+      "name": "Alexandre Cesar",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 4,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 4,
+      "spring": null
+    },
+    {
+      "key": "luiz-carlos-de-souza-junior",
+      "name": "Luiz Carlos de Souza Junior",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 4,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 4,
+      "spring": null
+    },
+    {
+      "key": "raphael-oliveira",
+      "name": "Raphael Oliveira",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 4,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 4,
+      "spring": null
+    },
+    {
+      "key": "comunale",
+      "name": "Claudio Comunale Filho",
+      "slug": "comunale",
+      "number": 17,
+      "current": true,
+      "photo": "assets/img/squad/comunale.jpg",
+      "goalsBySeason": {
+        "w2425": 1,
+        "w2425cup": null,
+        "w2526": 1,
+        "w2526cup": null,
+        "spring26": 1,
+        "w2627": 0
+      },
+      "goals": 3,
+      "spring": {
+        "mp": 9,
+        "gs": 5,
+        "min": 484,
+        "mpg": 54,
+        "g": 0,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 0,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "gabriel",
+      "name": "Gabriel Lloyd",
+      "slug": "gabriel",
+      "number": 9,
+      "current": true,
+      "photo": "assets/img/squad/gabriel.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": 2,
+        "w2627": 1
+      },
+      "goals": 3,
+      "spring": {
+        "mp": 4,
+        "gs": 3,
+        "min": 201,
+        "mpg": 50,
+        "g": 2,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 0,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "giga",
+      "name": "Pedro Koster",
+      "slug": "giga",
+      "number": 22,
+      "current": true,
+      "photo": "assets/img/squad/giga.jpg",
+      "goalsBySeason": {
+        "w2425": 3,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 3,
+      "spring": {
+        "mp": 2,
+        "gs": 0,
+        "min": 47,
+        "mpg": 24,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -1,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "thiago-bernardo",
+      "name": "Thiago Bernardo",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 3,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 3,
+      "spring": null
+    },
+    {
+      "key": "alison",
+      "name": "Alison Marangao",
+      "slug": "alison",
+      "number": 10,
+      "current": true,
+      "photo": "assets/img/squad/alison.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 2,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 2,
+      "spring": {
+        "mp": 9,
+        "gs": 7,
+        "min": 613,
+        "mpg": 68,
+        "g": 0,
+        "as": 2,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 0,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "gabriel-berenguer-vieira",
+      "name": "Gabriel Berenguer Vieira",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": 2,
+        "w2627": null
+      },
+      "goals": 2,
+      "spring": {
+        "mp": 7,
+        "gs": 5,
+        "min": 500,
+        "mpg": 71,
+        "g": 2,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 7,
+        "mvp": 1
+      }
+    },
+    {
+      "key": "claudio-coelho",
+      "name": "Claudio Coelho",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 1,
+        "w2425cup": null,
+        "w2526": 1,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": null
+      },
+      "goals": 2,
+      "spring": {
+        "mp": 9,
+        "gs": 3,
+        "min": 383,
+        "mpg": 43,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -3,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "lucas-mastelaro-cunha",
+      "name": "Lucas Mastelaro cunha",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 1,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": 1,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 2,
+      "spring": null
+    },
+    {
+      "key": "vitor",
+      "name": "Vitor Sarone",
+      "slug": "vitor",
+      "number": 5,
+      "current": true,
+      "photo": "assets/img/squad/vitor.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": 1,
+        "w2627": 0
+      },
+      "goals": 1,
+      "spring": {
+        "mp": 9,
+        "gs": 7,
+        "min": 534,
+        "mpg": 59,
+        "g": 1,
+        "as": 0,
+        "ga": 0,
+        "yc": 1,
+        "rc": 0,
+        "plusMinus": 2,
+        "mvp": 1
+      }
+    },
+    {
+      "key": "vini",
+      "name": "Vinicius Totti",
+      "slug": "vini",
+      "number": 12,
+      "current": true,
+      "photo": "assets/img/squad/vini.jpg",
+      "goalsBySeason": {
+        "w2425": 1,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 1,
+      "spring": {
+        "mp": 8,
+        "gs": 8,
+        "min": 503,
+        "mpg": 63,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -6,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "tom",
+      "name": "Tomas Moraes",
+      "slug": "tom",
+      "number": 25,
+      "current": true,
+      "photo": "assets/img/squad/tom.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": 1,
+        "w2526cup": null,
+        "spring26": 0,
+        "w2627": 0
+      },
+      "goals": 1,
+      "spring": {
+        "mp": 9,
+        "gs": 3,
+        "min": 282,
+        "mpg": 31,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -4,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "aleksandro-pereira",
+      "name": "Aleksandro Pereira",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "w2425": 1,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": null
+      },
+      "goals": 1,
+      "spring": null
+    },
+    {
+      "key": "henrique",
+      "name": "Henrique Noujeimi",
+      "slug": "henrique",
+      "number": 19,
+      "current": true,
+      "photo": "assets/img/squad/henrique.jpg",
+      "goalsBySeason": {
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "spring26": null,
+        "w2627": 1
+      },
+      "goals": 1,
+      "spring": null
+    },
+    {
+      "key": "dani",
+      "name": "Daniel",
+      "slug": "dani",
+      "number": 3,
+      "current": true,
+      "photo": "assets/img/squad/dani.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 10,
+        "gs": 9,
+        "min": 713,
+        "mpg": 71,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 10,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "leo",
+      "name": "Leo Correa",
+      "slug": "leo",
+      "number": 2,
+      "current": true,
+      "photo": "assets/img/squad/leo.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 10,
+        "gs": 8,
+        "min": 678,
+        "mpg": 68,
+        "g": 0,
+        "as": 1,
+        "ga": 0,
+        "yc": 1,
+        "rc": 0,
+        "plusMinus": 0,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "tiago",
+      "name": "Tiago",
+      "slug": "tiago",
+      "number": 1,
+      "current": true,
+      "photo": "assets/img/squad/tiago.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 7,
+        "gs": 6,
+        "min": 564,
+        "mpg": 81,
+        "g": 0,
+        "as": 0,
+        "ga": 6,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 4,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "jeff",
+      "name": "Jefferson Tosti",
+      "slug": "jeff",
+      "number": 6,
+      "current": true,
+      "photo": "assets/img/squad/jeff.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 9,
+        "gs": 7,
+        "min": 489,
+        "mpg": 54,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 1,
+        "rc": 0,
+        "plusMinus": 6,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "osorio",
+      "name": "Osorio",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 3,
+        "gs": 3,
+        "min": 224,
+        "mpg": 75,
+        "g": 0,
+        "as": 0,
+        "ga": 8,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -2,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "giovanni",
+      "name": "Giovanni",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 6,
+        "gs": 0,
+        "min": 197,
+        "mpg": 33,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -5,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "bruno-santos",
+      "name": "Bruno Santos",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 4,
+        "gs": 0,
+        "min": 171,
+        "mpg": 43,
+        "g": 0,
+        "as": 1,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 2,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "dan-coutinho",
+      "name": "Dan Coutinho",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 3,
+        "gs": 2,
+        "min": 145,
+        "mpg": 48,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -1,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "adriano",
+      "name": "Adriano",
+      "slug": null,
+      "number": null,
+      "current": false,
+      "photo": null,
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 3,
+        "gs": 1,
+        "min": 113,
+        "mpg": 38,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -1,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "eliel",
+      "name": "Eliel",
+      "slug": "eliel",
+      "number": 14,
+      "current": true,
+      "photo": "assets/img/squad/eliel.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 4,
+        "gs": 3,
+        "min": 111,
+        "mpg": 28,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 2,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "marcelo",
+      "name": "Marcelo Ribeiro",
+      "slug": "marcelo",
+      "number": 20,
+      "current": true,
+      "photo": "assets/img/squad/marcelo.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 4,
+        "gs": 0,
+        "min": 49,
+        "mpg": 12,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": -5,
+        "mvp": 0
+      }
+    },
+    {
+      "key": "ryan",
+      "name": "Ryan Jobb",
+      "slug": "ryan",
+      "number": 21,
+      "current": true,
+      "photo": "assets/img/squad/ryan.jpg",
+      "goalsBySeason": {
+        "spring26": 0,
+        "w2425": null,
+        "w2425cup": null,
+        "w2526": null,
+        "w2526cup": null,
+        "w2627": null
+      },
+      "goals": 0,
+      "spring": {
+        "mp": 2,
+        "gs": 0,
+        "min": 14,
+        "mpg": 7,
+        "g": 0,
+        "as": 0,
+        "ga": 0,
+        "yc": 0,
+        "rc": 0,
+        "plusMinus": 1,
+        "mvp": 0
+      }
+    }
+  ],
+  "springTotals": {
+    "mp": 176,
+    "gs": 109,
+    "min": 9578,
+    "g": 17,
+    "as": 12,
+    "ga": 14,
+    "yc": 7,
+    "rc": 4,
+    "plusMinus": 31,
+    "mvp": 8,
+    "players": 28
+  },
+  "allTimeGoals": 137
+}
