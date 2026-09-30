@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T12:46:42.876Z",
+  "updatedAt": "2026-09-30T22:22:57.377Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -141,7 +141,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-11-08T12:00:00-08:00",
+      "kickoff": "2026-11-08T12:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -160,7 +160,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-11-13T20:45:00-08:00",
+      "kickoff": "2026-11-13T20:45:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -179,7 +179,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-11-20T20:45:00-08:00",
+      "kickoff": "2026-11-20T20:45:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -198,7 +198,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-11-28T20:00:00-08:00",
+      "kickoff": "2026-11-28T20:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -217,7 +217,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-12-04T20:45:00-08:00",
+      "kickoff": "2026-12-04T20:45:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -236,7 +236,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-12-13T18:00:00-08:00",
+      "kickoff": "2026-12-13T18:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -255,7 +255,7 @@
       "result": null
     },
     {
-      "kickoff": "2026-12-18T20:45:00-08:00",
+      "kickoff": "2026-12-18T20:45:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -274,7 +274,7 @@
       "result": null
     },
     {
-      "kickoff": "2027-01-10T18:00:00-08:00",
+      "kickoff": "2027-01-10T18:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
@@ -293,7 +293,7 @@
       "result": null
     },
     {
-      "kickoff": "2027-01-16T20:00:00-08:00",
+      "kickoff": "2027-01-16T20:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
       "status": "Active",
