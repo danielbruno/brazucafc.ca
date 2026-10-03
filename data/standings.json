@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T05:34:46.575Z",
+  "updatedAt": "2026-10-03T16:31:25.899Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -8,6 +8,18 @@
   "rows": [
     {
       "pos": 1,
+      "team": "Brazuca FC",
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "gf": 20,
+      "ga": 1,
+      "gd": 19,
+      "pts": 9
+    },
+    {
+      "pos": 2,
       "team": "LUSA Heat",
       "gp": 3,
       "w": 2,
@@ -17,18 +29,6 @@
       "ga": 8,
       "gd": 2,
       "pts": 7
-    },
-    {
-      "pos": 2,
-      "team": "Brazuca FC",
-      "gp": 2,
-      "w": 2,
-      "d": 0,
-      "l": 0,
-      "gf": 10,
-      "ga": 1,
-      "gd": 9,
-      "pts": 6
     },
     {
       "pos": 3,
@@ -56,18 +56,6 @@
     },
     {
       "pos": 5,
-      "team": "Ridge Meadows Chargers",
-      "gp": 2,
-      "w": 1,
-      "d": 0,
-      "l": 1,
-      "gf": 6,
-      "ga": 5,
-      "gd": 1,
-      "pts": 3
-    },
-    {
-      "pos": 6,
       "team": "Ridge Meadows Gunners",
       "gp": 3,
       "w": 1,
@@ -76,6 +64,18 @@
       "gf": 7,
       "ga": 11,
       "gd": -4,
+      "pts": 3
+    },
+    {
+      "pos": 6,
+      "team": "Ridge Meadows Chargers",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 6,
+      "ga": 15,
+      "gd": -9,
       "pts": 3
     },
     {
