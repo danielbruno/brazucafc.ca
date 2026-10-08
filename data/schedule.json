@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T16:31:25.898Z",
+  "updatedAt": "2026-10-08T23:26:54.136Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -122,16 +122,16 @@
       "result": null
     },
     {
-      "kickoff": "2026-10-31T20:00:00-07:00",
+      "kickoff": "2026-11-01T19:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
-      "status": "Active",
+      "status": "Conflict",
       "division": "Masters 3 (Fall)",
       "home": "AC Fury",
       "away": "Brazuca FC",
       "homeScore": null,
       "awayScore": null,
-      "field": "Central",
+      "field": "Burnaby 2",
       "notes": null,
       "isBye": false,
       "isHome": false,
