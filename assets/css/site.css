@@ -911,17 +911,29 @@ h1, h2, h3 {
 .esports-overview { margin-top: clamp(16px, 3vw, 28px); }
 
 .esports-banner {
-  position: relative; border-bottom: 1px solid var(--line);
-  background: radial-gradient(70% 120% at 50% 0%, rgba(30, 138, 60, .28), transparent 65%), var(--bg);
+  position: relative; isolation: isolate; overflow: hidden;
+  background:
+    radial-gradient(58% 120% at 50% 25%, rgba(30, 138, 60, .32), transparent 70%),
+    radial-gradient(90% 70% at 50% 0%, rgba(245, 197, 24, .05), transparent 70%),
+    var(--bg);
 }
-.esports-banner .container { padding-block: clamp(20px, 3vw, 36px) clamp(24px, 4vw, 40px); }
+.esports-banner .container { padding-block: clamp(4px, 1.5vw, 16px) 0; }
 .banner-frame {
   /* The artwork is 1024px wide; don't upscale it on big screens. */
-  max-width: 1024px; margin-inline: auto; overflow: hidden;
-  border: 1px solid rgba(245, 197, 24, .3); border-radius: var(--radius);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, .55); background: #061009;
+  max-width: 1024px; margin-inline: auto;
 }
-.banner-frame img { width: 100%; height: auto; }
+/* Feather every edge so the artwork melts into the page instead of sitting in a box. */
+.banner-frame img {
+  width: 100%; height: auto;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 8%, #000 74%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 8%, #000 74%, transparent 100%);
+  mask-composite: intersect;
+}
 
 @media (max-width: 520px) {
   .club-facts div { flex-direction: column; gap: 2px; }
