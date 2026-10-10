@@ -40,6 +40,12 @@ LABELS = {
 # Columns worth showing when they carry data, in display order.
 DISPLAY_ORDER = ['mp', 'gs', 'min', 'mpg', 'g', 'as', 'ga', 'gp', 'sog', 'yc', 'rc', 'mvp', 'plusMinus']
 
+# Display names that differ from the spreadsheet. Players are still matched on
+# the spreadsheet spelling, so a re-export keeps working.
+NAME_OVERRIDES = {
+    'Daniel Bruno da Silva': 'Daniel Bruno',
+}
+
 # Nickname -> squad photo slug in assets/img/squad/.
 PHOTO_SLUGS = {
     'Tiago': 'tiago', 'Dani': 'dani', 'Vini': 'vini', 'Renan': 'renan', 'Eliel': 'eliel',
@@ -73,7 +79,7 @@ for row in csv.reader(open(ROSTER_CSV)):
     slug = PHOTO_SLUGS.get(nickname) if status == 'Current' else None
     photo = f'assets/img/squad/{slug}.jpg' if slug and (ROOT / f'assets/img/squad/{slug}.jpg').exists() else None
     players[key] = {
-        'key': key, 'nickname': nickname, 'name': name,
+        'key': key, 'nickname': nickname, 'name': NAME_OVERRIDES.get(name, name),
         'number': int(number) if number.isdigit() else None,
         'position': position, 'positionOrder': int(position_order) if position_order.isdigit() else 99,
         'foot': foot, 'current': status == 'Current', 'slug': slug, 'photo': photo,
