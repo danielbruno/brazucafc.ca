@@ -14,6 +14,7 @@ assets and push.
 | `team.html` | Coach and players by position (rendered from `data/team.json`) |
 | `schedule.html` | Next match, full fixture list with filters, league table |
 | `stats.html` | All-time goal scorers and detailed Spring 2026 stats (rendered from `data/stats.json`) |
+| `esports.html` | eBrazuca FC on EA Sports FC Pro Clubs (rendered from `data/esports.json`) |
 | `gallery.html` | Photo albums with a lightbox (rendered from `data/gallery.json`) |
 | `contact.html` | Contact inboxes and Instagram |
 
@@ -28,6 +29,7 @@ The header and footer are repeated in each page, so change them in all six.
 | `data/standings.json` | GitHub Action (automatic) |
 | `data/team.json` | Hand-edited |
 | `data/stats.json` | `scripts/build-stats.py` (from the spreadsheets in `data/source/`) |
+| `data/esports.json` | GitHub Action (automatic, hourly) |
 | `data/gallery.json` | Hand-edited |
 
 ### League schedule and standings
@@ -85,6 +87,38 @@ Two things to keep in mind when editing the script:
 
 Older seasons only record goals; minutes, assists, cards and the rest were
 first collected in Spring 2026, which the page explains in a closing note.
+
+### E-sports (EA Sports FC Pro Clubs)
+
+`scripts/update-esports.mjs` pulls eBrazuca FC's record, members and recent
+matches from EA's Pro Clubs API into `data/esports.json`.
+`.github/workflows/update-esports.yml` runs it hourly, commits any change and
+asks Pages to rebuild — four requests per run, and nothing is committed when
+the record hasn't moved.
+
+EA's edge **rejects requests that don't look like a browser**: a plain fetch
+gets `403 Access Denied` no matter the User-Agent. The full Chrome header set
+in `HEADERS` at the top of the script is what makes it work, so keep it intact
+if you edit the file.
+
+The club is identified by `CLUB_ID` (351608) and `PLATFORM` (`common-gen5`,
+meaning current-gen consoles) at the top of the script. Useful endpoints:
+
+| Endpoint | Gives |
+|---|---|
+| `clubs/info` | Club name, stadium, kit colours |
+| `clubs/overallStats` | Record, goals, skill rating, promotions |
+| `members/stats` | Per-member games, goals, assists, rating, MOTM |
+| `clubs/matches?matchType=leagueMatch` | Recent matches with per-player detail |
+
+`clubs/seasonalStats` returns 404 for FC and the crest image CDN isn't
+publicly reachable, so the page uses a styled badge instead.
+
+Run it locally the same way:
+
+```bash
+node scripts/update-esports.mjs
+```
 
 ### Squad
 

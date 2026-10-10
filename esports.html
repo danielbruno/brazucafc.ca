@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery — Brazuca FC</title>
-  <meta name="description" content="Photos of Brazuca FC on and off the pitch.">
+  <title>E-Sports — Brazuca FC</title>
+  <meta name="description" content="eBrazuca FC on EA Sports FC Pro Clubs: club record, squad stats and recent results, updated hourly.">
   <meta name="theme-color" content="#0a0d0a">
-  <link rel="canonical" href="https://brazucafc.ca/gallery.html">
+  <link rel="canonical" href="https://brazucafc.ca/esports.html">
   <link rel="icon" href="assets/img/crest-128.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/crest-128.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brazuca FC">
-  <meta property="og:title" content="Gallery — Brazuca FC">
-  <meta property="og:description" content="Photos of Brazuca FC on and off the pitch.">
-  <meta property="og:url" content="https://brazucafc.ca/gallery.html">
+  <meta property="og:title" content="E-Sports — Brazuca FC">
+  <meta property="og:description" content="eBrazuca FC on EA Sports FC Pro Clubs: club record, squad stats and recent results, updated hourly.">
+  <meta property="og:url" content="https://brazucafc.ca/esports.html">
   <meta property="og:image" content="https://brazucafc.ca/assets/img/gallery/squad-green.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/esports.js" defer></script>
   <script data-goatcounter="https://brazucafc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -42,8 +43,8 @@
           <li><a href="team.html">Team</a></li>
           <li><a href="schedule.html">Schedule</a></li>
           <li><a href="stats.html">Stats</a></li>
-          <li><a href="esports.html">E-Sports</a></li>
-          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="esports.html" aria-current="page">E-Sports</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -53,31 +54,54 @@
   <main id="main">
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
-        <p class="eyebrow">Gallery</p>
-        <h1 class="page-title" id="page-title">On &amp; Off <span>the Pitch</span></h1>
-        <p class="page-lead">Squad photos, matchday moments and everything in between. New albums land here as the season rolls on.</p>
+        <p class="eyebrow">E-Sports</p>
+        <h1 class="page-title" id="page-title">eBrazuca <span>FC</span></h1>
+        <p class="page-lead">The club's EA Sports FC Pro Clubs side. Record, squad and results pulled straight from EA, updated every hour.</p>
       </div>
     </section>
     <div class="stripe" aria-hidden="true"><span></span><span></span><span></span></div>
 
-    <section class="section">
-      <div class="container" data-gallery>
-        <p class="skeleton">Loading photos…</p>
+    <section class="section" aria-label="Club record">
+      <div class="container">
+        <div class="stats stats--4" data-esports-summary>
+          <p class="skeleton">Loading club record…</p>
+        </div>
+        <div class="grid-matchday esports-overview">
+          <div class="card" data-esports-club><p class="skeleton">Loading club…</p></div>
+          <div class="card">
+            <h2 class="card-title">Recent form</h2>
+            <div data-esports-form><p class="skeleton">Loading form…</p></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
-      <img alt="">
-      <div class="lightbox-bar">
-        <p class="lightbox-caption" data-lightbox-caption></p>
-        <span class="lightbox-count" data-lightbox-count></span>
-        <div class="lightbox-controls">
-          <button class="icon-btn" type="button" data-lightbox-prev aria-label="Previous photo">‹</button>
-          <button class="icon-btn" type="button" data-lightbox-next aria-label="Next photo">›</button>
-          <button class="icon-btn" type="button" data-lightbox-close aria-label="Close photo viewer">✕</button>
+    <section class="section section--alt" aria-labelledby="squad-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">The roster</p>
+            <h2 class="section-title" id="squad-title">Virtual <span>Pros</span></h2>
+            <p class="section-lead">Every member's record for the club, across all games played.</p>
+          </div>
         </div>
+        <div data-esports-members><p class="skeleton">Loading squad…</p></div>
       </div>
-    </dialog>
+    </section>
+
+    <section class="section" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Match history</p>
+            <h2 class="section-title" id="results-title">Latest <span>Results</span></h2>
+            <p class="section-lead">The most recent league matches, with scorers and the player of the match.</p>
+          </div>
+        </div>
+        <ol class="fixtures" data-esports-matches><li class="skeleton">Loading results…</li></ol>
+        <div data-esports-note></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

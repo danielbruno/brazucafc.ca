@@ -1,0 +1,389 @@
+{
+  "updatedAt": "2026-10-10T01:51:15.696Z",
+  "club": {
+    "id": "351608",
+    "name": "eBrazuca FC",
+    "platform": "common-gen5",
+    "platformLabel": "PlayStation 5 / Xbox Series X|S",
+    "stadium": "Estádio de ní"
+  },
+  "record": {
+    "gamesPlayed": 32,
+    "wins": 15,
+    "ties": 4,
+    "losses": 13,
+    "goals": 67,
+    "goalsAgainst": 60,
+    "goalDifference": 7,
+    "winRate": 47,
+    "skillRating": 1628,
+    "promotions": 2,
+    "relegations": 0,
+    "winStreak": 0,
+    "unbeatenStreak": 0
+  },
+  "positionCount": {
+    "midfielder": 5,
+    "goalkeeper": 0,
+    "forward": 3,
+    "defender": 0
+  },
+  "members": [
+    {
+      "name": "CeloLudolfR",
+      "proName": "Celinho",
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 80,
+      "gamesPlayed": 22,
+      "goals": 22,
+      "assists": 7,
+      "winRate": 40,
+      "rating": 7.3,
+      "motm": 2,
+      "passSuccess": 73,
+      "passesMade": 267,
+      "tackleSuccess": 63,
+      "tacklesMade": 24,
+      "shotSuccess": 38,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "SandroJuniorBM",
+      "proName": "Mateo",
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 80,
+      "gamesPlayed": 20,
+      "goals": 11,
+      "assists": 14,
+      "winRate": 45,
+      "rating": 6.9,
+      "motm": 2,
+      "passSuccess": 66,
+      "passesMade": 190,
+      "tackleSuccess": 8,
+      "tacklesMade": 8,
+      "shotSuccess": 30,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "pinage10",
+      "proName": "H. Hulk",
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 76,
+      "gamesPlayed": 13,
+      "goals": 10,
+      "assists": 9,
+      "winRate": 53,
+      "rating": 7.2,
+      "motm": 2,
+      "passSuccess": 77,
+      "passesMade": 152,
+      "tackleSuccess": 5,
+      "tacklesMade": 9,
+      "shotSuccess": 33,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "phiLL0ve_u",
+      "proName": "P. Phill",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 79,
+      "gamesPlayed": 25,
+      "goals": 9,
+      "assists": 12,
+      "winRate": 44,
+      "rating": 7,
+      "motm": 0,
+      "passSuccess": 71,
+      "passesMade": 328,
+      "tackleSuccess": 47,
+      "tacklesMade": 43,
+      "shotSuccess": 20,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "Matheusdvc",
+      "proName": "Duarte",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 81,
+      "gamesPlayed": 17,
+      "goals": 6,
+      "assists": 11,
+      "winRate": 52,
+      "rating": 7.2,
+      "motm": 2,
+      "passSuccess": 77,
+      "passesMade": 253,
+      "tackleSuccess": 20,
+      "tacklesMade": 20,
+      "shotSuccess": 21,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "viricciardi",
+      "proName": "V. Ricci",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 80,
+      "gamesPlayed": 14,
+      "goals": 4,
+      "assists": 4,
+      "winRate": 50,
+      "rating": 7.4,
+      "motm": 3,
+      "passSuccess": 84,
+      "passesMade": 207,
+      "tackleSuccess": 36,
+      "tacklesMade": 28,
+      "shotSuccess": 36,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "brunhms_220685",
+      "proName": "Brunão",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 79,
+      "gamesPlayed": 31,
+      "goals": 2,
+      "assists": 4,
+      "winRate": 48,
+      "rating": 6.9,
+      "motm": 2,
+      "passSuccess": 78,
+      "passesMade": 399,
+      "tackleSuccess": 16,
+      "tacklesMade": 54,
+      "shotSuccess": 25,
+      "cleanSheets": 0,
+      "redCards": 1
+    },
+    {
+      "name": "multithread13",
+      "proName": "Dani",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 75,
+      "gamesPlayed": 16,
+      "goals": 0,
+      "assists": 0,
+      "winRate": 37,
+      "rating": 7.1,
+      "motm": 3,
+      "passSuccess": 83,
+      "passesMade": 150,
+      "tackleSuccess": 30,
+      "tacklesMade": 24,
+      "shotSuccess": 0,
+      "cleanSheets": 2,
+      "redCards": 0
+    }
+  ],
+  "matches": [
+    {
+      "matchId": "82192650440386",
+      "playedAt": "2026-10-09T04:12:46.000Z",
+      "opponent": "eIitefc",
+      "opponentId": "234997",
+      "goalsFor": 5,
+      "goalsAgainst": 6,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        },
+        {
+          "name": "SandroJuniorBM",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "82000961830169",
+      "playedAt": "2026-10-09T03:50:57.000Z",
+      "opponent": "MATIP",
+      "opponentId": "328538",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "SandroJuniorBM",
+      "scorers": [
+        {
+          "name": "SandroJuniorBM",
+          "goals": 2
+        },
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "82272316900450",
+      "playedAt": "2026-10-09T03:31:34.000Z",
+      "opponent": "South Kariya",
+      "opponentId": "537029",
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "result": "D",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "82182472170347",
+      "playedAt": "2026-10-09T03:06:25.000Z",
+      "opponent": "LA Huskies",
+      "opponentId": "57637",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "result": "D",
+      "motm": "multithread13",
+      "scorers": [
+        {
+          "name": "brunhms_220685",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "82140498790159",
+      "playedAt": "2026-10-09T02:45:05.000Z",
+      "opponent": "Los P1TU2",
+      "opponentId": "60477",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "82140420890337",
+      "playedAt": "2026-10-09T02:29:27.000Z",
+      "opponent": "Pitolation FC",
+      "opponentId": "189837",
+      "goalsFor": 6,
+      "goalsAgainst": 2,
+      "result": "W",
+      "motm": "SandroJuniorBM",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "SandroJuniorBM",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "78896119210111",
+      "playedAt": "2026-10-08T03:31:47.000Z",
+      "opponent": "FC Tijuana",
+      "opponentId": "73542",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "multithread13",
+      "scorers": [
+        {
+          "name": "SandroJuniorBM",
+          "goals": 2
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "78790334660179",
+      "playedAt": "2026-10-08T03:11:09.000Z",
+      "opponent": "FC Tijuana",
+      "opponentId": "73542",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "result": "L",
+      "motm": null,
+      "scorers": []
+    },
+    {
+      "matchId": "78762296700428",
+      "playedAt": "2026-10-08T02:51:30.000Z",
+      "opponent": "FC Tijuana",
+      "opponentId": "73542",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "Matheusdvc",
+      "scorers": [
+        {
+          "name": "Matheusdvc",
+          "goals": 1
+        },
+        {
+          "name": "SandroJuniorBM",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "78320957460026",
+      "playedAt": "2026-10-08T02:12:41.000Z",
+      "opponent": "Frisco",
+      "opponentId": "235325",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "viricciardi",
+      "scorers": [
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    }
+  ],
+  "form": [
+    "L",
+    "W",
+    "D",
+    "D",
+    "L"
+  ],
+  "source": {
+    "name": "EA Sports FC Pro Clubs",
+    "url": "https://www.proclubsanalytics.com/club/351608?platform=common-gen5&clubName=eBrazuca%20FC"
+  }
+}

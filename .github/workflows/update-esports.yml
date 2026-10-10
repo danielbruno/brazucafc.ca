@@ -1,0 +1,52 @@
+name: Update e-sports data
+
+on:
+  schedule:
+    # Hourly, off the top of the hour. Four requests per run, and the job only
+    # commits when the club's record actually changed.
+    - cron: '37 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-esports
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch eBrazuca FC stats from EA
+        run: node scripts/update-esports.mjs
+
+      - name: Commit changes
+        id: commit
+        run: |
+          if git diff --quiet -- data/esports.json; then
+            echo "Pro Clubs data unchanged."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/esports.json
+          git commit -m "Update e-sports data"
+          git pull --rebase origin main
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
