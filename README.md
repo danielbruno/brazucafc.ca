@@ -54,25 +54,37 @@ changes) at the top of the script.
 
 ### Player stats
 
-`data/stats.json` is built from two spreadsheet exports kept in `data/source/`:
+`data/stats.json` is built from the club's stats workbook, exported to
+`data/source/`:
 
-| File | Covers |
+| File | Contains |
 |---|---|
-| `goals-all-time.csv` | Goals per player per season, every season the club has played |
-| `spring-2026-player-stats.csv` | Minutes, starts, assists, cards, plus-minus and MVP — Spring 2026 only |
+| `Brazuca FC -  Player Stats - Support Tables.csv` | The roster: nickname, full name, number, position, current or former |
+| `Brazuca FC -  Player Stats - All Time.csv` | One row per player per season and competition, up to Spring 2026 |
+| `Brazuca FC -  Player Stats - Season 2026-2027.csv` | One row per player per match day of the current season |
 
-The files spell the same people differently (nicknames, full names, typos), so
-`scripts/build-stats.py` holds a `NAMES` map that folds every spelling onto one
-player, and a `CURRENT` map linking players to their squad slug so the page can
-show their photo and number. After updating either CSV, rebuild:
+Rebuild after re-exporting any of them:
 
 ```bash
 python3 scripts/build-stats.py
 ```
 
-The script prints the top scorers and warns when the two files disagree. Where
-they conflict on goals, the all-time goals file wins. Adding a season means
-adding a column to the goals CSV and a line to `SEASONS` in the script.
+The script matches players by full name against the roster table and reports
+any row whose player is missing from it. Stat columns that are empty
+everywhere (shots on goal, fouls, injuries in most seasons) are left out of
+the page automatically, so new columns appear on their own once the
+spreadsheet starts recording them.
+
+Two things to keep in mind when editing the script:
+
+- `PHOTO_SLUGS` maps each nickname to a file in `assets/img/squad/`, which is
+  how the tables show photos and shirt numbers. Add a line when a new player
+  joins the squad.
+- `CURRENT_SEASON` names the season shown in the first table. Update it when a
+  new season starts, and point `SEASON_CSV` at that season's export.
+
+Older seasons only record goals; minutes, assists, cards and the rest were
+first collected in Spring 2026, which the page explains in a closing note.
 
 ### Squad
 

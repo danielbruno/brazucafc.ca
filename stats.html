@@ -54,8 +54,8 @@
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <p class="eyebrow">Stats</p>
-        <h1 class="page-title" id="page-title">All-Time <span>Record</span></h1>
-        <p class="page-lead">Every goal the club has scored since 2024, season by season, plus the detailed numbers from the Spring 2026 campaign.</p>
+        <h1 class="page-title" id="page-title">Player <span>Stats</span></h1>
+        <p class="page-lead">How the squad is performing this season, and what every player has contributed since the club started in 2024.</p>
       </div>
     </section>
     <div class="stripe" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -68,13 +68,26 @@
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="scorers-title">
+    <section class="section section--alt" aria-labelledby="season-title">
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="eyebrow">All time</p>
-            <h2 class="section-title" id="scorers-title">Goal <span>Scorers</span></h2>
-            <p class="section-lead">Goals in every season the club has played. Cup rounds are counted separately from the league.</p>
+            <p class="eyebrow" data-stats-season-eyebrow>This season</p>
+            <h2 class="section-title" id="season-title">Season <span>So Far</span></h2>
+            <p class="section-lead" data-stats-season-lead>Every player's record in the current campaign.</p>
+          </div>
+        </div>
+        <div data-stats-season><p class="skeleton">Loading stats…</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="alltime-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Since 2024</p>
+            <h2 class="section-title" id="alltime-title">Club <span>Career</span></h2>
+            <p class="section-lead" data-stats-alltime-lead>Totals across every season the club has played, current squad and former players together.</p>
           </div>
           <div class="filter-bar" role="group" aria-label="Filter players">
             <button type="button" data-stats-filter="all" aria-pressed="true">All</button>
@@ -82,20 +95,7 @@
             <button type="button" data-stats-filter="former" aria-pressed="false">Former</button>
           </div>
         </div>
-        <div data-stats-scorers><p class="skeleton">Loading stats…</p></div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="spring-title">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Spring 2026</p>
-            <h2 class="section-title" id="spring-title">Season <span>Detail</span></h2>
-            <p class="section-lead">Ten matches in Masters B. Minutes, assists, cards, plus-minus and MVP awards.</p>
-          </div>
-        </div>
-        <div data-stats-spring><p class="skeleton">Loading stats…</p></div>
+        <div data-stats-alltime><p class="skeleton">Loading stats…</p></div>
         <dl class="legend" data-stats-legend></dl>
       </div>
     </section>
@@ -104,9 +104,9 @@
       <div class="container">
         <div class="card disclaimer">
           <h2 class="card-title" id="note-title">About these numbers</h2>
-          <p><strong>Detailed statistics have only been collected since the Spring 2026 season.</strong> Minutes played, starts, assists, goals against, cards, plus-minus and MVP awards exist for Spring 2026 onwards, and there is no equivalent record for the seasons before it.</p>
-          <p>Goals are recorded for every season the club has played: Winter 2024/25, Winter 2025/26, Spring 2026 and the current Winter 2026/27, including cup rounds. For the earlier seasons, goals are the only statistic we have.</p>
-          <p>A dash means a player was not with the club that season. Former players are marked and stay on the all-time list.</p>
+          <p><strong>Detailed statistics have only been collected since the Spring 2026 season.</strong> Matches, minutes, starts, assists, cards, plus-minus and MVP awards exist from Spring 2026 onwards. For Winter 2024/25 and Winter 2025/26 the club recorded goals only.</p>
+          <p>In the club career table, a dash means we have no detailed record for that player — they played only in the seasons before this data was collected. Goals, however, are complete for every season.</p>
+          <p>Cup matches count towards the career totals alongside league games. Former players stay on the list.</p>
         </div>
       </div>
     </section>

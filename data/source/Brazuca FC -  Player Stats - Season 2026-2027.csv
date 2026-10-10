@@ -1,0 +1,64 @@
+Nickname,Player Name,Player Status,#,Position#,Position,Foot Pref,Year,Season,Championship,Match Day,Opponent,MP,GS,MIN,MPG,G,AS,GA,GP,SoG,YC,RC,PF,Injury,MVP,+/-,,,
+Tiago,Tiago Fabri Brenck,Current,1,1,Goalkeepers,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,90,90, - , - ,1, - , - , - , - , - , - , - ,7,,MP,Match Played
+Tom,Tomas Morais,Current,25,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,57,57, - , - , - , - , - , - , - , - , - , - ,4,,GS,Game Starter
+Ryan,Ryan Jobb,Current,21,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,MIN,Minutes
+Leo,Leonardo da Ruiz Correia,Current,2,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,MPG,Minutes per Game
+Jeff,Jefferson Tosti,Current,6,2,Full-Backs,Left,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,45,45, - , - , - , - , - , - , - , - , - , - ,4,,G,Goals
+Claudio,Claudio Comunale Filho,Current,17,2,Full-Backs,Left,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,44,44, - , - , - , - , - , - , - , - , - , - ,3,,AS,Assists
+Dani,Daniel Bruno da Silva,Current,3,3,Defenders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,63,63, - , - , - , - , - , - , - , - , - , - ,5,,GA,Goal Allowed
+Renan,Renan Gouveia,Current,4,3,Defenders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,60,60, - , - , - , - , - , - , - , - , - , - ,5,,GP,Goals Prevented
+Eliel,Eliel Souza,Current,14,3,Defenders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,39,39, - , - , - , - , - , - , - , - , - , - ,4,,SoG,Shot on Goal
+Vini,Vinicius Totti,Current,12,3,Defenders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,51,51, - , - , - , - , - , - , - , - , - , - ,3,,YC,Yellow Card
+Alison,Alison Marangao,Current,10,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,62,62, - ,1, - , - , - , - , - , - , - , - ,6,,RC,Red Card
+Vitor,Vitor Samone,Current,5,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,59,59, - , - , - , - , - , - , - , - , - , - ,5,,+/-,On-Field Score Differential
+Giga,Pedro Koster,Current,22,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,28,28, - , - , - , - , - ,1, - , - , - , - ,1,,MVP,Most Valuable Player
+Diego,Diego Sampaio,Current,8,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,66,66,2,1, - , - , - , - , - , - , - , - ,6,,,
+Henrique,Henrique Noujeimi,Current,19,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,63,63,1,1, - , - , - , - , - , - , - ,1,4,,,
+Felipe,Felipe Moreira,Current,23,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,35,35, - ,1, - , - , - , - , - , - , - , - ,3,,,
+Igor,Igor Paiva,Current,16,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,46,46,2,1, - , - , - , - , - , - , - , - ,3,,,
+Hulk,Andre Pinage,Current,11,6,Forwards,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,60,60,1, - , - , - , - , - , - , - , - , - ,6,,,
+Sam,Samuel Moura,Current,7,6,Forwards,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1,1,56,56,1,1, - , - , - , - , - , - , - , - ,5,,,
+P Bayer,Gabriel Lloyd,Current,9,6,Forwards,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,44,44,1,1, - , - , - , - , - , - , - , - ,2,,,
+Marcelo,Marcelo Ribeiro,Current,20,6,Forwards,Right,2026/2027,Winter,League,2026-09-19,Ridge Meadows Gunners,1, - ,18,18, - , - , - , - , - , - , - , - , - , - ,1,,,
+Tiago,Tiago Fabri Brenck,Current,1,1,Goalkeepers,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,90,90, - , - , - , - , - , - , - , - , - , - ,2,,,
+Tom,Tomas Morais,Current,25,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,45,45, - , - , - , - , - , - , - , - , - , - ,2,,,
+Ryan,Ryan Jobb,Current,21,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,30,30, - , - , - , - , - , - , - , - , - , - , - ,,,
+Leo,Leonardo da Ruiz Correia,Current,2,2,Full-Backs,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,45,45, - , - , - , - , - , - , - , - , - , - ,1,,,
+Jeff,Jefferson Tosti,Current,6,2,Full-Backs,Left,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,45,45,1, - , - , - , - , - , - , - , - , - ,1,,,
+Claudio,Claudio Comunale Filho,Current,17,2,Full-Backs,Left,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,
+Dani,Daniel Bruno da Silva,Current,3,3,Defenders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,65,65, - , - , - , - , - , - , - , - , - , - ,2,,,
+Renan,Renan Gouveia,Current,4,3,Defenders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution, - , - ,45,45, - , - , - , - , - , - , - , - , - , - , - ,,,
+Eliel,Eliel Souza,Current,14,3,Defenders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,45,45, - , - , - , - , - , - , - , - , - , - ,1,,,
+Vini,Vinicius Totti,Current,12,3,Defenders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,60,60, - , - , - , - , - , - , - , - , - , - ,2,,,
+Alison,Alison Marangao,Current,10,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,70,70, - , - , - , - , - , - , - , - , - , - ,1,,,
+Vitor,Vitor Samone,Current,5,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,60,60, - , - , - , - , - , - , - , - , - , - ,1,,,
+Giga,Pedro Koster,Current,22,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,45,45, - , - , - , - , - , - , - , - , - , - ,1,,,
+Diego,Diego Sampaio,Current,8,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1, - ,75,75,1, - , - , - , - , - , - , - , - ,1,2,,,
+Henrique,Henrique Noujeimi,Current,19,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,90,90, - , - , - , - , - , - , - , - , - , - ,2,,,
+Felipe,Felipe Moreira,Current,23,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,70,70, - ,2, - , - , - , - , - , - , - , - ,2,,,
+Igor,Igor Paiva,Current,16,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,50,50, - , - , - , - , - , - , - , - , - , - ,1,,,
+Hulk,Andre Pinage,Current,11,6,Forwards,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution,1,1,90,90, - , - , - , - , - , - , - , - , - , - ,2,,,
+Sam,Samuel Moura,Current,7,6,Forwards,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,
+P Bayer,Gabriel Lloyd,Current,9,6,Forwards,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,
+Marcelo,Marcelo Ribeiro,Current,20,6,Forwards,Right,2026/2027,Winter,League,2026-09-25,PoCo FC Revolution, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,
+Tiago,Tiago Fabri Brenck,Current,1,1,Goalkeepers,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,90,90, - , - , - , - , - , - , - , - , - , - ,10,,,
+Leo,Leonardo da Ruiz Correia,Current,2,2,Full-Backs,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,32,32, - ,1, - , - , - , - , - , - , - , - ,5,,,
+Dani,Daniel Bruno da Silva,Current,3,3,Defenders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,64,64, - , - , - , - , - , - , - , - , - , - ,8,,,
+Claudio,Claudio Comunale Filho,Current,17,2,Full-Backs,Left,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,47,47, - , - , - , - , - , - , - , - , - , - ,5,,,
+Eliel,Eliel Souza,Current,14,3,Defenders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,49,49, - , - , - , - , - , - , - , - , - , - ,6,,,
+Ryan,Ryan Jobb,Current,21,2,Full-Backs,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,41,41, - , - , - , - , - , - , - , - , - , - ,4,,,
+Alison,Alison Marangao,Current,10,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,51,51,1, - , - , - , - , - , - , - , - , - ,6,,,
+Tom,Tomas Morais,Current,25,2,Full-Backs,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,43,43, - , - , - , - , - , - , - , - , - , - ,4,,,
+Felipe,Felipe Moreira,Current,23,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,45,45,1,1, - , - , - , - , - , - , - , - ,5,,,
+Igor,Igor Paiva,Current,16,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,50,50, - , - , - , - , - , - , - , - , - , - ,5,,,
+Marcelo,Marcelo Ribeiro,Current,20,6,Forwards,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,11,11,1, - , - , - , - , - , - , - , - , - ,1,,,
+Diego,Diego Sampaio,Current,8,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,59,59,3,1, - , - , - , - , - , - , - , - ,6,,,
+Vitor,Vitor Samone,Current,5,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,49,49,1,1, - , - , - , - , - , - , - , - ,5,,,
+Sam,Samuel Moura,Current,7,6,Forwards,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,66,66, - ,1, - , - , - , - , - , - , - , - ,7,,,
+Jeff,Jefferson Tosti,Current,6,2,Full-Backs,Left,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,43,43, - ,1, - , - , - , - , - , - , - , - ,5,,,
+Vini,Vinicius Totti,Current,12,3,Defenders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1, - ,50,50, - , - , - , - , - , - , - , - , - , - ,5,,,
+Renan,Renan Gouveia,Current,4,3,Defenders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,57,57, - , - , - , - , - , - , - , - , - , - ,6,,,
+Hulk,Andre Pinage,Current,11,6,Forwards,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,64,64,2,1, - , - , - , - , - , - , - , - ,8,,,
+Henrique,Henrique Noujeimi,Current,19,5,Attacking Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers,1,1,75,75,1,1, - , - , - , - , - , - , - ,1,9,,,
+P Bayer,Gabriel Lloyd,Current,9,6,Forwards,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,
+Giga,Pedro Koster,Current,22,4,Defensive Midfielders,Right,2026/2027,Winter,League,2026-10-02,Ridge Meadows Chargers, - , - , - , - , - , - , - , - , - , - , - , - , - , - , - ,,,

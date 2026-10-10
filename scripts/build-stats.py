@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Unify the club's stats spreadsheets into data/stats.json.
+"""Build data/stats.json from the club's player-stats spreadsheets.
 
-Sources (data/source/):
-  goals-all-time.csv           goals per player per season, every season played
-  spring-2026-player-stats.csv detailed stats, Spring 2026 only
+Sources (data/source/), exported from the club's stats workbook:
+  Brazuca FC -  Player Stats - Support Tables.csv   the roster: nickname, full name, number, position, status
+  Brazuca FC -  Player Stats - All Time.csv         one row per player per season/competition, up to Spring 2026
+  Brazuca FC -  Player Stats - Season 2026-2027.csv one row per player per match day, current season
 
-The two files use different spellings and nicknames for the same people, so
-NAMES below maps every spelling onto one player. Players on the current squad
-are keyed by their slug in data/team.json, which links their photo and number.
+Older seasons only record goals; everything else was first collected in
+Spring 2026. Columns that are empty everywhere are left out of the page.
 
 Run:  python3 scripts/build-stats.py
 """
@@ -17,146 +17,188 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / 'data' / 'source'
+ROSTER_CSV = SOURCE / 'Brazuca FC -  Player Stats - Support Tables.csv'
+ALL_TIME_CSV = SOURCE / 'Brazuca FC -  Player Stats - All Time.csv'
+SEASON_CSV = SOURCE / 'Brazuca FC -  Player Stats - Season 2026-2027.csv'
 
-# Season columns in goals-all-time.csv -> season id, in chronological order.
-SEASONS = [
-    ('24/25',          'w2425',    'Winter 2024/25', '24/25',     'league'),
-    ('24/25 CUP',      'w2425cup', 'Cup 2024/25',    '24/25 Cup', 'cup'),
-    ('25/26',          'w2526',    'Winter 2025/26', '25/26',     'league'),
-    ('25/26 (CUP)',    'w2526cup', 'Cup 2025/26',    '25/26 Cup', 'cup'),
-    ('25-26 (summer)', 'spring26', 'Spring 2026',    'Spring 26', 'league'),
-    ('26/27',          'w2627',    'Winter 2026/27', '26/27',     'league'),
-]
+CURRENT_SEASON = ('2026/2027', 'Winter')
+DETAILED_SINCE = 'Spring 2026'
 
-# Current squad: slug -> (full name, shirt number). Slugs match data/team.json.
-CURRENT = {
-    'tiago': ('Tiago', 1), 'dani': ('Daniel', 3), 'vini': ('Vinicius Totti', 12),
-    'renan': ('Renan Gouveia Jorio', 4), 'eliel': ('Eliel', 14), 'leo': ('Leo Correa', 2),
-    'comunale': ('Claudio Comunale Filho', 17), 'jeff': ('Jefferson Tosti', 6),
-    'tom': ('Tomas Moraes', 25), 'ryan': ('Ryan Jobb', 21), 'alison': ('Alison Marangao', 10),
-    'giga': ('Pedro Koster', 22), 'vitor': ('Vitor Sarone', 5), 'diego': ('Diego Sampaio', 8),
-    'henrique': ('Henrique Noujeimi', 19), 'felipe': ('Felipe Moreira', 23),
-    'igor': ('Igor Paiva', 16), 'gabriel': ('Gabriel Lloyd', 9), 'sam': ('Samuel Moura', 7),
-    'hulk': ('Hulk', 11), 'marcelo': ('Marcelo Ribeiro', 20),
+# Stat columns, in spreadsheet order. Both files put them at index 12 onwards.
+STATS = ['mp', 'gs', 'min', 'mpg', 'g', 'as', 'ga', 'gp', 'sog', 'yc', 'rc', 'pf', 'injury', 'mvp', 'plusMinus']
+STAT_START = 12
+
+# Shown on the page; anything with no data anywhere is dropped later.
+LABELS = {
+    'mp': ('MP', 'Matches played'), 'gs': ('GS', 'Games started'), 'min': ('MIN', 'Minutes played'),
+    'mpg': ('MPG', 'Minutes per game'), 'g': ('G', 'Goals'), 'as': ('AS', 'Assists'),
+    'ga': ('GA', 'Goals allowed'), 'gp': ('GP', 'Goals prevented'), 'sog': ('SoG', 'Shots on goal'),
+    'yc': ('YC', 'Yellow cards'), 'rc': ('RC', 'Red cards'), 'pf': ('PF', 'Fouls'),
+    'injury': ('INJ', 'Injuries'), 'mvp': ('MVP', 'Most valuable player awards'),
+    'plusMinus': ('+/-', 'On-field score differential'),
+}
+# Columns worth showing when they carry data, in display order.
+DISPLAY_ORDER = ['mp', 'gs', 'min', 'mpg', 'g', 'as', 'ga', 'gp', 'sog', 'yc', 'rc', 'mvp', 'plusMinus']
+
+# Nickname -> squad photo slug in assets/img/squad/.
+PHOTO_SLUGS = {
+    'Tiago': 'tiago', 'Dani': 'dani', 'Vini': 'vini', 'Renan': 'renan', 'Eliel': 'eliel',
+    'Leo': 'leo', 'Claudio': 'comunale', 'Jeff': 'jeff', 'Tom': 'tom', 'Ryan': 'ryan',
+    'Alison': 'alison', 'Giga': 'giga', 'Vitor': 'vitor', 'Diego': 'diego', 'Henrique': 'henrique',
+    'Felipe': 'felipe', 'Igor': 'igor', 'P Bayer': 'gabriel', 'Sam': 'sam', 'Hulk': 'hulk',
+    'Marcelo': 'marcelo',
 }
 
-# Every spelling found in the two files -> player key.
-NAMES = {
-    # goals-all-time.csv
-    'Gabriel Lloyd': 'gabriel', 'Henrique Noujeimi': 'henrique', 'Hulk': 'hulk',
-    'Samuel Moura': 'sam', 'Diego': 'diego', 'Igor': 'igor', 'Alison': 'alison',
-    'Claudio Comunale Filho': 'comunale', 'Felipe Moreira': 'felipe',
-    'Pedro Henrique Pereira Kloster': 'giga', 'Renan Gouveia Jorio': 'renan',
-    'Tomas Moraes': 'tom', 'Vinicius Totti': 'vini', 'Vitor Sarone': 'vitor',
-    # spring-2026-player-stats.csv
-    'Diego Sampaio': 'diego', 'Daniel': 'dani', 'Gabriel': 'gabriel-berenguer-vieira',
-    'Jefferson Tosti': 'jeff', 'Igor Paiva': 'igor', 'Tiago': 'tiago', 'Eliel': 'eliel',
-    'Vitor Samone': 'vitor', 'Renan Gouveia': 'renan', 'Ryan Jobb': 'ryan',
-    'Alison Marangao': 'alison', 'Leo Correa': 'leo', 'Pedro Koster': 'giga',
-    'Tomas Morais': 'tom', 'Marcelo Ribeiro': 'marcelo',
-}
+def num(value):
+    """Spreadsheet cell -> int. Blank and ' - ' mean no value."""
+    text = (value or '').strip()
+    if text in ('', '-', '–'):
+        return 0
+    return int(float(text))
 
-def key_for(name):
-    name = name.strip()
-    former = name.endswith('(former player)')
-    plain = name.replace('(former player)', '').strip()
-    if plain in NAMES:
-        return NAMES[plain], plain, former
-    slug = re.sub(r'[^a-z0-9]+', '-', plain.lower()).strip('-')
-    return slug, plain, former
+def slugify(name):
+    return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
+def season_label(year, season):
+    start, end = year.split('/')
+    return f'{season} {start[-2:]}/{end[-2:]}' if season == 'Winter' else f'{season} {end}'
+
+# --- roster ----------------------------------------------------------------
 players = {}
-
-def get(key, name, former=False):
-    if key not in players:
-        squad = CURRENT.get(key)
-        players[key] = {
-            'key': key,
-            'name': squad[0] if squad else name,
-            'slug': key if squad else None,
-            'number': squad[1] if squad else None,
-            'current': bool(squad),
-            'photo': f'assets/img/squad/{key}.jpg' if squad else None,
-            'goalsBySeason': {},
-            'goals': 0,
-            'spring': None,
-        }
-    if former and not players[key]['current']:
-        players[key]['current'] = False
-    return players[key]
-
-# --- goals per season -------------------------------------------------------
-rows = list(csv.reader(open(SOURCE / 'goals-all-time.csv')))
-header = rows[2]                      # ['', '26/27', '25-26 (summer)', ...]
-col = {name: i for i, name in enumerate(header)}
-warnings = []
-
-for row in rows[3:]:
-    if not row or not row[0].strip():
+for row in csv.reader(open(ROSTER_CSV)):
+    nickname, name, number, position_order, position, foot, status = (c.strip() for c in row[:7])
+    if not name or name == 'Player Name':
         continue
-    key, name, former = key_for(row[0])
-    player = get(key, name, former)
-    for csv_col, season_id, _, _, _ in SEASONS:
-        raw = row[col[csv_col]].strip()
-        if raw.lower() == 'n/a' or raw == '':
-            # "n/a" = not with the club, blank = played but did not score
-            player['goalsBySeason'][season_id] = None if raw.lower() == 'n/a' else 0
-        else:
-            player['goalsBySeason'][season_id] = int(raw)
-    player['goals'] = sum(v for v in player['goalsBySeason'].values() if v)
-    stated = row[col['TOTAL']].strip()
-    if stated.isdigit() and int(stated) != player['goals']:
-        warnings.append(f"{name}: goals add up to {player['goals']} but TOTAL column says {stated}")
+    key = slugify(name)
+    slug = PHOTO_SLUGS.get(nickname) if status == 'Current' else None
+    photo = f'assets/img/squad/{slug}.jpg' if slug and (ROOT / f'assets/img/squad/{slug}.jpg').exists() else None
+    players[key] = {
+        'key': key, 'nickname': nickname, 'name': name,
+        'number': int(number) if number.isdigit() else None,
+        'position': position, 'positionOrder': int(position_order) if position_order.isdigit() else 99,
+        'foot': foot, 'current': status == 'Current', 'slug': slug, 'photo': photo,
+    }
 
-# --- detailed Spring 2026 ---------------------------------------------------
-spring_fields = ['mp', 'gs', 'min', 'mpg', 'g', 'as', 'ga', 'yc', 'rc', 'plusMinus', 'mvp']
-for row in csv.DictReader(open(SOURCE / 'spring-2026-player-stats.csv')):
-    name = (row.get('Player Name') or '').strip()
+def blank_stats():
+    return dict.fromkeys(STATS, 0)
+
+def accumulate(target, row):
+    for i, field in enumerate(STATS):
+        if field == 'mpg':
+            continue
+        target[field] += num(row[STAT_START + i])
+
+def finish(stats):
+    stats['mpg'] = round(stats['min'] / stats['mp']) if stats['mp'] else 0
+    return stats
+
+def record(bucket, key, row):
+    entry = bucket.setdefault(key, blank_stats())
+    accumulate(entry, row)
+
+# --- all seasons up to Spring 2026 -----------------------------------------
+all_time, seasons, appearances, detailed = {}, {}, {}, set()
+unknown = set()
+
+for row in list(csv.reader(open(ALL_TIME_CSV)))[1:]:
+    name = row[1].strip()
     if not name:
         continue
-    key, plain, _ = key_for(name)
-    player = get(key, plain)
-    values = [row['MP'], row['GS'], row['MIN'], row['MPG'], row['G'], row['AS'],
-              row['GA'], row['YC'], row['RC'], row['+/-'], row['MVP']]
-    player['spring'] = {f: int(v) for f, v in zip(spring_fields, values)}
-    recorded = player['goalsBySeason'].get('spring26')
-    if recorded is None:
-        # Played that season, so "n/a" in the goals file means no goals.
-        player['goalsBySeason']['spring26'] = player['spring']['g']
-    elif recorded != player['spring']['g']:
-        warnings.append(
-            f"{player['name']}: Spring goals differ — goals file {recorded}, detailed file {player['spring']['g']}"
-            " (goals file kept)")
-    for season_id in (row_def[1] for row_def in SEASONS):
-        player['goalsBySeason'].setdefault(season_id, None)
-    player['goals'] = sum(v for v in player['goalsBySeason'].values() if v)
+    key = slugify(name)
+    if key not in players:
+        unknown.add(name)
+        continue
+    year, season, championship = row[7].strip(), row[8].strip(), row[10].strip()
+    season_id = f'{year} {season}'
+    seasons.setdefault(season_id, {'id': slugify(season_id), 'label': season_label(year, season),
+                                   'year': year, 'season': season, 'order': (year, {'Winter': 1, 'Spring': 2, 'Summer': 3, 'Fall': 0}.get(season, 9))})
+    record(all_time, key, row)
+    appearances.setdefault(key, set()).add(season_id)
+    if num(row[STAT_START]):          # minutes recorded -> detailed season
+        detailed.add(key)
 
-ordered = sorted(players.values(),
-                 key=lambda p: (-p['goals'], -(p['spring']['min'] if p['spring'] else 0), p['name']))
+# --- current season, one row per match day ---------------------------------
+current, match_days = {}, {}
+for row in list(csv.reader(open(SEASON_CSV)))[1:]:
+    name = row[1].strip()
+    if not name:
+        continue
+    key = slugify(name)
+    if key not in players:
+        unknown.add(name)
+        continue
+    year, season = row[7].strip(), row[8].strip()
+    match_days[row[10].strip()] = row[11].strip()
+    record(current, key, row)
+    record(all_time, key, row)
+    if num(row[STAT_START]):
+        appearances.setdefault(key, set()).add(f'{year} {season}')
+        detailed.add(key)
 
-spring_players = [p for p in ordered if p['spring']]
-totals = {f: sum(p['spring'][f] for p in spring_players) for f in spring_fields if f != 'mpg'}
-totals['players'] = len(spring_players)
+season_id = f'{CURRENT_SEASON[0]} {CURRENT_SEASON[1]}'
+seasons.setdefault(season_id, {'id': slugify(season_id), 'label': season_label(*CURRENT_SEASON),
+                               'year': CURRENT_SEASON[0], 'season': CURRENT_SEASON[1], 'order': (CURRENT_SEASON[0], 1)})
+
+# --- assemble ---------------------------------------------------------------
+def rows_for(bucket, with_seasons=False):
+    out = []
+    for key, stats in bucket.items():
+        if not any(stats.values()):
+            continue
+        player = dict(players[key])
+        player['stats'] = finish(dict(stats))
+        player['hasDetail'] = key in detailed
+        if with_seasons:
+            player['seasons'] = len(appearances.get(key, ()))
+        out.append(player)
+    return sorted(out, key=lambda p: (-p['stats']['g'], -p['stats']['min'], p['positionOrder'], p['name']))
+
+def totals_for(rows):
+    totals = {f: sum(p['stats'][f] for p in rows) for f in STATS if f != 'mpg'}
+    totals['mpg'] = 0
+    totals['players'] = len(rows)
+    return totals
+
+current_rows, all_time_rows = rows_for(current), rows_for(all_time, with_seasons=True)
+
+def columns_for(rows, extra_blank=()):  # keep only columns that carry data
+    return [f for f in DISPLAY_ORDER
+            if f not in extra_blank and any(p['stats'][f] for p in rows)]
+
+current_columns = columns_for(current_rows)
+all_time_columns = columns_for(all_time_rows)
 
 data = {
     'updatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z'),
-    'seasons': [{'id': sid, 'label': label, 'short': short, 'type': kind}
-                for csv_col, sid, label, short, kind in SEASONS],
-    'detailedSince': 'spring26',
-    'players': ordered,
-    'springTotals': totals,
-    'allTimeGoals': sum(p['goals'] for p in ordered),
+    'detailedSince': DETAILED_SINCE,
+    'legend': [[LABELS[f][0], LABELS[f][1]] for f in dict.fromkeys(current_columns + all_time_columns)],
+    'currentSeason': {
+        'label': season_label(*CURRENT_SEASON),
+        'competition': 'FVSL Masters 3',
+        'matches': [{'date': d, 'opponent': o} for d, o in sorted(match_days.items())],
+        'columns': current_columns,
+        'players': current_rows,
+        'totals': totals_for(current_rows),
+    },
+    'allTime': {
+        'seasons': [s['label'] for s in sorted(seasons.values(), key=lambda s: s['order'])],
+        'columns': ['seasons'] + all_time_columns,
+        'players': all_time_rows,
+        'totals': totals_for(all_time_rows),
+    },
+    'labels': {f: list(LABELS[f]) for f in LABELS},
 }
-out = ROOT / 'data' / 'stats.json'
-out.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+(ROOT / 'data' / 'stats.json').write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
 
-print(f"players: {len(ordered)}  (current squad: {sum(1 for p in ordered if p['current'])})")
-print(f"all-time goals: {data['allTimeGoals']}   spring players: {totals['players']}")
-print("\ntop scorers:")
-for p in ordered[:8]:
-    print(f"  {p['goals']:3}  {p['name']:32} {'squad' if p['current'] else 'former'}")
-print("\nplayers with no goals recorded:", ', '.join(p['name'] for p in ordered if p['goals'] == 0))
-if warnings:
-    print("\nwarnings:")
-    for w in warnings:
-        print(' -', w)
+print(f"seasons: {', '.join(data['allTime']['seasons'])}")
+print(f"current season: {len(current_rows)} players over {len(match_days)} match days, "
+      f"{data['currentSeason']['totals']['g']} goals")
+print(f"all time: {len(all_time_rows)} players, {data['allTime']['totals']['g']} goals, "
+      f"{data['allTime']['totals']['min']} minutes recorded")
+print(f"current columns:  {' '.join(current_columns)}")
+print(f"all-time columns: {' '.join(all_time_columns)}")
+print("\ntop scorers all time:")
+for p in all_time_rows[:6]:
+    print(f"  {p['stats']['g']:3}  {p['name']:30} {p['nickname']:9} {'squad' if p['current'] else 'former':6} seasons={p['seasons']}")
+if unknown:
+    print('\nnot in the roster table (ignored):', ', '.join(sorted(unknown)))
