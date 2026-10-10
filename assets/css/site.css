@@ -915,7 +915,6 @@ h1, h2, h3 {
   background: radial-gradient(70% 120% at 50% 0%, rgba(30, 138, 60, .28), transparent 65%), var(--bg);
 }
 .esports-banner .container { padding-block: clamp(20px, 3vw, 36px) clamp(24px, 4vw, 40px); }
-.esports-banner .page-lead { margin-top: 20px; }
 .banner-frame {
   /* The artwork is 1024px wide; don't upscale it on big screens. */
   max-width: 1024px; margin-inline: auto; overflow: hidden;
