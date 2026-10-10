@@ -909,3 +909,22 @@ h1, h2, h3 {
 .form-note { margin-top: 14px; font-size: .9rem; color: var(--muted); }
 
 .esports-overview { margin-top: clamp(16px, 3vw, 28px); }
+
+.esports-banner {
+  position: relative; border-bottom: 1px solid var(--line);
+  background: radial-gradient(70% 120% at 50% 0%, rgba(30, 138, 60, .28), transparent 65%), var(--bg);
+}
+.esports-banner .container { padding-block: clamp(20px, 3vw, 36px) clamp(24px, 4vw, 40px); }
+.esports-banner .page-lead { margin-top: 20px; }
+.banner-frame {
+  /* The artwork is 1024px wide; don't upscale it on big screens. */
+  max-width: 1024px; margin-inline: auto; overflow: hidden;
+  border: 1px solid rgba(245, 197, 24, .3); border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .55); background: #061009;
+}
+.banner-frame img { width: 100%; height: auto; }
+
+@media (max-width: 520px) {
+  .club-facts div { flex-direction: column; gap: 2px; }
+  .club-facts dd { text-align: left; }
+}
