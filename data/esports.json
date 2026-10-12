@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T15:56:43.606Z",
+  "updatedAt": "2026-10-12T06:28:17.765Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,27 +8,47 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 45,
-    "wins": 23,
+    "gamesPlayed": 49,
+    "wins": 25,
     "ties": 6,
-    "losses": 16,
-    "goals": 104,
-    "goalsAgainst": 77,
-    "goalDifference": 27,
+    "losses": 18,
+    "goals": 118,
+    "goalsAgainst": 84,
+    "goalDifference": 34,
     "winRate": 51,
-    "skillRating": 1783,
+    "skillRating": 1776,
     "promotions": 3,
     "relegations": 0,
-    "winStreak": 4,
-    "unbeatenStreak": 7
+    "winStreak": 2,
+    "unbeatenStreak": 2
   },
   "positionCount": {
     "midfielder": 3,
     "goalkeeper": 0,
-    "forward": 4,
-    "defender": 1
+    "forward": 5,
+    "defender": 0
   },
   "members": [
+    {
+      "name": "pinage10",
+      "proName": "Hulk",
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 77,
+      "gamesPlayed": 28,
+      "goals": 32,
+      "assists": 20,
+      "winRate": 57,
+      "rating": 7.6,
+      "motm": 9,
+      "passSuccess": 77,
+      "passesMade": 363,
+      "tackleSuccess": 8,
+      "tacklesMade": 32,
+      "shotSuccess": 40,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
     {
       "name": "CeloLudolfR",
       "proName": "Celinho",
@@ -50,42 +70,22 @@
       "redCards": 0
     },
     {
-      "name": "pinage10",
-      "proName": "H. Hulk",
-      "position": "forward",
-      "proPosition": "25",
-      "overall": 77,
-      "gamesPlayed": 24,
-      "goals": 27,
-      "assists": 14,
-      "winRate": 58,
-      "rating": 7.5,
-      "motm": 7,
-      "passSuccess": 78,
-      "passesMade": 292,
-      "tackleSuccess": 6,
-      "tacklesMade": 20,
-      "shotSuccess": 40,
-      "cleanSheets": 0,
-      "redCards": 0
-    },
-    {
       "name": "phiLL0ve_u",
-      "proName": "T. Mendes",
+      "proName": "T. T Mendes",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 79,
-      "gamesPlayed": 38,
-      "goals": 16,
-      "assists": 17,
+      "overall": 78,
+      "gamesPlayed": 42,
+      "goals": 20,
+      "assists": 21,
       "winRate": 50,
-      "rating": 7.1,
+      "rating": 7.2,
       "motm": 0,
       "passSuccess": 71,
-      "passesMade": 500,
-      "tackleSuccess": 52,
-      "tacklesMade": 68,
-      "shotSuccess": 25,
+      "passesMade": 558,
+      "tackleSuccess": 53,
+      "tacklesMade": 74,
+      "shotSuccess": 28,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -152,20 +152,20 @@
     {
       "name": "brunhms_220685",
       "proName": "GOMEZ",
-      "position": "defender",
-      "proPosition": "5",
-      "overall": 80,
-      "gamesPlayed": 44,
-      "goals": 2,
-      "assists": 4,
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 73,
+      "gamesPlayed": 48,
+      "goals": 6,
+      "assists": 6,
       "winRate": 52,
       "rating": 7.2,
       "motm": 2,
-      "passSuccess": 79,
-      "passesMade": 576,
-      "tackleSuccess": 18,
-      "tacklesMade": 84,
-      "shotSuccess": 25,
+      "passSuccess": 78,
+      "passesMade": 643,
+      "tackleSuccess": 17,
+      "tacklesMade": 88,
+      "shotSuccess": 46,
       "cleanSheets": 0,
       "redCards": 1
     },
@@ -174,23 +174,107 @@
       "proName": "Dani",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 79,
-      "gamesPlayed": 18,
-      "goals": 0,
-      "assists": 0,
-      "winRate": 38,
-      "rating": 7.1,
+      "overall": 78,
+      "gamesPlayed": 22,
+      "goals": 1,
+      "assists": 1,
+      "winRate": 40,
+      "rating": 7.2,
       "motm": 3,
-      "passSuccess": 83,
-      "passesMade": 181,
-      "tackleSuccess": 30,
-      "tacklesMade": 27,
-      "shotSuccess": 0,
+      "passSuccess": 82,
+      "passesMade": 217,
+      "tackleSuccess": 31,
+      "tacklesMade": 40,
+      "shotSuccess": 25,
       "cleanSheets": 2,
       "redCards": 0
     }
   ],
   "matches": [
+    {
+      "matchId": "93444139210175",
+      "playedAt": "2026-10-12T06:24:25.000Z",
+      "opponent": "Tip Warrios",
+      "opponentId": "229588",
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "pinage10",
+      "scorers": [
+        {
+          "name": "pinage10",
+          "goals": 3
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 2
+        },
+        {
+          "name": "brunhms_220685",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "93280453350135",
+      "playedAt": "2026-10-12T06:06:52.000Z",
+      "opponent": "San Diego Unite",
+      "opponentId": "63636",
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "pinage10",
+      "scorers": [
+        {
+          "name": "phiLL0ve_u",
+          "goals": 2
+        },
+        {
+          "name": "brunhms_220685",
+          "goals": 2
+        },
+        {
+          "name": "multithread13",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "93128731590223",
+      "playedAt": "2026-10-12T05:48:07.000Z",
+      "opponent": "Fc Wert",
+      "opponentId": "229766",
+      "goalsFor": 1,
+      "goalsAgainst": 4,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "brunhms_220685",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "93318310420076",
+      "playedAt": "2026-10-12T05:28:18.000Z",
+      "opponent": "RBS United",
+      "opponentId": "569296",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "90004419930039",
       "playedAt": "2026-10-11T09:20:34.000Z",
@@ -318,90 +402,14 @@
           "goals": 2
         }
       ]
-    },
-    {
-      "matchId": "89754440990286",
-      "playedAt": "2026-10-11T07:32:44.000Z",
-      "opponent": "Classico XI UTD",
-      "opponentId": "1196437",
-      "goalsFor": 4,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 3
-        },
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "89848222250199",
-      "playedAt": "2026-10-11T07:14:24.000Z",
-      "opponent": "yo ho going",
-      "opponentId": "535950",
-      "goalsFor": 2,
-      "goalsAgainst": 3,
-      "result": "L",
-      "motm": "viricciardi",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 2
-        }
-      ]
-    },
-    {
-      "matchId": "89074855130429",
-      "playedAt": "2026-10-11T00:53:12.000Z",
-      "opponent": "Friied Fc",
-      "opponentId": "204760",
-      "goalsFor": 4,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "Matheusdvc",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "89252345100013",
-      "playedAt": "2026-10-11T00:31:19.000Z",
-      "opponent": "Los Patrones Fc",
-      "opponentId": "63267",
-      "goalsFor": 1,
-      "goalsAgainst": 3,
-      "result": "L",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
     "W",
     "W",
-    "W",
-    "W",
-    "D"
+    "L",
+    "L",
+    "W"
   ],
   "source": {
     "name": "EA Sports FC Pro Clubs",
