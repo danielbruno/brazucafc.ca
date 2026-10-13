@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T03:49:57.909Z",
+  "updatedAt": "2026-10-13T12:08:05.808Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 61,
-    "wins": 32,
+    "gamesPlayed": 62,
+    "wins": 33,
     "ties": 9,
     "losses": 20,
-    "goals": 148,
-    "goalsAgainst": 104,
-    "goalDifference": 44,
-    "winRate": 52,
-    "skillRating": 1835,
-    "promotions": 3,
+    "goals": 152,
+    "goalsAgainst": 106,
+    "goalDifference": 46,
+    "winRate": 53,
+    "skillRating": 1862,
+    "promotions": 4,
     "relegations": 0,
-    "winStreak": 4,
-    "unbeatenStreak": 6
+    "winStreak": 5,
+    "unbeatenStreak": 7
   },
   "positionCount": {
     "midfielder": 4,
@@ -35,17 +35,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 79,
-      "gamesPlayed": 36,
-      "goals": 42,
-      "assists": 28,
-      "winRate": 55,
+      "gamesPlayed": 37,
+      "goals": 43,
+      "assists": 29,
+      "winRate": 56,
       "rating": 7.8,
       "motm": 12,
-      "passSuccess": 77,
-      "passesMade": 492,
+      "passSuccess": 78,
+      "passesMade": 504,
       "tackleSuccess": 8,
       "tacklesMade": 43,
-      "shotSuccess": 40,
+      "shotSuccess": 39,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -55,17 +55,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 83,
-      "gamesPlayed": 37,
-      "goals": 35,
+      "gamesPlayed": 38,
+      "goals": 38,
       "assists": 13,
-      "winRate": 48,
+      "winRate": 50,
       "rating": 7.3,
       "motm": 5,
-      "passSuccess": 73,
-      "passesMade": 461,
-      "tackleSuccess": 57,
-      "tacklesMade": 30,
-      "shotSuccess": 33,
+      "passSuccess": 72,
+      "passesMade": 471,
+      "tackleSuccess": 58,
+      "tacklesMade": 31,
+      "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -75,14 +75,14 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 78,
-      "gamesPlayed": 54,
+      "gamesPlayed": 55,
       "goals": 25,
-      "assists": 28,
-      "winRate": 51,
+      "assists": 29,
+      "winRate": 52,
       "rating": 7.3,
       "motm": 2,
       "passSuccess": 72,
-      "passesMade": 785,
+      "passesMade": 802,
       "tackleSuccess": 53,
       "tacklesMade": 107,
       "shotSuccess": 28,
@@ -95,17 +95,17 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 82,
-      "gamesPlayed": 36,
+      "gamesPlayed": 37,
       "goals": 17,
-      "assists": 32,
-      "winRate": 63,
+      "assists": 33,
+      "winRate": 64,
       "rating": 7.6,
       "motm": 4,
-      "passSuccess": 78,
-      "passesMade": 649,
+      "passSuccess": 79,
+      "passesMade": 670,
       "tackleSuccess": 19,
       "tacklesMade": 44,
-      "shotSuccess": 26,
+      "shotSuccess": 25,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -135,16 +135,16 @@
       "position": "defender",
       "proPosition": "5",
       "overall": 78,
-      "gamesPlayed": 60,
+      "gamesPlayed": 61,
       "goals": 8,
       "assists": 7,
-      "winRate": 53,
+      "winRate": 54,
       "rating": 7.3,
       "motm": 2,
-      "passSuccess": 77,
-      "passesMade": 818,
+      "passSuccess": 78,
+      "passesMade": 837,
       "tackleSuccess": 18,
-      "tacklesMade": 111,
+      "tacklesMade": 112,
       "shotSuccess": 42,
       "cleanSheets": 0,
       "redCards": 1
@@ -155,16 +155,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 80,
-      "gamesPlayed": 33,
+      "gamesPlayed": 34,
       "goals": 7,
       "assists": 13,
-      "winRate": 57,
+      "winRate": 58,
       "rating": 7.6,
       "motm": 6,
       "passSuccess": 82,
-      "passesMade": 557,
+      "passesMade": 573,
       "tackleSuccess": 30,
-      "tacklesMade": 60,
+      "tacklesMade": 63,
       "shotSuccess": 29,
       "cleanSheets": 0,
       "redCards": 0
@@ -191,6 +191,26 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "96250948770484",
+      "playedAt": "2026-10-13T03:56:30.000Z",
+      "opponent": "Kirkkumcised FC",
+      "opponentId": "80087",
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "result": "W",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "96584077870399",
       "playedAt": "2026-10-13T03:36:44.000Z",
@@ -357,30 +377,6 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "95094544460257",
-      "playedAt": "2026-10-12T19:25:31.000Z",
-      "opponent": "ALI3F  TRICKS",
-      "opponentId": "235763",
-      "goalsFor": 4,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "multithread13",
-      "scorers": [
-        {
-          "name": "phiLL0ve_u",
-          "goals": 2
-        },
-        {
-          "name": "multithread13",
-          "goals": 1
-        },
-        {
-          "name": "Matheusdvc",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
@@ -388,7 +384,7 @@
     "W",
     "W",
     "W",
-    "D"
+    "W"
   ],
   "source": {
     "name": "EA Sports FC Pro Clubs",
