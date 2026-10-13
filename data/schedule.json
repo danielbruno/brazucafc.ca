@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T23:26:54.136Z",
+  "updatedAt": "2026-10-13T22:55:40.275Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -125,7 +125,7 @@
       "kickoff": "2026-11-01T19:00:00-07:00",
       "competition": "Winter Masters",
       "type": "League",
-      "status": "Conflict",
+      "status": "Active",
       "division": "Masters 3 (Fall)",
       "home": "AC Fury",
       "away": "Brazuca FC",
