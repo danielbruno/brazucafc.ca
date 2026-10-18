@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T22:55:40.275Z",
+  "updatedAt": "2026-10-18T11:23:00.799Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -91,16 +91,16 @@
       "division": "Masters 3 (Fall)",
       "home": "Albion Legacy FC",
       "away": "Brazuca FC",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 3,
       "field": "Golden Ears",
       "notes": null,
       "isBye": false,
       "isHome": false,
       "opponent": "Albion Legacy FC",
-      "goalsFor": null,
-      "goalsAgainst": null,
-      "result": null
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "result": "W"
     },
     {
       "kickoff": "2026-10-23T20:45:00-07:00",
