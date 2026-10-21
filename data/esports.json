@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T06:33:19.095Z",
+  "updatedAt": "2026-10-21T05:15:46.979Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 82,
-    "wins": 48,
-    "ties": 10,
-    "losses": 24,
-    "goals": 194,
-    "goalsAgainst": 122,
-    "goalDifference": 72,
+    "gamesPlayed": 87,
+    "wins": 51,
+    "ties": 11,
+    "losses": 25,
+    "goals": 207,
+    "goalsAgainst": 129,
+    "goalDifference": 78,
     "winRate": 59,
-    "skillRating": 2026,
+    "skillRating": 2023,
     "promotions": 4,
     "relegations": 0,
-    "winStreak": 10,
-    "unbeatenStreak": 10
+    "winStreak": 2,
+    "unbeatenStreak": 3
   },
   "positionCount": {
     "midfielder": 5,
@@ -34,18 +34,18 @@
       "proName": "Celinho",
       "position": "forward",
       "proPosition": "25",
-      "overall": 83,
-      "gamesPlayed": 58,
-      "goals": 51,
-      "assists": 18,
+      "overall": 84,
+      "gamesPlayed": 63,
+      "goals": 57,
+      "assists": 20,
       "winRate": 58,
       "rating": 7.3,
       "motm": 6,
       "passSuccess": 73,
-      "passesMade": 708,
-      "tackleSuccess": 61,
+      "passesMade": 761,
+      "tackleSuccess": 60,
       "tacklesMade": 45,
-      "shotSuccess": 35,
+      "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -74,18 +74,18 @@
       "proName": "T. T Mendes",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 79,
-      "gamesPlayed": 75,
-      "goals": 29,
-      "assists": 36,
+      "overall": 80,
+      "gamesPlayed": 80,
+      "goals": 31,
+      "assists": 39,
       "winRate": 58,
       "rating": 7.3,
-      "motm": 2,
+      "motm": 3,
       "passSuccess": 73,
-      "passesMade": 1073,
-      "tackleSuccess": 49,
-      "tacklesMade": 131,
-      "shotSuccess": 28,
+      "passesMade": 1156,
+      "tackleSuccess": 52,
+      "tacklesMade": 152,
+      "shotSuccess": 29,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -95,17 +95,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 83,
-      "gamesPlayed": 33,
-      "goals": 22,
-      "assists": 25,
+      "gamesPlayed": 38,
+      "goals": 27,
+      "assists": 32,
       "winRate": 63,
-      "rating": 7.3,
-      "motm": 7,
-      "passSuccess": 68,
-      "passesMade": 320,
-      "tackleSuccess": 10,
-      "tacklesMade": 16,
-      "shotSuccess": 36,
+      "rating": 7.4,
+      "motm": 9,
+      "passSuccess": 66,
+      "passesMade": 365,
+      "tackleSuccess": 9,
+      "tacklesMade": 19,
+      "shotSuccess": 39,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -135,16 +135,16 @@
       "position": "defender",
       "proPosition": "5",
       "overall": 81,
-      "gamesPlayed": 81,
+      "gamesPlayed": 86,
       "goals": 8,
       "assists": 9,
       "winRate": 59,
       "rating": 7.3,
       "motm": 5,
       "passSuccess": 79,
-      "passesMade": 1034,
-      "tackleSuccess": 20,
-      "tacklesMade": 142,
+      "passesMade": 1076,
+      "tackleSuccess": 21,
+      "tacklesMade": 156,
       "shotSuccess": 38,
       "cleanSheets": 0,
       "redCards": 1
@@ -231,6 +231,22 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "122886041630294",
+      "playedAt": "2026-10-21T04:01:22.000Z",
+      "opponent": "La Fabrica SP",
+      "opponentId": "340314",
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "result": "D",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        }
+      ]
+    },
     {
       "matchId": "99450913220228",
       "playedAt": "2026-10-14T04:48:21.000Z",
@@ -375,37 +391,13 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "96412406190466",
-      "playedAt": "2026-10-13T03:18:41.000Z",
-      "opponent": "Kosher Wieners",
-      "opponentId": "242361",
-      "goalsFor": 5,
-      "goalsAgainst": 3,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 3
-        },
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        },
-        {
-          "name": "Matheusdvc",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
+    "D",
     "L",
     "L",
     "D",
-    "W",
     "W"
   ],
   "source": {
