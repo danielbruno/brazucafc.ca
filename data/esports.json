@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T01:04:07.848Z",
+  "updatedAt": "2026-10-24T06:25:12.480Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 103,
-    "wins": 62,
+    "gamesPlayed": 105,
+    "wins": 63,
     "ties": 13,
-    "losses": 28,
-    "goals": 251,
-    "goalsAgainst": 156,
+    "losses": 29,
+    "goals": 255,
+    "goalsAgainst": 160,
     "goalDifference": 95,
     "winRate": 60,
-    "skillRating": 2038,
+    "skillRating": 2010,
     "promotions": 5,
     "relegations": 0,
-    "winStreak": 0,
-    "unbeatenStreak": 0
+    "winStreak": 1,
+    "unbeatenStreak": 1
   },
   "positionCount": {
     "midfielder": 5,
@@ -35,17 +35,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 82,
-      "gamesPlayed": 79,
-      "goals": 70,
-      "assists": 32,
+      "gamesPlayed": 81,
+      "goals": 73,
+      "assists": 33,
       "winRate": 60,
       "rating": 7.3,
       "motm": 6,
       "passSuccess": 72,
-      "passesMade": 964,
+      "passesMade": 983,
       "tackleSuccess": 61,
       "tacklesMade": 53,
-      "shotSuccess": 32,
+      "shotSuccess": 33,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -55,16 +55,16 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 80,
-      "gamesPlayed": 52,
+      "gamesPlayed": 54,
       "goals": 56,
-      "assists": 32,
+      "assists": 33,
       "winRate": 55,
-      "rating": 7.6,
+      "rating": 7.5,
       "motm": 13,
       "passSuccess": 77,
-      "passesMade": 694,
-      "tackleSuccess": 7,
-      "tacklesMade": 56,
+      "passesMade": 715,
+      "tackleSuccess": 8,
+      "tacklesMade": 58,
       "shotSuccess": 42,
       "cleanSheets": 0,
       "redCards": 0
@@ -75,16 +75,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 80,
-      "gamesPlayed": 95,
-      "goals": 39,
-      "assists": 42,
-      "winRate": 60,
+      "gamesPlayed": 97,
+      "goals": 40,
+      "assists": 44,
+      "winRate": 59,
       "rating": 7.4,
-      "motm": 6,
+      "motm": 7,
       "passSuccess": 73,
-      "passesMade": 1410,
-      "tackleSuccess": 50,
-      "tacklesMade": 174,
+      "passesMade": 1431,
+      "tackleSuccess": 51,
+      "tacklesMade": 179,
       "shotSuccess": 30,
       "cleanSheets": 0,
       "redCards": 0
@@ -114,17 +114,17 @@
       "proName": "Noé",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 82,
-      "gamesPlayed": 58,
+      "overall": 79,
+      "gamesPlayed": 60,
       "goals": 24,
       "assists": 47,
       "winRate": 65,
-      "rating": 7.6,
+      "rating": 7.5,
       "motm": 8,
       "passSuccess": 79,
-      "passesMade": 1120,
+      "passesMade": 1132,
       "tackleSuccess": 18,
-      "tacklesMade": 63,
+      "tacklesMade": 64,
       "shotSuccess": 26,
       "cleanSheets": 0,
       "redCards": 0
@@ -215,16 +215,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 77,
-      "gamesPlayed": 9,
+      "gamesPlayed": 11,
       "goals": 0,
       "assists": 0,
-      "winRate": 88,
-      "rating": 7.8,
+      "winRate": 81,
+      "rating": 7.7,
       "motm": 2,
-      "passSuccess": 86,
-      "passesMade": 151,
-      "tackleSuccess": 40,
-      "tacklesMade": 21,
+      "passSuccess": 83,
+      "passesMade": 173,
+      "tackleSuccess": 37,
+      "tacklesMade": 24,
       "shotSuccess": 0,
       "cleanSheets": 0,
       "redCards": 0
@@ -251,6 +251,37 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "132670284310119",
+      "playedAt": "2026-10-24T01:36:45.000Z",
+      "opponent": "4The Badge",
+      "opponentId": "67878",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "phiLL0ve_u",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "132556639570360",
+      "playedAt": "2026-10-24T01:17:26.000Z",
+      "opponent": "TapInMerchants",
+      "opponentId": "8412",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": null,
+      "scorers": []
+    },
     {
       "matchId": "132746067360383",
       "playedAt": "2026-10-24T00:59:52.000Z",
@@ -418,28 +449,12 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "122886041630294",
-      "playedAt": "2026-10-21T04:01:22.000Z",
-      "opponent": "La Fabrica SP",
-      "opponentId": "340314",
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "result": "D",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 3
-        }
-      ]
     }
   ],
   "form": [
+    "W",
     "L",
-    "W",
-    "W",
+    "L",
     "W",
     "W"
   ],
