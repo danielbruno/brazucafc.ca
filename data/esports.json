@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T06:25:12.480Z",
+  "updatedAt": "2026-10-24T11:34:18.774Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 105,
-    "wins": 63,
+    "gamesPlayed": 109,
+    "wins": 64,
     "ties": 13,
-    "losses": 29,
-    "goals": 255,
-    "goalsAgainst": 160,
-    "goalDifference": 95,
-    "winRate": 60,
-    "skillRating": 2010,
+    "losses": 32,
+    "goals": 260,
+    "goalsAgainst": 170,
+    "goalDifference": 90,
+    "winRate": 59,
+    "skillRating": 1962,
     "promotions": 5,
     "relegations": 0,
-    "winStreak": 1,
-    "unbeatenStreak": 1
+    "winStreak": 0,
+    "unbeatenStreak": 0
   },
   "positionCount": {
     "midfielder": 5,
@@ -35,17 +35,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 82,
-      "gamesPlayed": 81,
-      "goals": 73,
+      "gamesPlayed": 85,
+      "goals": 78,
       "assists": 33,
-      "winRate": 60,
+      "winRate": 58,
       "rating": 7.3,
-      "motm": 6,
+      "motm": 8,
       "passSuccess": 72,
-      "passesMade": 983,
-      "tackleSuccess": 61,
-      "tacklesMade": 53,
-      "shotSuccess": 33,
+      "passesMade": 1033,
+      "tackleSuccess": 62,
+      "tacklesMade": 56,
+      "shotSuccess": 32,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -75,16 +75,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 80,
-      "gamesPlayed": 97,
+      "gamesPlayed": 101,
       "goals": 40,
       "assists": 44,
-      "winRate": 59,
+      "winRate": 58,
       "rating": 7.4,
       "motm": 7,
       "passSuccess": 73,
-      "passesMade": 1431,
-      "tackleSuccess": 51,
-      "tacklesMade": 179,
+      "passesMade": 1498,
+      "tackleSuccess": 50,
+      "tacklesMade": 189,
       "shotSuccess": 30,
       "cleanSheets": 0,
       "redCards": 0
@@ -135,17 +135,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 80,
-      "gamesPlayed": 16,
+      "gamesPlayed": 20,
       "goals": 10,
-      "assists": 12,
-      "winRate": 68,
-      "rating": 7.8,
+      "assists": 14,
+      "winRate": 60,
+      "rating": 7.7,
       "motm": 4,
-      "passSuccess": 73,
-      "passesMade": 252,
-      "tackleSuccess": 32,
-      "tacklesMade": 15,
-      "shotSuccess": 34,
+      "passSuccess": 72,
+      "passesMade": 325,
+      "tackleSuccess": 33,
+      "tacklesMade": 25,
+      "shotSuccess": 29,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -252,6 +252,65 @@
   ],
   "matches": [
     {
+      "matchId": "133406004360042",
+      "playedAt": "2026-10-24T08:27:19.000Z",
+      "opponent": "CHAFA PALOS FC",
+      "opponentId": "486722",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": "CeloLudolfR",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "133346016280126",
+      "playedAt": "2026-10-24T08:06:53.000Z",
+      "opponent": "Tip Warrios",
+      "opponentId": "229588",
+      "goalsFor": 1,
+      "goalsAgainst": 4,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "133204319180456",
+      "playedAt": "2026-10-24T07:46:42.000Z",
+      "opponent": "Big Chiches",
+      "opponentId": "81309",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "CeloLudolfR",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "133048791180009",
+      "playedAt": "2026-10-24T07:27:27.000Z",
+      "opponent": "LA IRREVERENTE",
+      "opponentId": "55292",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": null,
+      "scorers": []
+    },
+    {
       "matchId": "132670284310119",
       "playedAt": "2026-10-24T01:36:45.000Z",
       "opponent": "4The Badge",
@@ -357,105 +416,13 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "129482079200360",
-      "playedAt": "2026-10-23T04:18:27.000Z",
-      "opponent": "Le seniors",
-      "opponentId": "225584",
-      "goalsFor": 6,
-      "goalsAgainst": 2,
-      "result": "W",
-      "motm": "Samwiseee27",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "Matheusdvc",
-          "goals": 2
-        },
-        {
-          "name": "Samwiseee27",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "129220827940012",
-      "playedAt": "2026-10-23T03:56:06.000Z",
-      "opponent": "XJB FC",
-      "opponentId": "45145",
-      "goalsFor": 1,
-      "goalsAgainst": 1,
-      "result": "D",
-      "motm": "phiLL0ve_u",
-      "scorers": [
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "129010980400006",
-      "playedAt": "2026-10-23T03:37:41.000Z",
-      "opponent": "Changos De Woo",
-      "opponentId": "190915",
-      "goalsFor": 5,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "Samwiseee27",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "pinage10",
-          "goals": 2
-        },
-        {
-          "name": "Samwiseee27",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "129006854860150",
-      "playedAt": "2026-10-23T03:21:28.000Z",
-      "opponent": "Changos De Woo",
-      "opponentId": "190915",
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "result": "D",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        },
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
-    "W",
     "L",
     "L",
     "W",
+    "L",
     "W"
   ],
   "source": {
