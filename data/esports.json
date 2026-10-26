@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T01:39:06.353Z",
+  "updatedAt": "2026-10-26T08:05:35.502Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 118,
-    "wins": 73,
+    "gamesPlayed": 121,
+    "wins": 75,
     "ties": 13,
-    "losses": 32,
-    "goals": 290,
-    "goalsAgainst": 176,
-    "goalDifference": 114,
+    "losses": 33,
+    "goals": 303,
+    "goalsAgainst": 182,
+    "goalDifference": 121,
     "winRate": 62,
-    "skillRating": 2057,
-    "promotions": 6,
+    "skillRating": 2062,
+    "promotions": 7,
     "relegations": 0,
-    "winStreak": 9,
-    "unbeatenStreak": 9
+    "winStreak": 1,
+    "unbeatenStreak": 1
   },
   "positionCount": {
     "midfielder": 4,
@@ -35,17 +35,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 83,
-      "gamesPlayed": 94,
-      "goals": 83,
-      "assists": 39,
+      "gamesPlayed": 97,
+      "goals": 89,
+      "assists": 40,
       "winRate": 62,
       "rating": 7.3,
       "motm": 8,
       "passSuccess": 72,
-      "passesMade": 1144,
-      "tackleSuccess": 60,
-      "tacklesMade": 56,
-      "shotSuccess": 31,
+      "passesMade": 1183,
+      "tackleSuccess": 58,
+      "tacklesMade": 58,
+      "shotSuccess": 32,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -74,18 +74,18 @@
       "proName": "T. T Mendes",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 81,
-      "gamesPlayed": 110,
-      "goals": 46,
-      "assists": 51,
+      "overall": 82,
+      "gamesPlayed": 113,
+      "goals": 49,
+      "assists": 55,
       "winRate": 61,
       "rating": 7.5,
-      "motm": 7,
+      "motm": 8,
       "passSuccess": 73,
-      "passesMade": 1628,
+      "passesMade": 1695,
       "tackleSuccess": 50,
-      "tacklesMade": 202,
-      "shotSuccess": 33,
+      "tacklesMade": 210,
+      "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -155,17 +155,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 80,
-      "gamesPlayed": 20,
-      "goals": 10,
-      "assists": 14,
+      "gamesPlayed": 23,
+      "goals": 13,
+      "assists": 18,
       "winRate": 60,
-      "rating": 7.7,
-      "motm": 4,
-      "passSuccess": 72,
-      "passesMade": 325,
-      "tackleSuccess": 33,
-      "tacklesMade": 25,
-      "shotSuccess": 29,
+      "rating": 7.8,
+      "motm": 5,
+      "passSuccess": 73,
+      "passesMade": 400,
+      "tackleSuccess": 37,
+      "tacklesMade": 32,
+      "shotSuccess": 31,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -214,17 +214,17 @@
       "proName": "Ronaldinho",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 77,
-      "gamesPlayed": 11,
+      "overall": 79,
+      "gamesPlayed": 14,
       "goals": 0,
       "assists": 0,
-      "winRate": 81,
-      "rating": 7.7,
+      "winRate": 78,
+      "rating": 8,
       "motm": 2,
       "passSuccess": 83,
-      "passesMade": 173,
-      "tackleSuccess": 37,
-      "tacklesMade": 24,
+      "passesMade": 238,
+      "tackleSuccess": 38,
+      "tacklesMade": 36,
       "shotSuccess": 0,
       "cleanSheets": 0,
       "redCards": 0
@@ -251,6 +251,74 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "139282724560042",
+      "playedAt": "2026-10-26T03:47:01.000Z",
+      "opponent": "Gerald Town",
+      "opponentId": "1190915",
+      "goalsFor": 4,
+      "goalsAgainst": 3,
+      "result": "W",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        },
+        {
+          "name": "Samwiseee27",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "139300658600286",
+      "playedAt": "2026-10-26T03:26:20.000Z",
+      "opponent": "El Poso FC",
+      "opponentId": "136136",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": "phiLL0ve_u",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "139240665380199",
+      "playedAt": "2026-10-26T03:02:14.000Z",
+      "opponent": "LNSB V2",
+      "opponentId": "535948",
+      "goalsFor": 7,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "Samwiseee27",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "Samwiseee27",
+          "goals": 2
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "139314272780179",
       "playedAt": "2026-10-26T01:29:10.000Z",
@@ -390,71 +458,11 @@
           "goals": 2
         }
       ]
-    },
-    {
-      "matchId": "138922641250153",
-      "playedAt": "2026-10-25T23:29:11.000Z",
-      "opponent": "Super Saiyajins",
-      "opponentId": "55979",
-      "goalsFor": 5,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "phiLL0ve_u",
-          "goals": 2
-        },
-        {
-          "name": "pinage10",
-          "goals": 2
-        },
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "138806695450057",
-      "playedAt": "2026-10-25T23:09:36.000Z",
-      "opponent": "Pitote FC",
-      "opponentId": "570329",
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "Matheusdvc",
-      "scorers": [
-        {
-          "name": "Matheusdvc",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "133406004360042",
-      "playedAt": "2026-10-24T08:27:19.000Z",
-      "opponent": "CHAFA PALOS FC",
-      "opponentId": "486722",
-      "goalsFor": 2,
-      "goalsAgainst": 3,
-      "result": "L",
-      "motm": "CeloLudolfR",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        }
-      ]
     }
   ],
   "form": [
     "W",
-    "W",
+    "L",
     "W",
     "W",
     "W"
