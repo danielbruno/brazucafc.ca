@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T08:05:35.502Z",
+  "updatedAt": "2026-10-27T06:47:57.004Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,24 +8,24 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 121,
-    "wins": 75,
-    "ties": 13,
-    "losses": 33,
-    "goals": 303,
-    "goalsAgainst": 182,
-    "goalDifference": 121,
-    "winRate": 62,
-    "skillRating": 2062,
+    "gamesPlayed": 127,
+    "wins": 78,
+    "ties": 15,
+    "losses": 34,
+    "goals": 321,
+    "goalsAgainst": 192,
+    "goalDifference": 129,
+    "winRate": 61,
+    "skillRating": 2076,
     "promotions": 7,
     "relegations": 0,
     "winStreak": 1,
-    "unbeatenStreak": 1
+    "unbeatenStreak": 4
   },
   "positionCount": {
-    "midfielder": 4,
+    "midfielder": 5,
     "goalkeeper": 0,
-    "forward": 5,
+    "forward": 4,
     "defender": 1
   },
   "members": [
@@ -35,16 +35,16 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 83,
-      "gamesPlayed": 97,
-      "goals": 89,
-      "assists": 40,
+      "gamesPlayed": 103,
+      "goals": 96,
+      "assists": 45,
       "winRate": 62,
-      "rating": 7.3,
+      "rating": 7.4,
       "motm": 8,
-      "passSuccess": 72,
-      "passesMade": 1183,
+      "passSuccess": 71,
+      "passesMade": 1265,
       "tackleSuccess": 58,
-      "tacklesMade": 58,
+      "tacklesMade": 64,
       "shotSuccess": 32,
       "cleanSheets": 0,
       "redCards": 0
@@ -55,16 +55,16 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 80,
-      "gamesPlayed": 63,
-      "goals": 65,
-      "assists": 38,
-      "winRate": 61,
+      "gamesPlayed": 69,
+      "goals": 71,
+      "assists": 40,
+      "winRate": 60,
       "rating": 7.6,
       "motm": 15,
       "passSuccess": 76,
-      "passesMade": 830,
-      "tackleSuccess": 8,
-      "tacklesMade": 70,
+      "passesMade": 915,
+      "tackleSuccess": 7,
+      "tacklesMade": 74,
       "shotSuccess": 41,
       "cleanSheets": 0,
       "redCards": 0
@@ -74,18 +74,38 @@
       "proName": "T. T Mendes",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 82,
-      "gamesPlayed": 113,
-      "goals": 49,
-      "assists": 55,
+      "overall": 80,
+      "gamesPlayed": 119,
+      "goals": 50,
+      "assists": 58,
       "winRate": 61,
       "rating": 7.5,
-      "motm": 8,
-      "passSuccess": 73,
-      "passesMade": 1695,
-      "tackleSuccess": 50,
-      "tacklesMade": 210,
+      "motm": 9,
+      "passSuccess": 74,
+      "passesMade": 1782,
+      "tackleSuccess": 49,
+      "tacklesMade": 220,
       "shotSuccess": 34,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "Matheusdvc",
+      "proName": "Noé",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 83,
+      "gamesPlayed": 71,
+      "goals": 27,
+      "assists": 57,
+      "winRate": 66,
+      "rating": 7.5,
+      "motm": 11,
+      "passSuccess": 79,
+      "passesMade": 1330,
+      "tackleSuccess": 17,
+      "tacklesMade": 76,
+      "shotSuccess": 26,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -110,62 +130,42 @@
       "redCards": 0
     },
     {
-      "name": "Matheusdvc",
-      "proName": "Noé",
-      "position": "midfielder",
-      "proPosition": "14",
-      "overall": 82,
-      "gamesPlayed": 66,
-      "goals": 26,
-      "assists": 52,
-      "winRate": 68,
-      "rating": 7.6,
-      "motm": 10,
-      "passSuccess": 80,
-      "passesMade": 1229,
-      "tackleSuccess": 18,
-      "tacklesMade": 73,
-      "shotSuccess": 27,
+      "name": "Samwiseee27",
+      "proName": "S. Moura",
+      "position": "forward",
+      "proPosition": "25",
+      "overall": 80,
+      "gamesPlayed": 27,
+      "goals": 16,
+      "assists": 19,
+      "winRate": 59,
+      "rating": 7.8,
+      "motm": 6,
+      "passSuccess": 74,
+      "passesMade": 460,
+      "tackleSuccess": 38,
+      "tacklesMade": 37,
+      "shotSuccess": 33,
       "cleanSheets": 0,
       "redCards": 0
     },
     {
       "name": "viricciardi",
       "proName": "V. Ricci",
-      "position": "forward",
-      "proPosition": "25",
-      "overall": 78,
-      "gamesPlayed": 50,
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 79,
+      "gamesPlayed": 53,
       "goals": 13,
       "assists": 17,
-      "winRate": 64,
+      "winRate": 62,
       "rating": 7.7,
       "motm": 9,
       "passSuccess": 81,
-      "passesMade": 793,
-      "tackleSuccess": 30,
-      "tacklesMade": 86,
+      "passesMade": 825,
+      "tackleSuccess": 31,
+      "tacklesMade": 91,
       "shotSuccess": 35,
-      "cleanSheets": 0,
-      "redCards": 0
-    },
-    {
-      "name": "Samwiseee27",
-      "proName": "S. Moura",
-      "position": "forward",
-      "proPosition": "25",
-      "overall": 80,
-      "gamesPlayed": 23,
-      "goals": 13,
-      "assists": 18,
-      "winRate": 60,
-      "rating": 7.8,
-      "motm": 5,
-      "passSuccess": 73,
-      "passesMade": 400,
-      "tackleSuccess": 37,
-      "tacklesMade": 32,
-      "shotSuccess": 31,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -174,20 +174,20 @@
       "proName": "GOMEZ",
       "position": "defender",
       "proPosition": "5",
-      "overall": 82,
-      "gamesPlayed": 100,
+      "overall": 85,
+      "gamesPlayed": 105,
       "goals": 8,
       "assists": 9,
-      "winRate": 61,
+      "winRate": 60,
       "rating": 7.3,
       "motm": 8,
       "passSuccess": 80,
-      "passesMade": 1268,
+      "passesMade": 1304,
       "tackleSuccess": 22,
-      "tacklesMade": 178,
-      "shotSuccess": 38,
+      "tacklesMade": 184,
+      "shotSuccess": 36,
       "cleanSheets": 0,
-      "redCards": 1
+      "redCards": 2
     },
     {
       "name": "multithread13",
@@ -211,20 +211,20 @@
     },
     {
       "name": "DPRambo35",
-      "proName": "Ronaldinho",
+      "proName": "Diego",
       "position": "midfielder",
       "proPosition": "14",
-      "overall": 79,
-      "gamesPlayed": 14,
+      "overall": 81,
+      "gamesPlayed": 16,
       "goals": 0,
       "assists": 0,
-      "winRate": 78,
-      "rating": 8,
+      "winRate": 75,
+      "rating": 7.9,
       "motm": 2,
       "passSuccess": 83,
-      "passesMade": 238,
-      "tackleSuccess": 38,
-      "tacklesMade": 36,
+      "passesMade": 270,
+      "tackleSuccess": 36,
+      "tacklesMade": 37,
       "shotSuccess": 0,
       "cleanSheets": 0,
       "redCards": 0
@@ -251,6 +251,114 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "142070846110414",
+      "playedAt": "2026-10-27T04:20:36.000Z",
+      "opponent": "Pace in yo Face",
+      "opponentId": "77291",
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "result": "W",
+      "motm": "Matheusdvc",
+      "scorers": [
+        {
+          "name": "Samwiseee27",
+          "goals": 2
+        },
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        },
+        {
+          "name": "Matheusdvc",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "141982975760481",
+      "playedAt": "2026-10-27T03:52:33.000Z",
+      "opponent": "Southbay",
+      "opponentId": "60859",
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "result": "D",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "142182397930299",
+      "playedAt": "2026-10-27T03:27:41.000Z",
+      "opponent": "SadBoyz4Life FC",
+      "opponentId": "7692",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "result": "D",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "142218186810263",
+      "playedAt": "2026-10-27T02:39:02.000Z",
+      "opponent": "United Fury FC",
+      "opponentId": "295356",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "142042546870360",
+      "playedAt": "2026-10-27T02:18:07.000Z",
+      "opponent": "Bay Hittaz",
+      "opponentId": "65921",
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "phiLL0ve_u",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 3
+        },
+        {
+          "name": "pinage10",
+          "goals": 2
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "139282724560042",
       "playedAt": "2026-10-26T03:47:01.000Z",
@@ -366,105 +474,13 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "139264141640433",
-      "playedAt": "2026-10-26T00:48:55.000Z",
-      "opponent": "Troncos",
-      "opponentId": "423177",
-      "goalsFor": 2,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "multithread13",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        }
-      ]
-    },
-    {
-      "matchId": "138940951560448",
-      "playedAt": "2026-10-26T00:26:48.000Z",
-      "opponent": "Snapdragon",
-      "opponentId": "237252",
-      "goalsFor": 4,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "multithread13",
-      "scorers": [
-        {
-          "name": "viricciardi",
-          "goals": 3
-        },
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "139218061360131",
-      "playedAt": "2026-10-26T00:08:48.000Z",
-      "opponent": "blacc diamondz",
-      "opponentId": "773508",
-      "goalsFor": 4,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "Matheusdvc",
-      "scorers": [
-        {
-          "name": "phiLL0ve_u",
-          "goals": 2
-        },
-        {
-          "name": "Matheusdvc",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "138960805910256",
-      "playedAt": "2026-10-25T23:59:30.000Z",
-      "opponent": "Equis De",
-      "opponentId": "55734",
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "viricciardi",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "138944719530055",
-      "playedAt": "2026-10-25T23:49:27.000Z",
-      "opponent": "FC Antagonist",
-      "opponentId": "1497820",
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "multithread13",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 2
-        }
-      ]
     }
   ],
   "form": [
     "W",
+    "D",
+    "D",
     "L",
-    "W",
-    "W",
     "W"
   ],
   "source": {
