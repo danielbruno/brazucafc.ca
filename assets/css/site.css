@@ -727,6 +727,8 @@ h1, h2, h3 {
 .sponsor:hover { border-color: rgba(245, 197, 24, .4); transform: translateY(-2px); }
 .sponsor-mark { display: flex; align-items: center; height: 70px; }
 .sponsor-mark svg { width: auto; height: 100%; }
+/* Sponsors who supply a logo file rather than a drawn mark. */
+.sponsor-mark img { width: auto; height: 100%; border-radius: 14px; }
 .sponsor-name { font-size: 1.15rem; font-weight: 600; line-height: 1.25; }
 .sponsor-name .lvl { font-weight: 500; color: var(--red); }
 .sponsor-name .ll { font-weight: 400; letter-spacing: .09em; color: var(--green-bright); }
