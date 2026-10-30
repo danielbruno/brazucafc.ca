@@ -143,6 +143,23 @@ Add photos to `assets/img/gallery/` and list them in `data/gallery.json`:
 Photos go inside an album's `photos` array; add a new object to `albums` to
 start a new album. `thumb` is optional (an ~800px-wide copy keeps the grid fast).
 
+## Cache busting
+
+GitHub Pages serves assets with `cache-control: max-age=600`, so for ten
+minutes after a deploy a browser can load new HTML alongside the previous
+stylesheet. The CSS and JS links therefore carry a content hash
+(`site.css?v=ae584fca`), giving every version its own URL.
+
+**After changing anything in `assets/css/` or `assets/js/`, restamp the pages
+before committing:**
+
+```bash
+python3 scripts/version-assets.py
+```
+
+It rewrites the links in all the HTML pages and prints the new hashes. Files
+that didn't change keep their hash, so they stay cached.
+
 ## Run locally
 
 The pages load JSON with `fetch`, so open them through a local server rather
