@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T09:56:13.423Z",
+  "updatedAt": "2026-10-31T23:40:31.998Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,25 +8,25 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 146,
-    "wins": 86,
+    "gamesPlayed": 149,
+    "wins": 89,
     "ties": 18,
     "losses": 42,
-    "goals": 361,
-    "goalsAgainst": 228,
-    "goalDifference": 133,
-    "winRate": 59,
-    "skillRating": 1988,
+    "goals": 370,
+    "goalsAgainst": 230,
+    "goalDifference": 140,
+    "winRate": 60,
+    "skillRating": 2029,
     "promotions": 7,
     "relegations": 0,
-    "winStreak": 0,
-    "unbeatenStreak": 0
+    "winStreak": 3,
+    "unbeatenStreak": 3
   },
   "positionCount": {
-    "midfielder": 5,
+    "midfielder": 4,
     "goalkeeper": 0,
     "forward": 5,
-    "defender": 1
+    "defender": 2
   },
   "members": [
     {
@@ -54,37 +54,37 @@
       "proName": "Hulk",
       "position": "forward",
       "proPosition": "25",
-      "overall": 80,
-      "gamesPlayed": 88,
-      "goals": 79,
-      "assists": 49,
-      "winRate": 56,
+      "overall": 81,
+      "gamesPlayed": 91,
+      "goals": 82,
+      "assists": 50,
+      "winRate": 58,
       "rating": 7.5,
-      "motm": 17,
+      "motm": 18,
       "passSuccess": 76,
-      "passesMade": 1197,
+      "passesMade": 1249,
       "tackleSuccess": 8,
-      "tacklesMade": 98,
-      "shotSuccess": 39,
+      "tacklesMade": 105,
+      "shotSuccess": 40,
       "cleanSheets": 0,
       "redCards": 0
     },
     {
       "name": "phiLL0ve_u",
       "proName": "T. T Mendes",
-      "position": "midfielder",
-      "proPosition": "14",
-      "overall": 82,
-      "gamesPlayed": 130,
-      "goals": 51,
-      "assists": 58,
-      "winRate": 60,
+      "position": "defender",
+      "proPosition": "5",
+      "overall": 75,
+      "gamesPlayed": 133,
+      "goals": 52,
+      "assists": 59,
+      "winRate": 61,
       "rating": 7.5,
       "motm": 11,
       "passSuccess": 74,
-      "passesMade": 1956,
-      "tackleSuccess": 48,
-      "tacklesMade": 237,
+      "passesMade": 2008,
+      "tackleSuccess": 49,
+      "tacklesMade": 243,
       "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
@@ -95,17 +95,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 82,
-      "gamesPlayed": 53,
-      "goals": 39,
-      "assists": 41,
-      "winRate": 60,
-      "rating": 7.3,
+      "gamesPlayed": 56,
+      "goals": 41,
+      "assists": 42,
+      "winRate": 62,
+      "rating": 7.2,
       "motm": 9,
       "passSuccess": 66,
-      "passesMade": 501,
-      "tackleSuccess": 10,
+      "passesMade": 519,
+      "tackleSuccess": 9,
       "tacklesMade": 28,
-      "shotSuccess": 34,
+      "shotSuccess": 35,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -115,16 +115,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 83,
-      "gamesPlayed": 77,
-      "goals": 29,
-      "assists": 60,
-      "winRate": 67,
+      "gamesPlayed": 80,
+      "goals": 31,
+      "assists": 65,
+      "winRate": 68,
       "rating": 7.5,
-      "motm": 12,
+      "motm": 13,
       "passSuccess": 79,
-      "passesMade": 1407,
+      "passesMade": 1481,
       "tackleSuccess": 18,
-      "tacklesMade": 84,
+      "tacklesMade": 90,
       "shotSuccess": 27,
       "cleanSheets": 0,
       "redCards": 0
@@ -135,15 +135,15 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 82,
-      "gamesPlayed": 39,
+      "gamesPlayed": 41,
       "goals": 20,
       "assists": 23,
-      "winRate": 51,
-      "rating": 7.7,
+      "winRate": 53,
+      "rating": 7.6,
       "motm": 6,
       "passSuccess": 74,
-      "passesMade": 677,
-      "tackleSuccess": 35,
+      "passesMade": 721,
+      "tackleSuccess": 34,
       "tacklesMade": 56,
       "shotSuccess": 32,
       "cleanSheets": 0,
@@ -174,19 +174,19 @@
       "proName": "GOMEZ",
       "position": "defender",
       "proPosition": "5",
-      "overall": 86,
-      "gamesPlayed": 123,
+      "overall": 87,
+      "gamesPlayed": 126,
       "goals": 8,
       "assists": 9,
-      "winRate": 57,
+      "winRate": 58,
       "rating": 7.4,
       "motm": 9,
-      "passSuccess": 80,
-      "passesMade": 1490,
+      "passSuccess": 81,
+      "passesMade": 1534,
       "tackleSuccess": 23,
-      "tacklesMade": 218,
+      "tacklesMade": 223,
       "shotSuccess": 30,
-      "cleanSheets": 1,
+      "cleanSheets": 2,
       "redCards": 3
     },
     {
@@ -235,22 +235,86 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 82,
-      "gamesPlayed": 20,
+      "gamesPlayed": 21,
       "goals": 0,
       "assists": 0,
-      "winRate": 60,
+      "winRate": 61,
       "rating": 7.9,
       "motm": 2,
       "passSuccess": 81,
-      "passesMade": 338,
+      "passesMade": 369,
       "tackleSuccess": 32,
-      "tacklesMade": 46,
+      "tacklesMade": 48,
       "shotSuccess": 0,
       "cleanSheets": 0,
       "redCards": 0
     }
   ],
   "matches": [
+    {
+      "matchId": "156650489810083",
+      "playedAt": "2026-10-31T23:32:58.000Z",
+      "opponent": "Wakala Fc",
+      "opponentId": "36681",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "pinage10",
+      "scorers": [
+        {
+          "name": "pinage10",
+          "goals": 2
+        },
+        {
+          "name": "SandroJuniorBM",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "156528620400450",
+      "playedAt": "2026-10-31T23:14:42.000Z",
+      "opponent": "Mustardgold",
+      "opponentId": "183511",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "Matheusdvc",
+      "scorers": [
+        {
+          "name": "Matheusdvc",
+          "goals": 1
+        },
+        {
+          "name": "SandroJuniorBM",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "156414633580171",
+      "playedAt": "2026-10-31T22:53:50.000Z",
+      "opponent": "Robson Rats FC",
+      "opponentId": "196637",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        },
+        {
+          "name": "Matheusdvc",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "154494149330218",
       "playedAt": "2026-10-31T05:42:53.000Z",
@@ -364,61 +428,14 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "151284352390335",
-      "playedAt": "2026-10-30T03:14:09.000Z",
-      "opponent": "K3 FC",
-      "opponentId": "49166",
-      "goalsFor": 2,
-      "goalsAgainst": 2,
-      "result": "D",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "SandroJuniorBM",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "151216476940249",
-      "playedAt": "2026-10-30T02:53:21.000Z",
-      "opponent": "blue lock x1",
-      "opponentId": "473",
-      "goalsFor": 0,
-      "goalsAgainst": 3,
-      "result": "L",
-      "motm": null,
-      "scorers": []
-    },
-    {
-      "matchId": "151266290040273",
-      "playedAt": "2026-10-30T02:44:36.000Z",
-      "opponent": "Get Paid FC",
-      "opponentId": "66482",
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "result": "D",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
+    "W",
+    "W",
+    "W",
     "L",
-    "D",
-    "L",
-    "L",
-    "L"
+    "D"
   ],
   "source": {
     "name": "EA Sports FC Pro Clubs",
