@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T11:46:25.727Z",
+  "updatedAt": "2026-10-31T05:56:42.547Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -20,6 +20,18 @@
     },
     {
       "pos": 2,
+      "team": "Albion Legacy FC",
+      "gp": 6,
+      "w": 3,
+      "d": 1,
+      "l": 2,
+      "gf": 11,
+      "ga": 14,
+      "gd": -3,
+      "pts": 10
+    },
+    {
+      "pos": 3,
       "team": "AC Fury",
       "gp": 5,
       "w": 3,
@@ -31,7 +43,7 @@
       "pts": 9
     },
     {
-      "pos": 3,
+      "pos": 4,
       "team": "Ridge Meadows Gunners",
       "gp": 6,
       "w": 2,
@@ -43,7 +55,7 @@
       "pts": 7
     },
     {
-      "pos": 4,
+      "pos": 5,
       "team": "LUSA Heat",
       "gp": 5,
       "w": 2,
@@ -51,18 +63,6 @@
       "l": 2,
       "gf": 11,
       "ga": 16,
-      "gd": -5,
-      "pts": 7
-    },
-    {
-      "pos": 5,
-      "team": "Albion Legacy FC",
-      "gp": 5,
-      "w": 2,
-      "d": 1,
-      "l": 2,
-      "gf": 8,
-      "ga": 13,
       "gd": -5,
       "pts": 7
     },
@@ -81,13 +81,13 @@
     {
       "pos": 7,
       "team": "Ridge Meadows Chargers",
-      "gp": 5,
+      "gp": 6,
       "w": 1,
       "d": 0,
-      "l": 4,
-      "gf": 10,
-      "ga": 21,
-      "gd": -11,
+      "l": 5,
+      "gf": 11,
+      "ga": 24,
+      "gd": -13,
       "pts": 3
     }
   ]
