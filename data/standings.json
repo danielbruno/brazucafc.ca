@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T05:56:42.547Z",
+  "updatedAt": "2026-11-02T06:26:06.106Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -9,14 +9,14 @@
     {
       "pos": 1,
       "team": "Brazuca FC",
-      "gp": 5,
-      "w": 5,
+      "gp": 6,
+      "w": 6,
       "d": 0,
       "l": 0,
-      "gf": 29,
-      "ga": 1,
-      "gd": 28,
-      "pts": 15
+      "gf": 32,
+      "ga": 2,
+      "gd": 30,
+      "pts": 18
     },
     {
       "pos": 2,
@@ -32,18 +32,30 @@
     },
     {
       "pos": 3,
-      "team": "AC Fury",
-      "gp": 5,
+      "team": "LUSA Heat",
+      "gp": 6,
       "w": 3,
-      "d": 0,
+      "d": 1,
       "l": 2,
-      "gf": 11,
-      "ga": 6,
-      "gd": 5,
-      "pts": 9
+      "gf": 12,
+      "ga": 16,
+      "gd": -4,
+      "pts": 10
     },
     {
       "pos": 4,
+      "team": "AC Fury",
+      "gp": 6,
+      "w": 3,
+      "d": 0,
+      "l": 3,
+      "gf": 12,
+      "ga": 9,
+      "gd": 3,
+      "pts": 9
+    },
+    {
+      "pos": 5,
       "team": "Ridge Meadows Gunners",
       "gp": 6,
       "w": 2,
@@ -55,27 +67,15 @@
       "pts": 7
     },
     {
-      "pos": 5,
-      "team": "LUSA Heat",
-      "gp": 5,
-      "w": 2,
-      "d": 1,
-      "l": 2,
-      "gf": 11,
-      "ga": 16,
-      "gd": -5,
-      "pts": 7
-    },
-    {
       "pos": 6,
       "team": "Poco FC Revolution",
-      "gp": 5,
+      "gp": 6,
       "w": 1,
       "d": 1,
-      "l": 3,
+      "l": 4,
       "gf": 4,
-      "ga": 11,
-      "gd": -7,
+      "ga": 12,
+      "gd": -8,
       "pts": 4
     },
     {
