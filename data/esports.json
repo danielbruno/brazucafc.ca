@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T11:27:46.405Z",
+  "updatedAt": "2026-11-06T07:20:35.474Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,25 +8,25 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 175,
-    "wins": 106,
+    "gamesPlayed": 184,
+    "wins": 114,
     "ties": 20,
-    "losses": 49,
-    "goals": 437,
-    "goalsAgainst": 270,
-    "goalDifference": 167,
-    "winRate": 61,
-    "skillRating": 2065,
+    "losses": 50,
+    "goals": 462,
+    "goalsAgainst": 283,
+    "goalDifference": 179,
+    "winRate": 62,
+    "skillRating": 2108,
     "promotions": 8,
     "relegations": 0,
-    "winStreak": 0,
-    "unbeatenStreak": 5
+    "winStreak": 4,
+    "unbeatenStreak": 4
   },
   "positionCount": {
-    "midfielder": 3,
+    "midfielder": 5,
     "goalkeeper": 0,
-    "forward": 6,
-    "defender": 2
+    "forward": 5,
+    "defender": 1
   },
   "members": [
     {
@@ -55,16 +55,16 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 81,
-      "gamesPlayed": 117,
-      "goals": 102,
-      "assists": 67,
-      "winRate": 59,
+      "gamesPlayed": 126,
+      "goals": 112,
+      "assists": 74,
+      "winRate": 61,
       "rating": 7.6,
-      "motm": 25,
+      "motm": 26,
       "passSuccess": 77,
-      "passesMade": 1702,
+      "passesMade": 1847,
       "tackleSuccess": 8,
-      "tacklesMade": 134,
+      "tacklesMade": 149,
       "shotSuccess": 39,
       "cleanSheets": 0,
       "redCards": 0
@@ -72,19 +72,19 @@
     {
       "name": "phiLL0ve_u",
       "proName": "T. T Mendes",
-      "position": "defender",
-      "proPosition": "5",
-      "overall": 82,
-      "gamesPlayed": 151,
-      "goals": 54,
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 83,
+      "gamesPlayed": 160,
+      "goals": 55,
       "assists": 63,
-      "winRate": 61,
+      "winRate": 63,
       "rating": 7.5,
-      "motm": 15,
+      "motm": 16,
       "passSuccess": 76,
-      "passesMade": 2319,
+      "passesMade": 2459,
       "tackleSuccess": 51,
-      "tacklesMade": 285,
+      "tacklesMade": 303,
       "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
@@ -95,17 +95,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 81,
-      "gamesPlayed": 74,
-      "goals": 53,
-      "assists": 51,
-      "winRate": 62,
+      "gamesPlayed": 78,
+      "goals": 55,
+      "assists": 53,
+      "winRate": 64,
       "rating": 7.2,
       "motm": 10,
-      "passSuccess": 69,
-      "passesMade": 758,
+      "passSuccess": 68,
+      "passesMade": 778,
       "tackleSuccess": 10,
       "tacklesMade": 39,
-      "shotSuccess": 34,
+      "shotSuccess": 35,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -115,17 +115,17 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 83,
-      "gamesPlayed": 87,
+      "gamesPlayed": 91,
       "goals": 33,
-      "assists": 70,
-      "winRate": 67,
+      "assists": 72,
+      "winRate": 68,
       "rating": 7.5,
       "motm": 13,
       "passSuccess": 79,
-      "passesMade": 1636,
+      "passesMade": 1711,
       "tackleSuccess": 18,
-      "tacklesMade": 100,
-      "shotSuccess": 27,
+      "tacklesMade": 103,
+      "shotSuccess": 26,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -135,37 +135,57 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 82,
-      "gamesPlayed": 50,
-      "goals": 24,
-      "assists": 29,
-      "winRate": 54,
-      "rating": 7.6,
-      "motm": 6,
+      "gamesPlayed": 53,
+      "goals": 26,
+      "assists": 32,
+      "winRate": 56,
+      "rating": 7.7,
+      "motm": 7,
       "passSuccess": 75,
-      "passesMade": 900,
+      "passesMade": 987,
       "tackleSuccess": 36,
-      "tacklesMade": 77,
-      "shotSuccess": 32,
+      "tacklesMade": 83,
+      "shotSuccess": 33,
       "cleanSheets": 0,
       "redCards": 1
     },
     {
       "name": "viricciardi",
       "proName": "V. Ricci",
+      "position": "midfielder",
+      "proPosition": "14",
+      "overall": 80,
+      "gamesPlayed": 86,
+      "goals": 19,
+      "assists": 21,
+      "winRate": 68,
+      "rating": 7.6,
+      "motm": 11,
+      "passSuccess": 82,
+      "passesMade": 1276,
+      "tackleSuccess": 32,
+      "tacklesMade": 157,
+      "shotSuccess": 36,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "jlguariglia",
+      "proName": "Guariglia",
       "position": "forward",
       "proPosition": "25",
       "overall": 79,
-      "gamesPlayed": 77,
-      "goals": 17,
-      "assists": 17,
-      "winRate": 66,
-      "rating": 7.7,
-      "motm": 11,
-      "passSuccess": 82,
-      "passesMade": 1171,
-      "tackleSuccess": 33,
-      "tacklesMade": 146,
-      "shotSuccess": 35,
+      "gamesPlayed": 21,
+      "goals": 15,
+      "assists": 8,
+      "winRate": 71,
+      "rating": 7.8,
+      "motm": 3,
+      "passSuccess": 78,
+      "passesMade": 356,
+      "tackleSuccess": 35,
+      "tacklesMade": 36,
+      "shotSuccess": 68,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -175,39 +195,19 @@
       "position": "defender",
       "proPosition": "5",
       "overall": 86,
-      "gamesPlayed": 151,
+      "gamesPlayed": 157,
       "goals": 8,
       "assists": 10,
-      "winRate": 60,
+      "winRate": 61,
       "rating": 7.4,
       "motm": 14,
       "passSuccess": 81,
-      "passesMade": 1858,
+      "passesMade": 1914,
       "tackleSuccess": 25,
-      "tacklesMade": 274,
+      "tacklesMade": 288,
       "shotSuccess": 26,
       "cleanSheets": 4,
       "redCards": 3
-    },
-    {
-      "name": "jlguariglia",
-      "proName": "Guariglia",
-      "position": "forward",
-      "proPosition": "25",
-      "overall": 79,
-      "gamesPlayed": 15,
-      "goals": 8,
-      "assists": 7,
-      "winRate": 66,
-      "rating": 7.7,
-      "motm": 1,
-      "passSuccess": 80,
-      "passesMade": 255,
-      "tackleSuccess": 32,
-      "tacklesMade": 25,
-      "shotSuccess": 57,
-      "cleanSheets": 0,
-      "redCards": 0
     },
     {
       "name": "multithread13",
@@ -252,6 +252,185 @@
   ],
   "matches": [
     {
+      "matchId": "170508245480482",
+      "playedAt": "2026-11-06T03:49:20.000Z",
+      "opponent": "FC Armenia",
+      "opponentId": "171228",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": null,
+      "scorers": []
+    },
+    {
+      "matchId": "170520175580149",
+      "playedAt": "2026-11-06T03:31:56.000Z",
+      "opponent": "0 Chemistry",
+      "opponentId": "58813",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "result": "W",
+      "motm": "phiLL0ve_u",
+      "scorers": [
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        },
+        {
+          "name": "Samwiseee27",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "170202837640076",
+      "playedAt": "2026-11-06T03:09:45.000Z",
+      "opponent": "Wakala Fc",
+      "opponentId": "36681",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "result": "W",
+      "motm": "Samwiseee27",
+      "scorers": [
+        {
+          "name": "pinage10",
+          "goals": 2
+        },
+        {
+          "name": "Samwiseee27",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "170238634540244",
+      "playedAt": "2026-11-06T02:50:38.000Z",
+      "opponent": "Club Masia",
+      "opponentId": "61959",
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "result": "W",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "jlguariglia",
+          "goals": 2
+        },
+        {
+          "name": "pinage10",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "170356355120119",
+      "playedAt": "2026-11-06T02:31:31.000Z",
+      "opponent": "JITS4EVER FC",
+      "opponentId": "325997",
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "result": "L",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "jlguariglia",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "170190721570213",
+      "playedAt": "2026-11-06T02:10:35.000Z",
+      "opponent": "FC Figueroa",
+      "opponentId": "538351",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "pinage10",
+      "scorers": [
+        {
+          "name": "SandroJuniorBM",
+          "goals": 2
+        },
+        {
+          "name": "pinage10",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "170268440590476",
+      "playedAt": "2026-11-06T01:57:36.000Z",
+      "opponent": "FC Figueroa",
+      "opponentId": "538351",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "jlguariglia",
+      "scorers": [
+        {
+          "name": "jlguariglia",
+          "goals": 2
+        },
+        {
+          "name": "viricciardi",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "170154692580390",
+      "playedAt": "2026-11-06T01:47:43.000Z",
+      "opponent": "The Herbabites",
+      "opponentId": "205785",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": null,
+      "scorers": [
+        {
+          "name": "jlguariglia",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "170130643820301",
+      "playedAt": "2026-11-06T01:25:33.000Z",
+      "opponent": "Santa Lucia Cuh",
+      "opponentId": "7492",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "jlguariglia",
+      "scorers": [
+        {
+          "name": "viricciardi",
+          "goals": 1
+        },
+        {
+          "name": "jlguariglia",
+          "goals": 1
+        },
+        {
+          "name": "pinage10",
+          "goals": 1
+        }
+      ]
+    },
+    {
       "matchId": "167852605620004",
       "playedAt": "2026-11-05T04:01:13.000Z",
       "opponent": "Men of GodFC",
@@ -270,182 +449,14 @@
           "goals": 2
         }
       ]
-    },
-    {
-      "matchId": "167814693470478",
-      "playedAt": "2026-11-05T03:41:41.000Z",
-      "opponent": "Blue devilz fc",
-      "opponentId": "428283",
-      "goalsFor": 4,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "viricciardi",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "167846551470251",
-      "playedAt": "2026-11-05T03:22:20.000Z",
-      "opponent": "CD Cometesta",
-      "opponentId": "65415",
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "phiLL0ve_u",
-      "scorers": [
-        {
-          "name": "Samwiseee27",
-          "goals": 2
-        }
-      ]
-    },
-    {
-      "matchId": "167634927620055",
-      "playedAt": "2026-11-05T03:02:48.000Z",
-      "opponent": "CD Cometesta",
-      "opponentId": "65415",
-      "goalsFor": 2,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "phiLL0ve_u",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "167908326120072",
-      "playedAt": "2026-11-05T02:44:00.000Z",
-      "opponent": "openur4kinglegs",
-      "opponentId": "64620",
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "viricciardi",
-          "goals": 1
-        },
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "167908274200199",
-      "playedAt": "2026-11-05T02:26:18.000Z",
-      "opponent": "JITS4EVER FC",
-      "opponentId": "325997",
-      "goalsFor": 2,
-      "goalsAgainst": 4,
-      "result": "L",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        }
-      ]
-    },
-    {
-      "matchId": "167674673530043",
-      "playedAt": "2026-11-05T02:07:51.000Z",
-      "opponent": "NOX XI",
-      "opponentId": "56473",
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "brunhms_220685",
-      "scorers": [
-        {
-          "name": "phiLL0ve_u",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "167706525370437",
-      "playedAt": "2026-11-05T01:51:28.000Z",
-      "opponent": "SUPAPA",
-      "opponentId": "203532",
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "pinage10",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "165444257730440",
-      "playedAt": "2026-11-04T03:20:11.000Z",
-      "opponent": "Northwest GC",
-      "opponentId": "341781",
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "brunhms_220685",
-      "scorers": [
-        {
-          "name": "pinage10",
-          "goals": 2
-        },
-        {
-          "name": "jlguariglia",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "165088847390326",
-      "playedAt": "2026-11-04T02:56:53.000Z",
-      "opponent": "Craacks cf",
-      "opponentId": "430291",
-      "goalsFor": 1,
-      "goalsAgainst": 0,
-      "result": "W",
-      "motm": "brunhms_220685",
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 1
-        }
-      ]
     }
   ],
   "form": [
-    "D",
     "W",
     "W",
     "W",
-    "W"
+    "W",
+    "L"
   ],
   "source": {
     "name": "EA Sports FC Pro Clubs",
