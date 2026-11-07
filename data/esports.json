@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T07:20:35.474Z",
+  "updatedAt": "2026-11-07T01:09:49.862Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -8,19 +8,19 @@
     "stadium": "Estádio de ní"
   },
   "record": {
-    "gamesPlayed": 184,
-    "wins": 114,
+    "gamesPlayed": 187,
+    "wins": 117,
     "ties": 20,
     "losses": 50,
-    "goals": 462,
-    "goalsAgainst": 283,
-    "goalDifference": 179,
-    "winRate": 62,
-    "skillRating": 2108,
-    "promotions": 8,
+    "goals": 476,
+    "goalsAgainst": 284,
+    "goalDifference": 192,
+    "winRate": 63,
+    "skillRating": 2121,
+    "promotions": 9,
     "relegations": 0,
-    "winStreak": 4,
-    "unbeatenStreak": 4
+    "winStreak": 7,
+    "unbeatenStreak": 7
   },
   "positionCount": {
     "midfielder": 5,
@@ -35,17 +35,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 83,
-      "gamesPlayed": 128,
-      "goals": 114,
-      "assists": 54,
-      "winRate": 60,
-      "rating": 7.3,
-      "motm": 8,
+      "gamesPlayed": 131,
+      "goals": 122,
+      "assists": 55,
+      "winRate": 61,
+      "rating": 7.4,
+      "motm": 9,
       "passSuccess": 72,
-      "passesMade": 1615,
+      "passesMade": 1657,
       "tackleSuccess": 59,
-      "tacklesMade": 81,
-      "shotSuccess": 32,
+      "tacklesMade": 85,
+      "shotSuccess": 33,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -75,16 +75,16 @@
       "position": "midfielder",
       "proPosition": "14",
       "overall": 83,
-      "gamesPlayed": 160,
-      "goals": 55,
-      "assists": 63,
+      "gamesPlayed": 163,
+      "goals": 57,
+      "assists": 66,
       "winRate": 63,
-      "rating": 7.5,
+      "rating": 7.6,
       "motm": 16,
       "passSuccess": 76,
-      "passesMade": 2459,
-      "tackleSuccess": 51,
-      "tacklesMade": 303,
+      "passesMade": 2530,
+      "tackleSuccess": 52,
+      "tacklesMade": 311,
       "shotSuccess": 34,
       "cleanSheets": 0,
       "redCards": 0
@@ -175,17 +175,17 @@
       "position": "forward",
       "proPosition": "25",
       "overall": 79,
-      "gamesPlayed": 21,
-      "goals": 15,
-      "assists": 8,
-      "winRate": 71,
-      "rating": 7.8,
-      "motm": 3,
-      "passSuccess": 78,
-      "passesMade": 356,
-      "tackleSuccess": 35,
-      "tacklesMade": 36,
-      "shotSuccess": 68,
+      "gamesPlayed": 24,
+      "goals": 18,
+      "assists": 15,
+      "winRate": 75,
+      "rating": 8.1,
+      "motm": 5,
+      "passSuccess": 77,
+      "passesMade": 437,
+      "tackleSuccess": 38,
+      "tacklesMade": 46,
+      "shotSuccess": 62,
       "cleanSheets": 0,
       "redCards": 0
     },
@@ -195,16 +195,16 @@
       "position": "defender",
       "proPosition": "5",
       "overall": 86,
-      "gamesPlayed": 157,
+      "gamesPlayed": 160,
       "goals": 8,
       "assists": 10,
       "winRate": 61,
       "rating": 7.4,
       "motm": 14,
       "passSuccess": 81,
-      "passesMade": 1914,
+      "passesMade": 1944,
       "tackleSuccess": 25,
-      "tacklesMade": 288,
+      "tacklesMade": 294,
       "shotSuccess": 26,
       "cleanSheets": 4,
       "redCards": 3
@@ -251,6 +251,70 @@
     }
   ],
   "matches": [
+    {
+      "matchId": "172762131870068",
+      "playedAt": "2026-11-07T00:01:39.000Z",
+      "opponent": "LOS ANGELES 67",
+      "opponentId": "528657",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "jlguariglia",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        }
+      ]
+    },
+    {
+      "matchId": "172466796180039",
+      "playedAt": "2026-11-06T23:36:00.000Z",
+      "opponent": "Sündãy Mõrmøn§",
+      "opponentId": "172212",
+      "goalsFor": 6,
+      "goalsAgainst": 1,
+      "result": "W",
+      "motm": "CeloLudolfR",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 4
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        },
+        {
+          "name": "jlguariglia",
+          "goals": 1
+        }
+      ]
+    },
+    {
+      "matchId": "172596192340321",
+      "playedAt": "2026-11-06T23:14:55.000Z",
+      "opponent": "RUNDOWN GANG",
+      "opponentId": "154374",
+      "goalsFor": 5,
+      "goalsAgainst": 0,
+      "result": "W",
+      "motm": "jlguariglia",
+      "scorers": [
+        {
+          "name": "CeloLudolfR",
+          "goals": 2
+        },
+        {
+          "name": "jlguariglia",
+          "goals": 2
+        },
+        {
+          "name": "phiLL0ve_u",
+          "goals": 1
+        }
+      ]
+    },
     {
       "matchId": "170508245480482",
       "playedAt": "2026-11-06T03:49:20.000Z",
@@ -385,70 +449,6 @@
           "goals": 1
         }
       ]
-    },
-    {
-      "matchId": "170154692580390",
-      "playedAt": "2026-11-06T01:47:43.000Z",
-      "opponent": "The Herbabites",
-      "opponentId": "205785",
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "jlguariglia",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "170130643820301",
-      "playedAt": "2026-11-06T01:25:33.000Z",
-      "opponent": "Santa Lucia Cuh",
-      "opponentId": "7492",
-      "goalsFor": 3,
-      "goalsAgainst": 1,
-      "result": "W",
-      "motm": "jlguariglia",
-      "scorers": [
-        {
-          "name": "viricciardi",
-          "goals": 1
-        },
-        {
-          "name": "jlguariglia",
-          "goals": 1
-        },
-        {
-          "name": "pinage10",
-          "goals": 1
-        }
-      ]
-    },
-    {
-      "matchId": "167852605620004",
-      "playedAt": "2026-11-05T04:01:13.000Z",
-      "opponent": "Men of GodFC",
-      "opponentId": "576904",
-      "goalsFor": 4,
-      "goalsAgainst": 4,
-      "result": "D",
-      "motm": null,
-      "scorers": [
-        {
-          "name": "CeloLudolfR",
-          "goals": 2
-        },
-        {
-          "name": "pinage10",
-          "goals": 2
-        }
-      ]
     }
   ],
   "form": [
@@ -456,7 +456,7 @@
     "W",
     "W",
     "W",
-    "L"
+    "W"
   ],
   "source": {
     "name": "EA Sports FC Pro Clubs",
