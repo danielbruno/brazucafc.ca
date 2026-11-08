@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T06:18:48.190Z",
+  "updatedAt": "2026-11-08T13:39:05.946Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -33,14 +33,14 @@
     {
       "pos": 3,
       "team": "Albion Legacy FC",
-      "gp": 6,
+      "gp": 7,
       "w": 3,
-      "d": 1,
+      "d": 2,
       "l": 2,
-      "gf": 11,
-      "ga": 14,
+      "gf": 15,
+      "ga": 18,
       "gd": -3,
-      "pts": 10
+      "pts": 11
     },
     {
       "pos": 4,
@@ -57,14 +57,14 @@
     {
       "pos": 5,
       "team": "Ridge Meadows Gunners",
-      "gp": 6,
+      "gp": 7,
       "w": 2,
-      "d": 1,
+      "d": 2,
       "l": 3,
-      "gf": 13,
-      "ga": 18,
+      "gf": 17,
+      "ga": 22,
       "gd": -5,
-      "pts": 7
+      "pts": 8
     },
     {
       "pos": 6,
