@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T06:26:06.106Z",
+  "updatedAt": "2026-11-08T06:18:48.190Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -20,6 +20,18 @@
     },
     {
       "pos": 2,
+      "team": "AC Fury",
+      "gp": 7,
+      "w": 4,
+      "d": 0,
+      "l": 3,
+      "gf": 15,
+      "ga": 11,
+      "gd": 4,
+      "pts": 12
+    },
+    {
+      "pos": 3,
       "team": "Albion Legacy FC",
       "gp": 6,
       "w": 3,
@@ -31,7 +43,7 @@
       "pts": 10
     },
     {
-      "pos": 3,
+      "pos": 4,
       "team": "LUSA Heat",
       "gp": 6,
       "w": 3,
@@ -41,18 +53,6 @@
       "ga": 16,
       "gd": -4,
       "pts": 10
-    },
-    {
-      "pos": 4,
-      "team": "AC Fury",
-      "gp": 6,
-      "w": 3,
-      "d": 0,
-      "l": 3,
-      "gf": 12,
-      "ga": 9,
-      "gd": 3,
-      "pts": 9
     },
     {
       "pos": 5,
@@ -69,13 +69,13 @@
     {
       "pos": 6,
       "team": "Poco FC Revolution",
-      "gp": 6,
+      "gp": 7,
       "w": 1,
       "d": 1,
-      "l": 4,
-      "gf": 4,
-      "ga": 12,
-      "gd": -8,
+      "l": 5,
+      "gf": 6,
+      "ga": 15,
+      "gd": -9,
       "pts": 4
     },
     {
