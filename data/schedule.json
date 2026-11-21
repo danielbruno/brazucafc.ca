@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T06:44:02.067Z",
+  "updatedAt": "2026-11-21T07:24:53.948Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -186,16 +186,16 @@
       "division": "Masters 3 (Fall)",
       "home": "Brazuca FC",
       "away": "Poco FC Revolution",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 5,
+      "awayScore": 1,
       "field": "Cloverdale 4",
       "notes": null,
       "isBye": false,
       "isHome": true,
       "opponent": "Poco FC Revolution",
-      "goalsFor": null,
-      "goalsAgainst": null,
-      "result": null
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "result": "W"
     },
     {
       "kickoff": "2026-11-28T20:00:00-07:00",
