@@ -1,0 +1,54 @@
+name: Update player stats
+
+on:
+  schedule:
+    # Mondays at 15:20 UTC — Monday morning in Vancouver, after the weekend's
+    # matches have been entered in the club's sheet.
+    - cron: '20 15 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the stats sheet and rebuild data/stats.json
+        env:
+          # Set this repository variable to swap in a new OneDrive share link
+          # without editing the script.
+          STATS_CSV_URL: ${{ vars.STATS_CSV_URL }}
+        run: python3 scripts/build-stats.py --fetch
+
+      - name: Commit changes
+        id: commit
+        run: |
+          # updatedAt changes on every run, so only commit when the numbers did.
+          if git diff --quiet -- data/source/; then
+            echo "Stats sheet unchanged."
+            git checkout -- data/
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Update player stats"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with GITHUB_TOKEN don't always trigger a Pages build, so ask for one.
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

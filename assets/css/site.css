@@ -857,7 +857,6 @@ h1, h2, h3 {
 
 .stats-table td { color: var(--ink); }
 .stats-table .is-zero { color: var(--faint); }
-.stats-table .is-empty { color: #3f463f; }
 .stats-table .is-positive { color: var(--green-bright); }
 .stats-table .is-negative { color: var(--red); }
 .stats-table tfoot td {

@@ -29,15 +29,9 @@
     return `<div class="player-chip">${photo}<span class="player-chip-name">${esc(player.name)}${number}</span>${tag}</div>`;
   }
 
-  // A player with no detailed record shows dashes rather than misleading zeroes.
   function cell(player, field) {
     if (field === 'seasons') return `<td>${player.seasons}</td>`;
     const value = player.stats[field];
-    if (!player.hasDetail && field !== 'g') return '<td class="is-empty">–</td>';
-    if (field === 'plusMinus') {
-      const cls = value > 0 ? 'is-positive' : value < 0 ? 'is-negative' : 'is-zero';
-      return `<td class="${cls}">${value > 0 ? `+${value}` : value}</td>`;
-    }
     if (field === 'g' && value) return `<td class="col-pts">${value}</td>`;
     return `<td${value ? '' : ' class="is-zero"'}>${value}</td>`;
   }
@@ -57,8 +51,8 @@
         <tr>
           <td class="col-team">${totals.players} players</td>
           ${columns.map(field => (
-            // Seasons, minutes per game and plus-minus don't add up into a team number.
-            ['seasons', 'mpg', 'plusMinus'].includes(field) ? '<td>–</td>' : `<td>${totals[field]}</td>`
+            // A count of seasons played doesn't add up into a team number.
+            field === 'seasons' ? '<td>–</td>' : `<td>${totals[field]}</td>`
           )).join('')}
         </tr>
       </tfoot>` : '';
@@ -81,7 +75,7 @@
       const top = [...career.players].sort((a, b) => b.stats.g - a.stats.g)[0];
       const cards = [
         [season.totals.g, `Goals · ${season.label}`],
-        [season.matches.length, 'Matches this season'],
+        [season.totals.a, `Assists · ${season.label}`],
         [career.totals.g, 'Goals all time'],
         [`${top.stats.g}`, `Top scorer · ${top.nickname}`],
       ];
@@ -100,9 +94,9 @@
       const eyebrow = document.querySelector('[data-stats-season-eyebrow]');
       if (eyebrow) eyebrow.textContent = `${season.label} · ${season.competition}`;
       const lead = document.querySelector('[data-stats-season-lead]');
-      if (lead && season.matches.length) {
-        const last = season.matches[season.matches.length - 1];
-        lead.textContent = `${season.matches.length} matches played so far, most recently against ${last.opponent}.`;
+      if (lead) {
+        const t = season.totals;
+        lead.textContent = `${t.g} goals and ${t.a} assists from ${t.players} players so far.`;
       }
     } catch (err) { console.error(err); failed(el); }
   }

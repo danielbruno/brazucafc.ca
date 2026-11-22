@@ -56,37 +56,43 @@ changes) at the top of the script.
 
 ### Player stats
 
-`data/stats.json` is built from the club's stats workbook, exported to
-`data/source/`:
-
-| File | Contains |
-|---|---|
-| `Brazuca FC -  Player Stats - Support Tables.csv` | The roster: nickname, full name, number, position, current or former |
-| `Brazuca FC -  Player Stats - All Time.csv` | One row per player per season and competition, up to Spring 2026 |
-| `Brazuca FC -  Player Stats - Season 2026-2027.csv` | One row per player per match day of the current season |
-
-Rebuild after re-exporting any of them:
+`data/stats.json` is built from one spreadsheet the club keeps in OneDrive and
+updates after matchday, cached in the repo at
+`data/source/Brazuca FC -  Player Stats - All Time.csv`. It holds one row per
+player per season and competition, with goals and assists; shirt numbers,
+positions and squad status are read from the same rows.
 
 ```bash
-python3 scripts/build-stats.py
+python3 scripts/build-stats.py            # rebuild from the local copy
+python3 scripts/build-stats.py --fetch    # pull the sheet first, then rebuild
 ```
 
-The script matches players by full name against the roster table and reports
-any row whose player is missing from it. Stat columns that are empty
-everywhere (shots on goal, fouls, injuries in most seasons) are left out of
-the page automatically, so new columns appear on their own once the
-spreadsheet starts recording them.
+`.github/workflows/update-stats.yml` runs the `--fetch` form every Monday,
+commits any change and asks Pages to rebuild. Nothing is committed when the
+sheet hasn't moved.
+
+The sheet is shared with "anyone with the link". The 1drv.ms address redirects
+to a `onedrive.live.com` one that only serves the file once that redirect has
+been followed with cookies kept, so `fetch_source()` makes two trips: the
+first redeems the share, the second asks for `download=1`. A download that
+isn't the stats sheet, or that comes back short, is refused rather than
+written over a good copy.
+
+**If the share link is ever regenerated**, set a repository variable named
+`STATS_CSV_URL` to the new link (Settings → Secrets and variables → Actions →
+Variables). The workflow passes it through, and the script falls back to the
+link in its own `SHARE_URL` when the variable is unset.
 
 Two things to keep in mind when editing the script:
 
 - `PHOTO_SLUGS` maps each nickname to a file in `assets/img/squad/`, which is
   how the tables show photos and shirt numbers. Add a line when a new player
   joins the squad.
-- `CURRENT_SEASON` names the season shown in the first table. Update it when a
-  new season starts, and point `SEASON_CSV` at that season's export.
+- The current season is whichever is latest in the sheet, so a new season
+  appears on its own once rows for it are added.
 
-Older seasons only record goals; minutes, assists, cards and the rest were
-first collected in Spring 2026, which the page explains in a closing note.
+Assists were first recorded in Spring 2026; the earlier seasons tracked goals
+only, which the page explains in a closing note.
 
 ### E-sports (EA Sports FC Pro Clubs)
 

@@ -1,80 +1,26 @@
 {
-  "updatedAt": "2026-10-10T01:19:18Z",
-  "detailedSince": "Spring 2026",
+  "updatedAt": "2026-11-22T04:06:43Z",
   "legend": [
-    [
-      "MP",
-      "Matches played"
-    ],
-    [
-      "GS",
-      "Games started"
-    ],
-    [
-      "MIN",
-      "Minutes played"
-    ],
-    [
-      "MPG",
-      "Minutes per game"
-    ],
     [
       "G",
       "Goals"
     ],
     [
-      "AS",
+      "A",
       "Assists"
     ],
     [
-      "GA",
-      "Goals allowed"
-    ],
-    [
-      "YC",
-      "Yellow cards"
-    ],
-    [
-      "MVP",
-      "Most valuable player awards"
-    ],
-    [
-      "+/-",
-      "On-field score differential"
-    ],
-    [
-      "RC",
-      "Red cards"
+      "G+A",
+      "Goals and assists"
     ]
   ],
   "currentSeason": {
     "label": "Winter 26/27",
     "competition": "FVSL Masters 3",
-    "matches": [
-      {
-        "date": "2026-09-19",
-        "opponent": "Ridge Meadows Gunners"
-      },
-      {
-        "date": "2026-09-25",
-        "opponent": "PoCo FC Revolution"
-      },
-      {
-        "date": "2026-10-02",
-        "opponent": "Ridge Meadows Chargers"
-      }
-    ],
     "columns": [
-      "mp",
-      "gs",
-      "min",
-      "mpg",
       "g",
-      "as",
-      "ga",
-      "yc",
-      "mvp",
-      "plusMinus"
+      "a",
+      "gPlusA"
     ],
     "players": [
       {
@@ -89,53 +35,10 @@
         "slug": "diego",
         "photo": "assets/img/squad/diego.jpg",
         "stats": {
-          "mp": 3,
-          "gs": 2,
-          "min": 200,
-          "mpg": 67,
-          "g": 6,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 14
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "andre-pinage",
-        "nickname": "Hulk",
-        "name": "Andre Pinage",
-        "number": 11,
-        "position": "Forwards",
-        "positionOrder": 6,
-        "foot": "Right",
-        "current": true,
-        "slug": "hulk",
-        "photo": "assets/img/squad/hulk.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 214,
-          "mpg": 71,
-          "g": 3,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 16
-        },
-        "hasDetail": true
+          "g": 9,
+          "a": 7,
+          "gPlusA": 16
+        }
       },
       {
         "key": "henrique-noujeimi",
@@ -149,113 +52,10 @@
         "slug": "henrique",
         "photo": "assets/img/squad/henrique.jpg",
         "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 228,
-          "mpg": 76,
-          "g": 2,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 2,
-          "plusMinus": 15
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "igor-paiva",
-        "nickname": "Igor",
-        "name": "Igor Paiva",
-        "number": 16,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
-        "foot": "Right",
-        "current": true,
-        "slug": "igor",
-        "photo": "assets/img/squad/igor.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 2,
-          "min": 146,
-          "mpg": 49,
-          "g": 2,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 9
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "alison-marangao",
-        "nickname": "Alison",
-        "name": "Alison Marangao",
-        "number": 10,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
-        "foot": "Right",
-        "current": true,
-        "slug": "alison",
-        "photo": "assets/img/squad/alison.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 2,
-          "min": 183,
-          "mpg": 61,
-          "g": 1,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 13
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "vitor-samone",
-        "nickname": "Vitor",
-        "name": "Vitor Samone",
-        "number": 5,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
-        "foot": "Right",
-        "current": true,
-        "slug": "vitor",
-        "photo": "assets/img/squad/vitor.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 168,
-          "mpg": 56,
-          "g": 1,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 11
-        },
-        "hasDetail": true
+          "g": 7,
+          "a": 4,
+          "gPlusA": 11
+        }
       },
       {
         "key": "felipe-moreira",
@@ -269,53 +69,10 @@
         "slug": "felipe",
         "photo": "assets/img/squad/felipe.jpg",
         "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 150,
-          "mpg": 50,
-          "g": 1,
-          "as": 4,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 10
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "jefferson-tosti",
-        "nickname": "Jeff",
-        "name": "Jefferson Tosti",
-        "number": 6,
-        "position": "Full-Backs",
-        "positionOrder": 2,
-        "foot": "Left",
-        "current": true,
-        "slug": "jeff",
-        "photo": "assets/img/squad/jeff.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 133,
-          "mpg": 44,
-          "g": 1,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 10
-        },
-        "hasDetail": true
+          "g": 3,
+          "a": 6,
+          "gPlusA": 9
+        }
       },
       {
         "key": "samuel-moura",
@@ -329,23 +86,44 @@
         "slug": "sam",
         "photo": "assets/img/squad/sam.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 2,
-          "min": 122,
-          "mpg": 61,
-          "g": 1,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 12
-        },
-        "hasDetail": true
+          "g": 3,
+          "a": 3,
+          "gPlusA": 6
+        }
+      },
+      {
+        "key": "andre-pinage",
+        "nickname": "Hulk",
+        "name": "Andre Pinage",
+        "number": 11,
+        "position": "Forwards",
+        "positionOrder": 6,
+        "foot": "Right",
+        "current": true,
+        "slug": "hulk",
+        "photo": "assets/img/squad/hulk.jpg",
+        "stats": {
+          "g": 4,
+          "a": 1,
+          "gPlusA": 5
+        }
+      },
+      {
+        "key": "igor-paiva",
+        "nickname": "Igor",
+        "name": "Igor Paiva",
+        "number": 16,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
+        "foot": "Right",
+        "current": true,
+        "slug": "igor",
+        "photo": "assets/img/squad/igor.jpg",
+        "stats": {
+          "g": 3,
+          "a": 1,
+          "gPlusA": 4
+        }
       },
       {
         "key": "gabriel-lloyd",
@@ -359,203 +137,61 @@
         "slug": "gabriel",
         "photo": "assets/img/squad/gabriel.jpg",
         "stats": {
-          "mp": 1,
-          "gs": 0,
-          "min": 44,
-          "mpg": 44,
+          "g": 2,
+          "a": 1,
+          "gPlusA": 3
+        }
+      },
+      {
+        "key": "alison-marangao",
+        "nickname": "Alison",
+        "name": "Alison Marangao",
+        "number": 10,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
+        "foot": "Right",
+        "current": true,
+        "slug": "alison",
+        "photo": "assets/img/squad/alison.jpg",
+        "stats": {
           "g": 1,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 2
-        },
-        "hasDetail": true
+          "a": 2,
+          "gPlusA": 3
+        }
       },
       {
-        "key": "marcelo-ribeiro",
-        "nickname": "Marcelo",
-        "name": "Marcelo Ribeiro",
-        "number": 20,
-        "position": "Forwards",
-        "positionOrder": 6,
+        "key": "vitor-samone",
+        "nickname": "Vitor",
+        "name": "Vitor Samone",
+        "number": 5,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
         "foot": "Right",
         "current": true,
-        "slug": "marcelo",
-        "photo": "assets/img/squad/marcelo.jpg",
+        "slug": "vitor",
+        "photo": "assets/img/squad/vitor.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 0,
-          "min": 29,
-          "mpg": 14,
           "g": 1,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 2
-        },
-        "hasDetail": true
+          "a": 2,
+          "gPlusA": 3
+        }
       },
       {
-        "key": "tiago-fabri-brenck",
-        "nickname": "Tiago",
-        "name": "Tiago Fabri Brenck",
-        "number": 1,
-        "position": "Goalkeepers",
-        "positionOrder": 1,
-        "foot": "Right",
-        "current": true,
-        "slug": "tiago",
-        "photo": "assets/img/squad/tiago.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 270,
-          "mpg": 90,
-          "g": 0,
-          "as": 0,
-          "ga": 1,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 19
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "daniel-bruno-da-silva",
-        "nickname": "Dani",
-        "name": "Daniel Bruno",
-        "number": 3,
-        "position": "Defenders",
-        "positionOrder": 3,
-        "foot": "Right",
-        "current": true,
-        "slug": "dani",
-        "photo": "assets/img/squad/dani.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 192,
-          "mpg": 64,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 15
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "renan-gouveia",
-        "nickname": "Renan",
-        "name": "Renan Gouveia",
-        "number": 4,
-        "position": "Defenders",
-        "positionOrder": 3,
-        "foot": "Right",
-        "current": true,
-        "slug": "renan",
-        "photo": "assets/img/squad/renan.jpg",
-        "stats": {
-          "mp": 2,
-          "gs": 1,
-          "min": 162,
-          "mpg": 81,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 11
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "vinicius-totti",
-        "nickname": "Vini",
-        "name": "Vinicius Totti",
-        "number": 12,
-        "position": "Defenders",
-        "positionOrder": 3,
-        "foot": "Right",
-        "current": true,
-        "slug": "vini",
-        "photo": "assets/img/squad/vini.jpg",
-        "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 161,
-          "mpg": 54,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 10
-        },
-        "hasDetail": true
-      },
-      {
-        "key": "tomas-morais",
-        "nickname": "Tom",
-        "name": "Tomas Morais",
-        "number": 25,
+        "key": "jefferson-tosti",
+        "nickname": "Jeff",
+        "name": "Jefferson Tosti",
+        "number": 6,
         "position": "Full-Backs",
         "positionOrder": 2,
-        "foot": "Right",
+        "foot": "Left",
         "current": true,
-        "slug": "tom",
-        "photo": "assets/img/squad/tom.jpg",
+        "slug": "jeff",
+        "photo": "assets/img/squad/jeff.jpg",
         "stats": {
-          "mp": 3,
-          "gs": 2,
-          "min": 145,
-          "mpg": 48,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 10
-        },
-        "hasDetail": true
+          "g": 1,
+          "a": 1,
+          "gPlusA": 2
+        }
       },
       {
         "key": "eliel-souza",
@@ -569,53 +205,27 @@
         "slug": "eliel",
         "photo": "assets/img/squad/eliel.jpg",
         "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 133,
-          "mpg": 44,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 11
-        },
-        "hasDetail": true
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
+        }
       },
       {
-        "key": "claudio-comunale-filho",
-        "nickname": "Claudio",
-        "name": "Claudio Comunale Filho",
-        "number": 17,
-        "position": "Full-Backs",
-        "positionOrder": 2,
-        "foot": "Left",
+        "key": "marcelo-ribeiro",
+        "nickname": "Marcelo",
+        "name": "Marcelo Ribeiro",
+        "number": 20,
+        "position": "Forwards",
+        "positionOrder": 6,
+        "foot": "Right",
         "current": true,
-        "slug": "comunale",
-        "photo": "assets/img/squad/comunale.jpg",
+        "slug": "marcelo",
+        "photo": "assets/img/squad/marcelo.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 2,
-          "min": 91,
-          "mpg": 46,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 8
-        },
-        "hasDetail": true
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
+        }
       },
       {
         "key": "leonardo-da-ruiz-correia",
@@ -629,53 +239,61 @@
         "slug": "leo",
         "photo": "assets/img/squad/leo.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 1,
-          "min": 77,
-          "mpg": 38,
           "g": 0,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 6
-        },
-        "hasDetail": true
+          "a": 1,
+          "gPlusA": 1
+        }
       },
       {
-        "key": "pedro-koster",
-        "nickname": "Giga",
-        "name": "Pedro Koster",
-        "number": 22,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
+        "key": "tomas-morais",
+        "nickname": "Tom",
+        "name": "Tomas Morais",
+        "number": 25,
+        "position": "Full-Backs",
+        "positionOrder": 2,
         "foot": "Right",
         "current": true,
-        "slug": "giga",
-        "photo": "assets/img/squad/giga.jpg",
+        "slug": "tom",
+        "photo": "assets/img/squad/tom.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 1,
-          "min": 73,
-          "mpg": 36,
           "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 1,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 2
-        },
-        "hasDetail": true
+          "a": 1,
+          "gPlusA": 1
+        }
+      },
+      {
+        "key": "tiago-fabri-brenck",
+        "nickname": "Tiago",
+        "name": "Tiago Fabri Brenck",
+        "number": 1,
+        "position": "Goalkeepers",
+        "positionOrder": 1,
+        "foot": "Right",
+        "current": true,
+        "slug": "tiago",
+        "photo": "assets/img/squad/tiago.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
+      },
+      {
+        "key": "claudio-comunale-filho",
+        "nickname": "Claudio",
+        "name": "Claudio Comunale Filho",
+        "number": 17,
+        "position": "Full-Backs",
+        "positionOrder": 2,
+        "foot": "Left",
+        "current": true,
+        "slug": "comunale",
+        "photo": "assets/img/squad/comunale.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
       },
       {
         "key": "ryan-jobb",
@@ -689,41 +307,84 @@
         "slug": "ryan",
         "photo": "assets/img/squad/ryan.jpg",
         "stats": {
-          "mp": 2,
-          "gs": 0,
-          "min": 71,
-          "mpg": 36,
           "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 4
-        },
-        "hasDetail": true
+          "a": 0,
+          "gPlusA": 0
+        }
+      },
+      {
+        "key": "daniel-bruno-da-silva",
+        "nickname": "Dani",
+        "name": "Daniel Bruno",
+        "number": 3,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
+        "current": true,
+        "slug": "dani",
+        "photo": "assets/img/squad/dani.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
+      },
+      {
+        "key": "renan-gouveia",
+        "nickname": "Renan",
+        "name": "Renan Gouveia",
+        "number": 4,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
+        "current": true,
+        "slug": "renan",
+        "photo": "assets/img/squad/renan.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
+      },
+      {
+        "key": "vinicius-totti",
+        "nickname": "Vini",
+        "name": "Vinicius Totti",
+        "number": 12,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
+        "current": true,
+        "slug": "vini",
+        "photo": "assets/img/squad/vini.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
+      },
+      {
+        "key": "pedro-koster",
+        "nickname": "Giga",
+        "name": "Pedro Koster",
+        "number": 22,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
+        "foot": "Right",
+        "current": true,
+        "slug": "giga",
+        "photo": "assets/img/squad/giga.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        }
       }
     ],
     "totals": {
-      "mp": 54,
-      "gs": 32,
-      "min": 2992,
-      "g": 20,
-      "as": 17,
-      "ga": 1,
-      "gp": 0,
-      "sog": 0,
-      "yc": 1,
-      "rc": 0,
-      "pf": 0,
-      "injury": 0,
-      "mvp": 3,
-      "plusMinus": 210,
-      "mpg": 0,
+      "g": 36,
+      "a": 30,
+      "gPlusA": 66,
       "players": 21
     }
   },
@@ -736,17 +397,9 @@
     ],
     "columns": [
       "seasons",
-      "mp",
-      "gs",
-      "min",
-      "mpg",
       "g",
-      "as",
-      "ga",
-      "yc",
-      "rc",
-      "mvp",
-      "plusMinus"
+      "a",
+      "gPlusA"
     ],
     "players": [
       {
@@ -761,23 +414,10 @@
         "slug": "hulk",
         "photo": "assets/img/squad/hulk.jpg",
         "stats": {
-          "mp": 7,
-          "gs": 5,
-          "min": 457,
-          "mpg": 65,
-          "g": 30,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 12
+          "g": 31,
+          "a": 1,
+          "gPlusA": 32
         },
-        "hasDetail": true,
         "seasons": 4
       },
       {
@@ -792,23 +432,10 @@
         "slug": "diego",
         "photo": "assets/img/squad/diego.jpg",
         "stats": {
-          "mp": 10,
-          "gs": 7,
-          "min": 755,
-          "mpg": 76,
-          "g": 21,
-          "as": 3,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 3,
-          "plusMinus": 25
+          "g": 24,
+          "a": 8,
+          "gPlusA": 32
         },
-        "hasDetail": true,
         "seasons": 3
       },
       {
@@ -823,23 +450,10 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
           "g": 20,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
+          "a": 0,
+          "gPlusA": 20
         },
-        "hasDetail": false,
         "seasons": 1
       },
       {
@@ -854,85 +468,10 @@
         "slug": "sam",
         "photo": "assets/img/squad/sam.jpg",
         "stats": {
-          "mp": 9,
-          "gs": 8,
-          "min": 573,
-          "mpg": 64,
-          "g": 9,
-          "as": 3,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 2,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 19
+          "g": 11,
+          "a": 4,
+          "gPlusA": 15
         },
-        "hasDetail": true,
-        "seasons": 3
-      },
-      {
-        "key": "leonardo-novais",
-        "nickname": "Novais",
-        "name": "Leonardo Novais",
-        "number": null,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
-          "g": 7,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
-        },
-        "hasDetail": false,
-        "seasons": 1
-      },
-      {
-        "key": "igor-paiva",
-        "nickname": "Igor",
-        "name": "Igor Paiva",
-        "number": 16,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
-        "foot": "Right",
-        "current": true,
-        "slug": "igor",
-        "photo": "assets/img/squad/igor.jpg",
-        "stats": {
-          "mp": 13,
-          "gs": 10,
-          "min": 664,
-          "mpg": 51,
-          "g": 5,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 14
-        },
-        "hasDetail": true,
         "seasons": 3
       },
       {
@@ -947,60 +486,52 @@
         "slug": "felipe",
         "photo": "assets/img/squad/felipe.jpg",
         "stats": {
-          "mp": 11,
-          "gs": 4,
-          "min": 417,
-          "mpg": 38,
-          "g": 5,
-          "as": 6,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 2,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 12
+          "g": 7,
+          "a": 8,
+          "gPlusA": 15
         },
-        "hasDetail": true,
         "seasons": 4
       },
       {
-        "key": "renan-gouveia",
-        "nickname": "Renan",
-        "name": "Renan Gouveia",
-        "number": 4,
-        "position": "Defenders",
-        "positionOrder": 3,
+        "key": "henrique-noujeimi",
+        "nickname": "Henrique",
+        "name": "Henrique Noujeimi",
+        "number": 19,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
         "foot": "Right",
         "current": true,
-        "slug": "renan",
-        "photo": "assets/img/squad/renan.jpg",
+        "slug": "henrique",
+        "photo": "assets/img/squad/henrique.jpg",
         "stats": {
-          "mp": 5,
-          "gs": 1,
-          "min": 283,
-          "mpg": 57,
-          "g": 5,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 12
+          "g": 7,
+          "a": 4,
+          "gPlusA": 11
         },
-        "hasDetail": true,
-        "seasons": 4
+        "seasons": 1
       },
       {
-        "key": "genelson-junior",
-        "nickname": "Juninho",
-        "name": "Genelson Junior",
+        "key": "igor-paiva",
+        "nickname": "Igor",
+        "name": "Igor Paiva",
+        "number": 16,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
+        "foot": "Right",
+        "current": true,
+        "slug": "igor",
+        "photo": "assets/img/squad/igor.jpg",
+        "stats": {
+          "g": 6,
+          "a": 2,
+          "gPlusA": 8
+        },
+        "seasons": 3
+      },
+      {
+        "key": "leonardo-novais",
+        "nickname": "Novais",
+        "name": "Leonardo Novais",
         "number": null,
         "position": "Attacking Midfielders",
         "positionOrder": 5,
@@ -1009,116 +540,10 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 6,
-          "gs": 5,
-          "min": 408,
-          "mpg": 68,
-          "g": 4,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 2,
-          "rc": 2,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 2,
-          "plusMinus": 3
+          "g": 7,
+          "a": 0,
+          "gPlusA": 7
         },
-        "hasDetail": true,
-        "seasons": 2
-      },
-      {
-        "key": "alexandre-cesar",
-        "nickname": "Ale",
-        "name": "Alexandre Cesar",
-        "number": null,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
-          "g": 4,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
-        },
-        "hasDetail": false,
-        "seasons": 1
-      },
-      {
-        "key": "luiz-carlos-de-souza-junior",
-        "nickname": "Luiz",
-        "name": "Luiz Carlos de Souza Junior",
-        "number": null,
-        "position": "Forwards",
-        "positionOrder": 6,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
-          "g": 4,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
-        },
-        "hasDetail": false,
-        "seasons": 1
-      },
-      {
-        "key": "raphael-oliveira",
-        "nickname": "Ibra",
-        "name": "Raphael Oliveira",
-        "number": null,
-        "position": "Forwards",
-        "positionOrder": 6,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
-          "g": 4,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
-        },
-        "hasDetail": false,
         "seasons": 1
       },
       {
@@ -1133,54 +558,28 @@
         "slug": "alison",
         "photo": "assets/img/squad/alison.jpg",
         "stats": {
-          "mp": 12,
-          "gs": 9,
-          "min": 796,
-          "mpg": 66,
           "g": 3,
-          "as": 3,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 13
+          "a": 4,
+          "gPlusA": 7
         },
-        "hasDetail": true,
         "seasons": 3
       },
       {
-        "key": "claudio-comunale-filho",
-        "nickname": "Claudio",
-        "name": "Claudio Comunale Filho",
-        "number": 17,
-        "position": "Full-Backs",
-        "positionOrder": 2,
-        "foot": "Left",
+        "key": "renan-gouveia",
+        "nickname": "Renan",
+        "name": "Renan Gouveia",
+        "number": 4,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
         "current": true,
-        "slug": "comunale",
-        "photo": "assets/img/squad/comunale.jpg",
+        "slug": "renan",
+        "photo": "assets/img/squad/renan.jpg",
         "stats": {
-          "mp": 11,
-          "gs": 7,
-          "min": 575,
-          "mpg": 52,
-          "g": 3,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 9
+          "g": 5,
+          "a": 1,
+          "gPlusA": 6
         },
-        "hasDetail": true,
         "seasons": 4
       },
       {
@@ -1195,23 +594,118 @@
         "slug": "gabriel",
         "photo": "assets/img/squad/gabriel.jpg",
         "stats": {
-          "mp": 5,
-          "gs": 3,
-          "min": 245,
-          "mpg": 49,
-          "g": 3,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 2
+          "g": 4,
+          "a": 2,
+          "gPlusA": 6
         },
-        "hasDetail": true,
+        "seasons": 2
+      },
+      {
+        "key": "alexandre-cesar",
+        "nickname": "Ale",
+        "name": "Alexandre Cesar",
+        "number": null,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 4,
+          "a": 0,
+          "gPlusA": 4
+        },
+        "seasons": 1
+      },
+      {
+        "key": "genelson-junior",
+        "nickname": "Juninho",
+        "name": "Genelson Junior",
+        "number": null,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 4,
+          "a": 0,
+          "gPlusA": 4
+        },
+        "seasons": 2
+      },
+      {
+        "key": "luiz-carlos-de-souza-junior",
+        "nickname": "Luiz",
+        "name": "Luiz Carlos de Souza Junior",
+        "number": null,
+        "position": "Forwards",
+        "positionOrder": 6,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 4,
+          "a": 0,
+          "gPlusA": 4
+        },
+        "seasons": 1
+      },
+      {
+        "key": "raphael-oliveira",
+        "nickname": "Ibra",
+        "name": "Raphael Oliveira",
+        "number": null,
+        "position": "Forwards",
+        "positionOrder": 6,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 4,
+          "a": 0,
+          "gPlusA": 4
+        },
+        "seasons": 1
+      },
+      {
+        "key": "claudio-comunale-filho",
+        "nickname": "Claudio",
+        "name": "Claudio Comunale Filho",
+        "number": 17,
+        "position": "Full-Backs",
+        "positionOrder": 2,
+        "foot": "Left",
+        "current": true,
+        "slug": "comunale",
+        "photo": "assets/img/squad/comunale.jpg",
+        "stats": {
+          "g": 3,
+          "a": 1,
+          "gPlusA": 4
+        },
+        "seasons": 4
+      },
+      {
+        "key": "vitor-samone",
+        "nickname": "Vitor",
+        "name": "Vitor Samone",
+        "number": 5,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
+        "foot": "Right",
+        "current": true,
+        "slug": "vitor",
+        "photo": "assets/img/squad/vitor.jpg",
+        "stats": {
+          "g": 2,
+          "a": 2,
+          "gPlusA": 4
+        },
         "seasons": 2
       },
       {
@@ -1226,23 +720,10 @@
         "slug": "giga",
         "photo": "assets/img/squad/giga.jpg",
         "stats": {
-          "mp": 4,
-          "gs": 1,
-          "min": 120,
-          "mpg": 30,
           "g": 3,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 1,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 1
+          "a": 0,
+          "gPlusA": 3
         },
-        "hasDetail": true,
         "seasons": 3
       },
       {
@@ -1257,85 +738,10 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
           "g": 3,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
+          "a": 0,
+          "gPlusA": 3
         },
-        "hasDetail": false,
-        "seasons": 1
-      },
-      {
-        "key": "vitor-samone",
-        "nickname": "Vitor",
-        "name": "Vitor Samone",
-        "number": 5,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
-        "foot": "Right",
-        "current": true,
-        "slug": "vitor",
-        "photo": "assets/img/squad/vitor.jpg",
-        "stats": {
-          "mp": 12,
-          "gs": 8,
-          "min": 702,
-          "mpg": 58,
-          "g": 2,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 1,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 13
-        },
-        "hasDetail": true,
-        "seasons": 2
-      },
-      {
-        "key": "gabriel-berenguer-vieira",
-        "nickname": "Gabriel",
-        "name": "Gabriel Berenguer Vieira",
-        "number": null,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 7,
-          "gs": 5,
-          "min": 500,
-          "mpg": 71,
-          "g": 2,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 1,
-          "plusMinus": 7
-        },
-        "hasDetail": true,
         "seasons": 1
       },
       {
@@ -1350,54 +756,28 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 9,
-          "gs": 3,
-          "min": 383,
-          "mpg": 43,
           "g": 2,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -3
+          "a": 0,
+          "gPlusA": 2
         },
-        "hasDetail": true,
         "seasons": 3
       },
       {
-        "key": "henrique-noujeimi",
-        "nickname": "Henrique",
-        "name": "Henrique Noujeimi",
-        "number": 19,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
+        "key": "gabriel-berenguer-vieira",
+        "nickname": "Gabriel",
+        "name": "Gabriel Berenguer Vieira",
+        "number": null,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
         "foot": "Right",
-        "current": true,
-        "slug": "henrique",
-        "photo": "assets/img/squad/henrique.jpg",
+        "current": false,
+        "slug": null,
+        "photo": null,
         "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 228,
-          "mpg": 76,
           "g": 2,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 2,
-          "plusMinus": 15
+          "a": 0,
+          "gPlusA": 2
         },
-        "hasDetail": true,
         "seasons": 1
       },
       {
@@ -1412,55 +792,11 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
           "g": 2,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
+          "a": 0,
+          "gPlusA": 2
         },
-        "hasDetail": false,
         "seasons": 2
-      },
-      {
-        "key": "vinicius-totti",
-        "nickname": "Vini",
-        "name": "Vinicius Totti",
-        "number": 12,
-        "position": "Defenders",
-        "positionOrder": 3,
-        "foot": "Right",
-        "current": true,
-        "slug": "vini",
-        "photo": "assets/img/squad/vini.jpg",
-        "stats": {
-          "mp": 11,
-          "gs": 9,
-          "min": 664,
-          "mpg": 60,
-          "g": 1,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 4
-        },
-        "hasDetail": true,
-        "seasons": 3
       },
       {
         "key": "jefferson-tosti",
@@ -1474,23 +810,10 @@
         "slug": "jeff",
         "photo": "assets/img/squad/jeff.jpg",
         "stats": {
-          "mp": 12,
-          "gs": 8,
-          "min": 622,
-          "mpg": 52,
           "g": 1,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 1,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 16
+          "a": 1,
+          "gPlusA": 2
         },
-        "hasDetail": true,
         "seasons": 2
       },
       {
@@ -1505,148 +828,11 @@
         "slug": "tom",
         "photo": "assets/img/squad/tom.jpg",
         "stats": {
-          "mp": 12,
-          "gs": 5,
-          "min": 427,
-          "mpg": 36,
           "g": 1,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 6
+          "a": 1,
+          "gPlusA": 2
         },
-        "hasDetail": true,
         "seasons": 3
-      },
-      {
-        "key": "marcelo-ribeiro",
-        "nickname": "Marcelo",
-        "name": "Marcelo Ribeiro",
-        "number": 20,
-        "position": "Forwards",
-        "positionOrder": 6,
-        "foot": "Right",
-        "current": true,
-        "slug": "marcelo",
-        "photo": "assets/img/squad/marcelo.jpg",
-        "stats": {
-          "mp": 6,
-          "gs": 0,
-          "min": 78,
-          "mpg": 13,
-          "g": 1,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -3
-        },
-        "hasDetail": true,
-        "seasons": 2
-      },
-      {
-        "key": "aleksandro-pereira",
-        "nickname": "Aleksandro",
-        "name": "Aleksandro Pereira",
-        "number": null,
-        "position": "Defensive Midfielders",
-        "positionOrder": 4,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 0,
-          "gs": 0,
-          "min": 0,
-          "mpg": 0,
-          "g": 1,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 0
-        },
-        "hasDetail": false,
-        "seasons": 1
-      },
-      {
-        "key": "daniel-bruno-da-silva",
-        "nickname": "Dani",
-        "name": "Daniel Bruno",
-        "number": 3,
-        "position": "Defenders",
-        "positionOrder": 3,
-        "foot": "Right",
-        "current": true,
-        "slug": "dani",
-        "photo": "assets/img/squad/dani.jpg",
-        "stats": {
-          "mp": 13,
-          "gs": 12,
-          "min": 905,
-          "mpg": 70,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 25
-        },
-        "hasDetail": true,
-        "seasons": 2
-      },
-      {
-        "key": "tiago-fabri-brenck",
-        "nickname": "Tiago",
-        "name": "Tiago Fabri Brenck",
-        "number": 1,
-        "position": "Goalkeepers",
-        "positionOrder": 1,
-        "foot": "Right",
-        "current": true,
-        "slug": "tiago",
-        "photo": "assets/img/squad/tiago.jpg",
-        "stats": {
-          "mp": 10,
-          "gs": 9,
-          "min": 834,
-          "mpg": 83,
-          "g": 0,
-          "as": 0,
-          "ga": 7,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 23
-        },
-        "hasDetail": true,
-        "seasons": 2
       },
       {
         "key": "leonardo-da-ruiz-correia",
@@ -1660,23 +846,10 @@
         "slug": "leo",
         "photo": "assets/img/squad/leo.jpg",
         "stats": {
-          "mp": 12,
-          "gs": 9,
-          "min": 755,
-          "mpg": 63,
           "g": 0,
-          "as": 2,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 1,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 6
+          "a": 2,
+          "gPlusA": 2
         },
-        "hasDetail": true,
         "seasons": 2
       },
       {
@@ -1691,86 +864,65 @@
         "slug": "eliel",
         "photo": "assets/img/squad/eliel.jpg",
         "stats": {
-          "mp": 7,
-          "gs": 4,
-          "min": 244,
-          "mpg": 35,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 13
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
         },
-        "hasDetail": true,
         "seasons": 2
       },
       {
-        "key": "osorio-araruna-filho",
-        "nickname": "Osorio",
-        "name": "Osorio Araruna Filho",
-        "number": null,
-        "position": "Goalkeepers",
-        "positionOrder": 1,
-        "foot": "Right",
-        "current": false,
-        "slug": null,
-        "photo": null,
-        "stats": {
-          "mp": 3,
-          "gs": 3,
-          "min": 224,
-          "mpg": 75,
-          "g": 0,
-          "as": 0,
-          "ga": 8,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -2
-        },
-        "hasDetail": true,
-        "seasons": 1
-      },
-      {
-        "key": "giovanni-ferreira-dos-santos",
-        "nickname": "Giovanni",
-        "name": "Giovanni Ferreira dos Santos",
-        "number": null,
+        "key": "vinicius-totti",
+        "nickname": "Vini",
+        "name": "Vinicius Totti",
+        "number": 12,
         "position": "Defenders",
         "positionOrder": 3,
         "foot": "Right",
+        "current": true,
+        "slug": "vini",
+        "photo": "assets/img/squad/vini.jpg",
+        "stats": {
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
+        },
+        "seasons": 3
+      },
+      {
+        "key": "aleksandro-pereira",
+        "nickname": "Aleksandro",
+        "name": "Aleksandro Pereira",
+        "number": null,
+        "position": "Defensive Midfielders",
+        "positionOrder": 4,
+        "foot": "Right",
         "current": false,
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 6,
-          "gs": 0,
-          "min": 197,
-          "mpg": 33,
-          "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -5
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
         },
-        "hasDetail": true,
         "seasons": 1
+      },
+      {
+        "key": "marcelo-ribeiro",
+        "nickname": "Marcelo",
+        "name": "Marcelo Ribeiro",
+        "number": 20,
+        "position": "Forwards",
+        "positionOrder": 6,
+        "foot": "Right",
+        "current": true,
+        "slug": "marcelo",
+        "photo": "assets/img/squad/marcelo.jpg",
+        "stats": {
+          "g": 1,
+          "a": 0,
+          "gPlusA": 1
+        },
+        "seasons": 2
       },
       {
         "key": "bruno-santos",
@@ -1784,55 +936,47 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 4,
-          "gs": 0,
-          "min": 171,
-          "mpg": 43,
           "g": 0,
-          "as": 1,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 2
+          "a": 1,
+          "gPlusA": 1
         },
-        "hasDetail": true,
         "seasons": 1
       },
       {
-        "key": "dan-coutinho",
-        "nickname": "Dan",
-        "name": "Dan Coutinho",
+        "key": "osorio-araruna-filho",
+        "nickname": "Osorio",
+        "name": "Osorio Araruna Filho",
         "number": null,
-        "position": "Attacking Midfielders",
-        "positionOrder": 5,
+        "position": "Goalkeepers",
+        "positionOrder": 1,
         "foot": "Right",
         "current": false,
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 3,
-          "gs": 2,
-          "min": 145,
-          "mpg": 48,
           "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -1
+          "a": 0,
+          "gPlusA": 0
         },
-        "hasDetail": true,
         "seasons": 1
+      },
+      {
+        "key": "tiago-fabri-brenck",
+        "nickname": "Tiago",
+        "name": "Tiago Fabri Brenck",
+        "number": 1,
+        "position": "Goalkeepers",
+        "positionOrder": 1,
+        "foot": "Right",
+        "current": true,
+        "slug": "tiago",
+        "photo": "assets/img/squad/tiago.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        },
+        "seasons": 2
       },
       {
         "key": "adriano-brito",
@@ -1846,23 +990,10 @@
         "slug": null,
         "photo": null,
         "stats": {
-          "mp": 3,
-          "gs": 1,
-          "min": 113,
-          "mpg": 38,
           "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": -1
+          "a": 0,
+          "gPlusA": 0
         },
-        "hasDetail": true,
         "seasons": 1
       },
       {
@@ -1877,105 +1008,86 @@
         "slug": "ryan",
         "photo": "assets/img/squad/ryan.jpg",
         "stats": {
-          "mp": 4,
-          "gs": 0,
-          "min": 85,
-          "mpg": 21,
           "g": 0,
-          "as": 0,
-          "ga": 0,
-          "gp": 0,
-          "sog": 0,
-          "yc": 0,
-          "rc": 0,
-          "pf": 0,
-          "injury": 0,
-          "mvp": 0,
-          "plusMinus": 5
+          "a": 0,
+          "gPlusA": 0
         },
-        "hasDetail": true,
         "seasons": 2
+      },
+      {
+        "key": "daniel-bruno-da-silva",
+        "nickname": "Dani",
+        "name": "Daniel Bruno",
+        "number": 3,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
+        "current": true,
+        "slug": "dani",
+        "photo": "assets/img/squad/dani.jpg",
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        },
+        "seasons": 2
+      },
+      {
+        "key": "giovanni-ferreira-dos-santos",
+        "nickname": "Giovanni",
+        "name": "Giovanni Ferreira dos Santos",
+        "number": null,
+        "position": "Defenders",
+        "positionOrder": 3,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        },
+        "seasons": 1
+      },
+      {
+        "key": "dan-coutinho",
+        "nickname": "Dan",
+        "name": "Dan Coutinho",
+        "number": null,
+        "position": "Attacking Midfielders",
+        "positionOrder": 5,
+        "foot": "Right",
+        "current": false,
+        "slug": null,
+        "photo": null,
+        "stats": {
+          "g": 0,
+          "a": 0,
+          "gPlusA": 0
+        },
+        "seasons": 1
       }
     ],
     "totals": {
-      "mp": 230,
-      "gs": 141,
-      "min": 12570,
-      "g": 148,
-      "as": 29,
-      "ga": 15,
-      "gp": 0,
-      "sog": 0,
-      "yc": 8,
-      "rc": 4,
-      "pf": 0,
-      "injury": 0,
-      "mvp": 13,
-      "plusMinus": 242,
-      "mpg": 0,
+      "g": 164,
+      "a": 42,
+      "gPlusA": 206,
       "players": 37
     }
   },
   "labels": {
-    "mp": [
-      "MP",
-      "Matches played"
-    ],
-    "gs": [
-      "GS",
-      "Games started"
-    ],
-    "min": [
-      "MIN",
-      "Minutes played"
-    ],
-    "mpg": [
-      "MPG",
-      "Minutes per game"
-    ],
     "g": [
       "G",
       "Goals"
     ],
-    "as": [
-      "AS",
+    "a": [
+      "A",
       "Assists"
     ],
-    "ga": [
-      "GA",
-      "Goals allowed"
-    ],
-    "gp": [
-      "GP",
-      "Goals prevented"
-    ],
-    "sog": [
-      "SoG",
-      "Shots on goal"
-    ],
-    "yc": [
-      "YC",
-      "Yellow cards"
-    ],
-    "rc": [
-      "RC",
-      "Red cards"
-    ],
-    "pf": [
-      "PF",
-      "Fouls"
-    ],
-    "injury": [
-      "INJ",
-      "Injuries"
-    ],
-    "mvp": [
-      "MVP",
-      "Most valuable player awards"
-    ],
-    "plusMinus": [
-      "+/-",
-      "On-field score differential"
+    "gPlusA": [
+      "G+A",
+      "Goals and assists"
     ]
   }
 }
