@@ -585,6 +585,19 @@
 
   // ---------------------------------------------------------- gallery
 
+  // Photo credit for an album: plain text plus one optional link (an Instagram
+  // handle, a photographer's site). Anything that isn't an http(s) URL is shown
+  // as text, so a bad entry in gallery.json can't become a javascript: link.
+  function albumCredit(credit) {
+    if (!credit || !credit.text) return '';
+    const link = credit.link;
+    const safe = link && link.href && /^https?:\/\//i.test(link.href);
+    const tail = safe
+      ? ` · <a href="${esc(link.href)}" target="_blank" rel="noopener">${esc(link.label || link.href)}</a>`
+      : (link && link.label ? ` · ${esc(link.label)}` : '');
+    return `<p class="album-credit">${esc(credit.text)}${tail}</p>`;
+  }
+
   async function renderGallery(el) {
     const dialog = document.querySelector('[data-lightbox]');
     try {
@@ -596,6 +609,7 @@
             <div>
               <h2 class="album-title" id="album-${esc(album.id)}">${esc(album.title)}</h2>
               ${album.description ? `<p class="section-lead">${esc(album.description)}</p>` : ''}
+              ${albumCredit(album.credit)}
             </div>
             <span class="pill">${album.photos.length} ${album.photos.length === 1 ? 'photo' : 'photos'}</span>
           </div>

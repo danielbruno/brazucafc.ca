@@ -3,7 +3,14 @@
     {
       "id": "matchday-2026-11-13",
       "title": "Matchday: Brazuca FC vs Ridge Meadows Gunners",
-      "description": "A wet Friday night under the lights at Cloverdale 4 — 13 November 2026, and a 7–0 win over Ridge Meadows Gunners. Photos by Jimmy Ma / sportsUP.",
+      "description": "A wet Friday night under the lights at Cloverdale 4 — 13 November 2026, and a 7–0 win over Ridge Meadows Gunners.",
+      "credit": {
+        "text": "Photos by Jimmy Ma / sportsUP",
+        "link": {
+          "label": "@sportsup.bc",
+          "href": "https://www.instagram.com/sportsup.bc/"
+        }
+      },
       "photos": [
         {
           "src": "assets/img/gallery/2026-11-13-gunners/01.jpg",

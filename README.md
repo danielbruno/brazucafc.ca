@@ -153,6 +153,16 @@ several megabytes each.
 The first photo in the first album is the one the grid features at double size,
 and the "send us your shots" card renders once, after the last album.
 
+An album can carry a photo credit, shown under its description. The link is
+optional, and only `http`/`https` addresses are turned into one:
+
+```json
+"credit": {
+  "text": "Photos by Jimmy Ma / sportsUP",
+  "link": { "label": "@sportsup.bc", "href": "https://www.instagram.com/sportsup.bc/" }
+}
+```
+
 ## Cache busting
 
 GitHub Pages serves assets with `cache-control: max-age=600`, so for ten

@@ -653,6 +653,8 @@ h1, h2, h3 {
 
 .album + .album { margin-top: clamp(44px, 6vw, 68px); }
 .album-title { font-size: clamp(1.6rem, 3.6vw, 2.4rem); }
+.album-credit { margin-top: 8px; font-size: .78rem; color: var(--faint); }
+.album-credit a { color: var(--muted); }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
 .gallery-item {
   position: relative; overflow: hidden; margin: 0; aspect-ratio: 4 / 3;
