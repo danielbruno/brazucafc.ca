@@ -1,6 +1,337 @@
 {
   "albums": [
     {
+      "id": "matchday-2026-11-13",
+      "title": "Matchday: Brazuca FC vs Ridge Meadows Gunners",
+      "description": "A wet Friday night under the lights at Cloverdale 4 — 13 November 2026. Photos by Jimmy Ma / sportsUP.",
+      "photos": [
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/01.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/01-800.jpg",
+          "alt": "The Brazuca FC starting eleven posed in two rows on the pitch under the floodlights before kick-off",
+          "caption": "The starting eleven"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/02.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/02-800.jpg",
+          "alt": "Players and coaching staff gathered beside the red dugout in the rain, a matchball on the turf",
+          "caption": "Last words before kick-off"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/03.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/03-800.jpg",
+          "alt": "A player in a Brazuca tracksuit jogging towards the camera during the warm-up, rain falling through the floodlights",
+          "caption": "Warming up in the drizzle"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/04.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/04-800.jpg",
+          "alt": "A group of players huddled together on the touchline, one of them wrapped in a Brazilian flag",
+          "caption": "The flag comes out"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/05.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/05-800.jpg",
+          "alt": "Two Brazuca players talking on the touchline before the match, number 21 in the foreground",
+          "caption": "Game faces"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/06.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/06-800.jpg",
+          "alt": "Three Brazuca players sharing a laugh before kick-off, the goalkeeper in a white kit between them",
+          "caption": "All smiles before the whistle"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/07.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/07-800.jpg",
+          "alt": "Two players hugging in front of the dugout, teammates in green either side",
+          "caption": "An embrace at the dugout"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/08.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/08-800.jpg",
+          "alt": "Brazuca players and staff standing in a loose line in front of the bench before the match",
+          "caption": "Lining up at the bench"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/09.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/09-800.jpg",
+          "alt": "The head coach in a cap gesturing with a raised finger as he talks to players and the referee before kick-off",
+          "caption": "The coach makes his point"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/10.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/10-800.jpg",
+          "alt": "Close-up of the Brazuca FC name printed across the back of a club jacket",
+          "caption": "Colours on our backs"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/11.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/11-800.jpg",
+          "alt": "The squad packed into a tight pre-match huddle with their hands joined in the middle",
+          "caption": "Hands in"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/12.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/12-800.jpg",
+          "alt": "Number 5 running across the wet pitch with rain streaking through the floodlights",
+          "caption": "Into the rain"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/13.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/13-800.jpg",
+          "alt": "Number 8 stretching to reach a ball dropping out of the night sky, an opponent in white alongside",
+          "caption": "Eyes on the ball"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/14.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/14-800.jpg",
+          "alt": "A Brazuca midfielder on the ball surrounded by Ridge Meadows Gunners players in white and navy",
+          "caption": "Midfield battle"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/15.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/15-800.jpg",
+          "alt": "Number 12 standing on the pitch with a hand to his head, catching his breath",
+          "caption": "A moment to reset"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/16.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/16-800.jpg",
+          "alt": "A Brazuca player carrying the ball forward with an opponent chasing and a teammate in support",
+          "caption": "Driving forward"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/17.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/17-800.jpg",
+          "alt": "A Brazuca player with his back to goal, shielding the ball from two Gunners defenders",
+          "caption": "Shielding the ball"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/18.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/18-800.jpg",
+          "alt": "Number 10 running with the ball through a crowd of players in the centre of the pitch",
+          "caption": "Through the middle"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/19.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/19-800.jpg",
+          "alt": "Number 3 stepping out of defence with the ball at his feet",
+          "caption": "Out from the back"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/20.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/20-800.jpg",
+          "alt": "Number 3 swinging a leg through the ball to clear it downfield",
+          "caption": "Clearing the lines"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/21.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/21-800.jpg",
+          "alt": "Number 7 and a Gunners defender leaning into each other as they chase the ball",
+          "caption": "Shoulder to shoulder"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/22.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/22-800.jpg",
+          "alt": "A Brazuca defender stretching to poke the ball away from an onrushing opponent",
+          "caption": "Winning it back"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/23.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/23-800.jpg",
+          "alt": "Three Brazuca players in green coming together to celebrate close to the touchline",
+          "caption": "Celebration by the line"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/24.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/24-800.jpg",
+          "alt": "Number 2 jogging across the pitch with a red floodlight glowing behind him",
+          "caption": "Under the red glow"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/25.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/25-800.jpg",
+          "alt": "Number 2 striding onto the ball in the dark, the pitch lit only at his feet",
+          "caption": "On the ball"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/26.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/26-800.jpg",
+          "alt": "Number 5 reaching out to high-five teammates after a goal",
+          "caption": "High fives all round"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/27.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/27-800.jpg",
+          "alt": "Brazuca and Gunners players packed into the penalty area as the ball drops in",
+          "caption": "Crowded box"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/28.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/28-800.jpg",
+          "alt": "Number 7 striking the ball towards goal, the Gunners goalkeeper in pink blurred in the foreground",
+          "caption": "Strike on goal"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/29.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/29-800.jpg",
+          "alt": "Number 5 running onto a loose ball in front of the goal",
+          "caption": "Running onto it"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/30.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/30-800.jpg",
+          "alt": "Number 9 at full stretch as he kicks, the ball still in the air beside him",
+          "caption": "Full stretch"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/31.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/31-800.jpg",
+          "alt": "Four Brazuca players walking back across the pitch together, one in an orange keeper bib",
+          "caption": "Walking it off"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/32.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/32-800.jpg",
+          "alt": "The head coach on the touchline with both arms out, calling instructions to the pitch",
+          "caption": "Instructions from the touchline"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/33.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/33-800.jpg",
+          "alt": "Number 18 running across the grass behind the goal frame",
+          "caption": "Behind the goal"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/34.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/34-800.jpg",
+          "alt": "The goalkeeper in an orange bib gathering the ball safely in front of his net",
+          "caption": "Safe hands"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/35.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/35-800.jpg",
+          "alt": "Substitutes and staff standing along the touchline in club jackets, watching the game",
+          "caption": "The bench watches on"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/36.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/36-800.jpg",
+          "alt": "A Brazuca player sliding across the wet turf with an arm outstretched",
+          "caption": "Everything on the line"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/37.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/37-800.jpg",
+          "alt": "Two Brazuca players running into each other's arms to celebrate as an opponent walks away",
+          "caption": "Running to celebrate"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/38.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/38-800.jpg",
+          "alt": "Four Brazuca players high-fiving in a line on the edge of the pitch",
+          "caption": "Another one to celebrate"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/39.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/39-800.jpg",
+          "alt": "Number 11 turning sharply away with his fist clenched",
+          "caption": "Spinning away"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/40.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/40-800.jpg",
+          "alt": "Number 23 getting a shot away as the Gunners goalkeeper in pink goes to ground",
+          "caption": "One-on-one with the keeper"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/41.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/41-800.jpg",
+          "alt": "A club member in a Brazuca jacket and beanie standing alone by the red dugout, seen past a blur of colour",
+          "caption": "Quiet moment by the dugout"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/42.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/42-800.jpg",
+          "alt": "Number 25 walking off the pitch with teammates behind him",
+          "caption": "Catching a breath"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/43.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/43-800.jpg",
+          "alt": "Number 17 driving forward with the ball, opponents tracking back around him",
+          "caption": "Carrying it forward"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/44.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/44-800.jpg",
+          "alt": "A Brazuca player and a Gunners player leaping together to contest a header",
+          "caption": "Up for the header"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/45.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/45-800.jpg",
+          "alt": "Number 11 jogging through the dark with his eyes fixed up the pitch",
+          "caption": "Eyes up"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/46.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/46-800.jpg",
+          "alt": "Number 5 walking across the pitch, looking straight ahead",
+          "caption": "Keeping focus"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/47.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/47-800.jpg",
+          "alt": "Two Brazuca players meeting in the middle of the pitch for a fist bump",
+          "caption": "Fist bump"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/48.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/48-800.jpg",
+          "alt": "Numbers 20 and 23 walking behind the goal, one with an arm raised",
+          "caption": "Arms up behind the goal"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/49.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/49-800.jpg",
+          "alt": "Three Brazuca players high-fiving in front of the goal",
+          "caption": "Job done"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/50.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/50-800.jpg",
+          "alt": "Number 21 jogging past an opponent in the closing stages of the match",
+          "caption": "Final minutes"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/51.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/51-800.jpg",
+          "alt": "Number 23 celebrating with a finger pointed upwards",
+          "caption": "Pointing to the sky"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/52.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/52-800.jpg",
+          "alt": "Number 21 roaring with both fists clenched after the final whistle",
+          "caption": "Full-time roar"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/53.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/53-800.jpg",
+          "alt": "The whole Brazuca FC squad and staff posed together on the pitch after the match",
+          "caption": "The full squad"
+        },
+        {
+          "src": "assets/img/gallery/2026-11-13-gunners/54.jpg",
+          "thumb": "assets/img/gallery/2026-11-13-gunners/54-800.jpg",
+          "alt": "The squad crowded into the dugout, arms in the air, celebrating at the end of the night",
+          "caption": "Dugout celebrations"
+        }
+      ]
+    },
+    {
       "id": "squad",
       "title": "The Squad",
       "description": "Team photos from the FVSL Masters season.",

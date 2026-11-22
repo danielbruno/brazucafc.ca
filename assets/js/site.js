@@ -590,7 +590,7 @@
     try {
       const data = await loadJson('data/gallery.json');
       const photos = [];
-      el.innerHTML = data.albums.map(album => `
+      el.innerHTML = data.albums.map((album, albumIndex) => `
         <section class="album" aria-labelledby="album-${esc(album.id)}">
           <div class="section-head">
             <div>
@@ -610,10 +610,11 @@
                   ${photo.caption ? `<figcaption>${esc(photo.caption)}</figcaption>` : ''}
                 </figure>`;
             }).join('')}
+            ${albumIndex === data.albums.length - 1 ? `
             <div class="gallery-slot">
               <strong>More moments coming</strong>
               <span>Got a great shot from matchday? Send it to <a href="mailto:tech@brazucafc.ca">tech@brazucafc.ca</a>.</span>
-            </div>
+            </div>` : ''}
           </div>
         </section>`).join('');
 

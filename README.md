@@ -143,6 +143,16 @@ Add photos to `assets/img/gallery/` and list them in `data/gallery.json`:
 Photos go inside an album's `photos` array; add a new object to `albums` to
 start a new album. `thumb` is optional (an ~800px-wide copy keeps the grid fast).
 
+Full-size copies are 1600px on the long edge, thumbnails 800px, both JPEG. A
+whole shoot goes in its own subfolder named after the match
+(`assets/img/gallery/2026-11-13-gunners/01.jpg` and `01-800.jpg`) so the
+top level stays readable. Re-encode from the originals rather than committing
+camera files: they carry EXIF (photographer, camera, sometimes GPS) and run to
+several megabytes each.
+
+The first photo in the first album is the one the grid features at double size,
+and the "send us your shots" card renders once, after the last album.
+
 ## Cache busting
 
 GitHub Pages serves assets with `cache-control: max-age=600`, so for ten
