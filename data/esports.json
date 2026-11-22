@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T07:44:22.151Z",
+  "updatedAt": "2026-11-22T00:38:57.118Z",
   "club": {
     "id": "351608",
     "name": "eBrazuca FC",
@@ -251,6 +251,26 @@
     },
     {
       "name": "Guirosis",
+      "proName": null,
+      "position": null,
+      "proPosition": null,
+      "overall": null,
+      "gamesPlayed": 0,
+      "goals": 0,
+      "assists": 0,
+      "winRate": 0,
+      "rating": 0,
+      "motm": 0,
+      "passSuccess": 0,
+      "passesMade": 0,
+      "tackleSuccess": 0,
+      "tacklesMade": 0,
+      "shotSuccess": 0,
+      "cleanSheets": 0,
+      "redCards": 0
+    },
+    {
+      "name": "GuileChaves",
       "proName": null,
       "position": null,
       "proPosition": null,
