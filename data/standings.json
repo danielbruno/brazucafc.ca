@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T07:06:05.382Z",
+  "updatedAt": "2026-11-23T07:53:29.654Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -33,25 +33,25 @@
     {
       "pos": 3,
       "team": "AC Fury",
-      "gp": 8,
-      "w": 5,
+      "gp": 9,
+      "w": 6,
       "d": 0,
       "l": 3,
-      "gf": 20,
+      "gf": 25,
       "ga": 11,
-      "gd": 9,
-      "pts": 15
+      "gd": 14,
+      "pts": 18
     },
     {
       "pos": 4,
       "team": "Albion Legacy FC",
-      "gp": 8,
+      "gp": 9,
       "w": 3,
       "d": 2,
-      "l": 3,
+      "l": 4,
       "gf": 17,
-      "ga": 22,
-      "gd": -5,
+      "ga": 27,
+      "gd": -10,
       "pts": 11
     },
     {
