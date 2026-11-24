@@ -405,6 +405,24 @@ h1, h2, h3 {
 .fixture-field--link:hover svg:last-child, .fixture-field--link:focus-visible svg:last-child {
   transform: translate(2px, -2px); opacity: 1; color: var(--yellow);
 }
+.fixture-videos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.video-link {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px 4px 10px;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+.video-link svg { flex: none; width: 12px; height: 12px; color: var(--red); transition: color .2s ease; }
+.video-link:hover, .video-link:focus-visible { border-color: rgba(245, 197, 24, .55); color: var(--yellow); background: rgba(245, 197, 24, .06); }
+.video-link:hover svg, .video-link:focus-visible svg { color: var(--yellow); }
+/* Finished games are dimmed, but a row with video links has to stay readable: dim its text, not the links. */
+.fixture.is-past.has-video { opacity: 1; }
+.fixture.is-past.has-video .fixture-date,
+.fixture.is-past.has-video .fixture-round,
+.fixture.is-past.has-video .fixture-teams,
+.fixture.is-past.has-video .fixture-field,
+.fixture.is-past.has-video .fixture-side { opacity: .6; }
 .fixture-side { justify-self: end; }
 .result { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.15rem; }
 .result-badge { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; font-size: .85rem; font-weight: 700; color: #fff; }
@@ -415,6 +433,8 @@ h1, h2, h3 {
   .fixture { grid-template-columns: 74px minmax(0, 1fr); gap: 12px; padding: 14px; }
   .fixture-side { grid-column: 2; justify-self: start; }
   .fixture-teams em { margin: 0 5px; }
+  .fixture-videos { gap: 6px; }
+  .video-link { padding: 4px 8px 4px 7px; gap: 5px; font-size: .66rem; letter-spacing: .02em; }
 }
 
 .schedule-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }

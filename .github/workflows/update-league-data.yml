@@ -28,6 +28,12 @@ jobs:
       - name: Fetch schedule and standings from FVSL
         run: node scripts/update-league-data.mjs
 
+      # After the schedule, since videos are matched to its games. A YouTube hiccup must not
+      # stop the scores from being published, hence continue-on-error.
+      - name: Link match videos from YouTube
+        continue-on-error: true
+        run: node scripts/update-videos.mjs
+
       - name: Commit changes
         id: commit
         run: |
@@ -39,7 +45,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git commit -m "Update league schedule and standings"
+          git commit -m "Update league schedule, standings and match videos"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 

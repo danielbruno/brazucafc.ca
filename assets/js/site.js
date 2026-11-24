@@ -38,6 +38,7 @@
     external: svg('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
     calendarPlus: svg('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 13v6M9 16h6"/>'),
     download: svg('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>'),
+    play: svg('<path d="M8 5v14l11-7z" fill="currentColor"/>'),
     chevronDown: svg('<path d="M6 9l6 6 6-6"/>'),
   };
 
@@ -410,9 +411,20 @@
     }
   }
 
-  function fixtureRow(game, now, next, fieldsData) {
+  // YouTube links for a finished game (data/videos.json, kept by scripts/update-videos.mjs).
+  const VIDEO_LABELS = [['highlights', 'Highlights'], ['full', 'Full match']];
+  function videoLinks(game, videos) {
+    const found = videos?.games?.[game.kickoff];
+    if (!found) return '';
+    const links = VIDEO_LABELS.filter(([kind]) => found[kind]?.id).map(([kind, label]) =>
+      `<a class="video-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(found[kind].id)}" target="_blank" rel="noopener" aria-label="${esc(label)} of ${esc(game.opponent || 'the match')} on YouTube (opens in a new tab)">${ICONS.play}<span>${label}</span></a>`);
+    return links.length ? `<div class="fixture-videos">${links.join('')}</div>` : '';
+  }
+
+  function fixtureRow(game, now, next, fieldsData, videos) {
     const over = isOver(game, now);
-    const classes = ['fixture', game.isBye && 'is-bye', over && 'is-past', game === next && 'is-next'].filter(Boolean).join(' ');
+    const watch = game.isBye ? '' : videoLinks(game, videos);
+    const classes = ['fixture', game.isBye && 'is-bye', over && 'is-past', game === next && 'is-next', watch && 'has-video'].filter(Boolean).join(' ');
     const date = `
       <div class="fixture-date">
         <span class="fixture-day">${esc(fmt.weekday.format(game.start))}</span>
@@ -461,6 +473,7 @@
           <span class="fixture-round">Round ${game.round} · ${game.isHome ? 'Home' : 'Away'}</span>
           <span class="fixture-teams">${name(game.home)}<em>vs</em>${name(game.away)}</span>
           ${fieldLink(game.field, fieldsData)}
+          ${watch}
         </div>
         <div class="fixture-side">${side}</div>
       </li>`;
@@ -482,9 +495,10 @@
     const list = el.querySelector('[data-fixtures]');
     const buttons = $$('[data-filter]', el);
     try {
-      const [schedule, fieldsData] = await Promise.all([
+      const [schedule, fieldsData, videos] = await Promise.all([
         loadJson('data/schedule.json'),
         loadJson('data/fields.json').catch(() => ({})),
+        loadJson('data/videos.json').catch(() => ({})),   // optional: the page works without it
       ]);
       const games = prepareGames(schedule);
       const now = Date.now();
@@ -503,7 +517,7 @@
       const draw = filter => {
         const shown = games.filter(filters[filter]);
         list.innerHTML = shown.length
-          ? shown.map(game => fixtureRow(game, now, next, fieldsData)).join('')
+          ? shown.map(game => fixtureRow(game, now, next, fieldsData, videos)).join('')
           : `<li class="empty-state">${empty[filter]}</li>`;
         buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
       };
