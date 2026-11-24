@@ -35,10 +35,12 @@ const dataDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
 
 // -------------------------------------------------------------------- feed
 
+// An entity naming a code point that doesn't exist stays as written instead of throwing.
+const fromCode = (n, whole) => (Number.isInteger(n) && n >= 0 && n <= 0x10FFFF ? String.fromCodePoint(n) : whole);
 const decode = s => s
   .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
-  .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-  .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+  .replace(/&#(\d+);/g, (whole, n) => fromCode(Number(n), whole))
+  .replace(/&#x([0-9a-f]+);/gi, (whole, n) => fromCode(parseInt(n, 16), whole))
   .replace(/&apos;/g, "'").replace(/&amp;/g, '&');
 
 export function parseFeed(xml) {
@@ -95,8 +97,17 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
   const matches = structuredClone(previous);
   const unmatched = [];
   const byKickoff = new Map(games.map(g => [g.kickoff, g]));
-  // Games that left the schedule (rescheduled or removed) take their links with them.
-  for (const kickoff of Object.keys(matches)) if (!byKickoff.has(kickoff)) delete matches[kickoff];
+  // Links are keyed by kickoff text. When the league moves a game or rewrites its UTC offset the key
+  // changes, and the feed can't rebuild old links (it holds 15 uploads), so a link whose key is gone
+  // follows the nearest game within a day that has none. With no such game it is kept, unseen.
+  for (const kickoff of Object.keys(matches)) {
+    if (byKickoff.has(kickoff)) continue;
+    const at = Date.parse(kickoff);
+    const target = games
+      .filter(g => g.kickoff && !g.isBye && !matches[g.kickoff] && Math.abs(Date.parse(g.kickoff) - at) <= 864e5)
+      .sort((a, b) => Math.abs(Date.parse(a.kickoff) - at) - Math.abs(Date.parse(b.kickoff) - at))[0];
+    if (target) { matches[target.kickoff] = matches[kickoff]; delete matches[kickoff]; }
+  }
 
   // Takes a video out of wherever it is filed, optionally keeping one slot (game + kind).
   const unfile = (id, keep) => {
@@ -118,7 +129,8 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
     } else {
       game = matchVideo(video, games);
     }
-    const seconds = durations[video.id];
+    // A length of 0 is a stream or upload still processing, not a clip: treat it as unknown.
+    const seconds = durations[video.id] > 0 ? durations[video.id] : undefined;
     if (!game || (Number.isFinite(seconds) && seconds < MIN_SECONDS)) {
       unfile(video.id);                                                     // no longer a match (or a Short)
       unmatched.push(video);
@@ -144,8 +156,15 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
 
 // -------------------------------------------------------------------- main
 
+// A missing file is fine (first run). A file that exists but can't be read or parsed stops the run,
+// so a bad merge can't be mistaken for "no data" and overwritten, losing links the feed can't restore.
 async function readJson(path, fallback) {
-  try { return JSON.parse(await readFile(path, 'utf8')); } catch { return fallback; }
+  let text;
+  try { text = await readFile(path, 'utf8'); } catch (err) {
+    if (err.code === 'ENOENT') return fallback;
+    throw err;
+  }
+  try { return JSON.parse(text); } catch (err) { throw new Error(`${path} is not valid JSON (${err.message}); fix it or delete it.`); }
 }
 
 // Lengths already stored are reused; only new videos cost a page fetch.

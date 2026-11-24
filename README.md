@@ -84,7 +84,7 @@ To fix one by hand, add it to `data/video-overrides.json` (create the file):
 A kickoff (exactly as written in `schedule.json`) pins the video to that game;
 `null` ignores the video (and removes a link it already has). A video whose
 length can't be read never replaces a link that is already there; it waits for
-the next run. The workflow runs the tests (`node --test scripts/`) before the
+the next run. The workflow runs the tests (`node --test scripts/*.test.mjs`) before the
 script, and a failure shows as a warning on the run.
 
 ### Player stats

@@ -1,9 +1,10 @@
-// node --test scripts/
+// node --test scripts/*.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseFeed, matchVideo, buildVideos, videoKind, parseDuration, normalize } from './update-videos.mjs';
 
-// Real titles and dates from the channel, against the real fixture list.
+// Real titles and dates from the channel, against the real fixture list (kickoffs written
+// exactly as data/schedule.json writes them, -07:00 all season).
 const game = (kickoff, opponent) => ({ kickoff, opponent, isBye: false });
 const games = [
   { kickoff: '2026-09-11T20:45:00-07:00', opponent: null, isBye: true },
@@ -13,9 +14,9 @@ const games = [
   game('2026-10-17T20:00:00-07:00', 'Albion Legacy FC'),
   game('2026-10-23T20:45:00-07:00', 'LUSA Heat'),
   game('2026-11-01T19:00:00-07:00', 'AC Fury'),
-  game('2026-11-13T20:45:00-08:00', 'Ridge Meadows Gunners'),
-  game('2026-11-20T20:45:00-08:00', 'Poco FC Revolution'),
-  game('2027-01-16T20:00:00-08:00', 'Ridge Meadows Gunners'),
+  game('2026-11-13T20:45:00-07:00', 'Ridge Meadows Gunners'),
+  game('2026-11-20T20:45:00-07:00', 'Poco FC Revolution'),
+  game('2027-01-16T20:00:00-07:00', 'Ridge Meadows Gunners'),
 ];
 const v = (id, day, title) => ({ id, title, publishedAt: `${day}T12:00:00+00:00` });
 // Real lengths in seconds, as read from the video pages.
@@ -40,7 +41,7 @@ test('every real video lands on the right game', () => {
   const { matches, unmatched } = buildVideos(feed, games, {}, {}, durations);
   assert.deepEqual(unmatched, []);
   const ids = k => Object.fromEntries(Object.entries(matches[k]).map(([kind, e]) => [kind, e.id]));
-  assert.deepEqual(ids('2026-11-20T20:45:00-08:00'), { full: 'a' });
+  assert.deepEqual(ids('2026-11-20T20:45:00-07:00'), { full: 'a' });
   assert.deepEqual(ids('2026-11-01T19:00:00-07:00'), { highlights: 'b', full: 'c' });
   assert.deepEqual(ids('2026-10-23T20:45:00-07:00'), { highlights: 'd', full: 'e' });
   assert.deepEqual(ids('2026-10-17T20:00:00-07:00'), { full: 'f', highlights: 'g' });
@@ -50,7 +51,7 @@ test('every real video lands on the right game', () => {
 test('an opponent played twice resolves to the game before the upload', () => {
   // Gunners were played on 19 Sep and 13 Nov; this upload is days after the second.
   const upload = v('x', '2026-11-16', 'BRAZUCA FC 7 X 0 Ridge Meadows Gunners | HIGHLIGHTS');
-  assert.equal(matchVideo(upload, games).kickoff, '2026-11-13T20:45:00-08:00');
+  assert.equal(matchVideo(upload, games).kickoff, '2026-11-13T20:45:00-07:00');
   // Ridge Meadows Chargers is a different team from the Gunners.
   assert.equal(matchVideo(v('y', '2026-10-04', 'BRAZUCA FC 10-0 Ridge Meadows Chargers'), games).opponent, 'Ridge Meadows Chargers');
 });
@@ -157,7 +158,26 @@ test('a linked video of unknown length is left where it is', () => {
   assert.deepEqual(Object.keys(matches['2026-11-01T19:00:00-07:00']), ['highlights']);
 });
 
-test('links of a game that left the schedule are dropped', () => {
-  const previous = { '2026-08-01T10:00:00-07:00': { full: { id: 'z', title: 't', publishedAt: 'x' } } };
-  assert.deepEqual(buildVideos([], games, previous).matches, {});
+test('links follow a game whose kickoff text changed (moved, or a new UTC offset)', () => {
+  const link = { id: 'z', title: 't', publishedAt: 'x' };
+  const moved = buildVideos([], games, { '2026-11-01T19:15:00-07:00': { full: link } }).matches;
+  assert.deepEqual(moved, { '2026-11-01T19:00:00-07:00': { full: link } });
+  const offset = buildVideos([], games, { '2026-11-01T18:00:00-08:00': { full: link } }).matches;   // same instant
+  assert.deepEqual(Object.keys(offset), ['2026-11-01T19:00:00-07:00']);
+});
+
+test('links of a game that is gone are kept, not lost', () => {
+  const link = { id: 'z', title: 't', publishedAt: 'x' };
+  assert.deepEqual(buildVideos([], games, { '2026-08-01T10:00:00-07:00': { full: link } }).matches,
+    { '2026-08-01T10:00:00-07:00': { full: link } });
+});
+
+test('a length of 0 (still processing) counts as unknown, not as a Short', () => {
+  const { matches } = buildVideos([feed[1]], games, {}, {}, { b: 0 });
+  assert.equal(Object.keys(matches).length, 1);
+});
+
+test('an impossible numeric entity does not throw', () => {
+  const xml = '<feed><entry><yt:videoId>abc</yt:videoId><title>x &#99999999; y &#x41;</title><published>2026-11-24T05:00:00+00:00</published></entry></feed>';
+  assert.equal(parseFeed(xml)[0].title, 'x &#99999999; y A');
 });

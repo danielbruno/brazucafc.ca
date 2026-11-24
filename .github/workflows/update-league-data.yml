@@ -33,7 +33,7 @@ jobs:
       - name: Link match videos from YouTube
         continue-on-error: true
         run: |
-          node --test scripts/
+          node --test scripts/*.test.mjs
           node scripts/update-videos.mjs || echo "::warning title=Match videos::update-videos.mjs failed; the schedule keeps its previous video links."
 
       - name: Commit changes
