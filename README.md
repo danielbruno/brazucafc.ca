@@ -27,6 +27,8 @@ The header and footer are repeated in each page, so change them in all six.
 |---|---|
 | `data/schedule.json` | GitHub Action (automatic) |
 | `data/standings.json` | GitHub Action (automatic) |
+| `data/videos.json` | GitHub Action (automatic, with the schedule) |
+| `data/video-overrides.json` | Hand-edited (optional) |
 | `data/team.json` | Hand-edited |
 | `data/stats.json` | `scripts/build-stats.py` (from the spreadsheets in `data/source/`) |
 | `data/esports.json` | GitHub Action (automatic, hourly) |
@@ -53,6 +55,40 @@ node scripts/update-league-data.mjs
 
 When the league opens a new season, update `REG_YEAR` (and `TEAM_ID` if it
 changes) at the top of the script.
+
+### Match videos
+
+`scripts/update-videos.mjs` reads the YouTube channel's public RSS feed (no API
+key) and links each finished game to its **Highlights** and **Full match**
+videos in `data/videos.json`; the schedule page shows them as buttons on the
+game's row. It runs right after the league data in the same workflow, and a
+failure there never blocks the scores.
+
+A video belongs to a game when its title names the opponent and it was
+uploaded within 14 days after kickoff (if the opponent was played twice, a
+date in the title such as `17/Out/2026` picks the game, otherwise the latest
+kickoff before the upload). The length of the video (read from its
+YouTube page) decides what it is: **under 30 minutes is the highlights, longer
+is the full match**, and the length is shown on the button. If the length can't
+be read, the video counts as the full match. Clips under 2 minutes (Shorts) are ignored. The feed only lists
+the latest 15 uploads, so existing links are kept and never dropped. Unmatched
+videos are printed in the Action's log.
+
+To fix one by hand, add it to `data/video-overrides.json` (create the file):
+
+```json
+{
+  "<videoId>": "2026-11-01T19:00:00-07:00",
+  "<anotherVideoId>": null
+}
+```
+
+A kickoff (exactly as written in `schedule.json`) pins the video to that game;
+`null` ignores the video (and removes a link it already has). A video whose
+length can't be read never replaces a link that is already there; it waits for
+the next run. The workflow runs the tests (`node --test scripts/*.test.mjs`) in their own
+step; a failing test or update shows as a red step on the run, and the scores
+are still published.
 
 ### Player stats
 

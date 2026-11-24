@@ -28,10 +28,22 @@ jobs:
       - name: Fetch schedule and standings from FVSL
         run: node scripts/update-league-data.mjs
 
+      # After the schedule, since videos are matched to its games. Neither step may stop the scores
+      # from being published, hence continue-on-error; a failed step shows red and the schedule keeps its previous video links.
+      - name: Test the video matching
+        id: video-tests
+        continue-on-error: true
+        run: node --test scripts/*.test.mjs
+
+      - name: Link match videos from YouTube
+        if: steps.video-tests.outcome == 'success'   # a broken change must not publish wrong links
+        continue-on-error: true
+        run: node scripts/update-videos.mjs
+
       - name: Commit changes
         id: commit
         run: |
-          if git diff --quiet -- data/; then
+          if [ -z "$(git status --porcelain -- data/)" ]; then
             echo "League data unchanged."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -39,7 +51,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git commit -m "Update league schedule and standings"
+          git commit -m "Update league schedule, standings and match videos"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
