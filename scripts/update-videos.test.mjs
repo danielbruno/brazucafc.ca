@@ -149,13 +149,28 @@ test('a video that stops matching any game keeps the link it already has', () =>
   assert.ok(Object.values(matches).flatMap(k => Object.values(k)).some(e => e.id === 'b'));
 });
 
-test('an unverified link (no length) can be replaced by another unverified one, a verified one cannot', () => {
-  const guess = { id: 'g', title: 't', publishedAt: 'x' };
-  const replaced = buildVideos([feed[1]], games, { '2026-11-01T19:00:00-07:00': { full: guess } }).matches;
-  assert.equal(replaced['2026-11-01T19:00:00-07:00'].full.id, 'b');
-  const verified = { id: 'g', title: 't', publishedAt: 'x', durationSeconds: 6000 };
-  const kept = buildVideos([feed[1]], games, { '2026-11-01T19:00:00-07:00': { full: verified } }).matches;
-  assert.equal(kept['2026-11-01T19:00:00-07:00'].full.id, 'g');
+test('a guess never displaces a link already in its slot, so nothing is lost while lengths are unreadable', () => {
+  // Full match (c) is filed first as a guess; the newer highlights (b) must not replace it.
+  const { matches } = buildVideos([feed[1], feed[2]], games);      // no lengths at all
+  const slot = matches['2026-11-01T19:00:00-07:00'];
+  assert.deepEqual(Object.keys(slot), ['full']);
+  assert.equal(slot.full.id, 'c');
+  // Once lengths are readable the highlights file itself.
+  const later = buildVideos([feed[1], feed[2]], games, matches, {}, { b: 588, c: 6307 }).matches['2026-11-01T19:00:00-07:00'];
+  assert.deepEqual([later.highlights.id, later.full.id], ['b', 'c']);
+});
+
+test('an override works for a video that has left the feed', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { highlights: { id: 'old', title: 't', publishedAt: 'x', durationSeconds: 500 } } };
+  assert.deepEqual(buildVideos([], games, previous, { old: null }).matches, {});
+  const moved = buildVideos([], games, previous, { old: '2026-10-23T20:45:00-07:00' }).matches;
+  assert.deepEqual(Object.keys(moved), ['2026-10-23T20:45:00-07:00']);
+  assert.equal(moved['2026-10-23T20:45:00-07:00'].highlights.id, 'old');
+});
+
+test('a title that names a date no candidate has is not matched', () => {
+  assert.equal(matchVideo(v('t', '2026-11-04', 'BRAZUCA FC x AC Fury - 19/Sep/2026'), games), null);
+  assert.equal(matchVideo(v('t', '2026-11-04', 'BRAZUCA FC x AC Fury - 01/Nov/2026'), games).opponent, 'AC Fury');
 });
 
 test('a link is only re-keyed onto a game whose opponent its title names', () => {

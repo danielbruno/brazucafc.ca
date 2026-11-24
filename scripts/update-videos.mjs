@@ -85,8 +85,8 @@ export function titleDate(title) {
 }
 
 // Returns the game (from schedule.json) a video is about, or null. When the opponent was played
-// more than once, a date written in the title picks the game; without one, the latest kickoff
-// before the upload wins.
+// more than once, a date written in the title picks the game (and if no candidate has that date, the
+// video isn't matched); without a date, the latest kickoff before the upload wins.
 export function matchVideo(video, games) {
   const title = ` ${normalize(video.title)} `;
   if (!title.includes(` ${normalize(TEAM)} `)) return null;
@@ -100,8 +100,8 @@ export function matchVideo(video, games) {
     return age >= -6 * 36e5 && age <= window;
   });
   const dated = titleDate(video.title);
-  const byDate = dated && candidates.find(game => game.kickoff.slice(0, 10) === dated);
-  return byDate || candidates.sort((a, b) => Date.parse(b.kickoff) - Date.parse(a.kickoff))[0] || null;
+  if (dated) return candidates.find(game => game.kickoff.slice(0, 10) === dated) || null;   // names a date: that game or none
+  return candidates.sort((a, b) => Date.parse(b.kickoff) - Date.parse(a.kickoff))[0] || null;
 }
 
 export function buildVideos(feed, games, previous = {}, overrides = {}, durations = {}) {
@@ -153,11 +153,12 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
     if (!game) { unmatched.push(video); continue; }
     const known = Number.isFinite(seconds);
     // Without a length the kind is only a guess (it counts as the full match), so it must not replace
-    // a link whose length was verified, nor re-file one (unless pinned by hand): it waits for the next run, when the length may be readable.
+    // a link already there, nor re-file one (unless pinned by hand): it waits for the next run, when the length may be readable.
     if (!known && !Object.hasOwn(overrides, video.id) && isFiled(video.id)) continue;
     const kind = videoKind(seconds);
-    // Only a link whose length was verified is protected; an unverified one may be replaced.
-    if (!known && Number.isFinite(matches[game.kickoff]?.[kind]?.durationSeconds)) { unmatched.push(video); continue; }
+    // A guess never displaces a link already in the slot, verified or not. It stays in the feed and is
+    // filed on a later run, once its length (or the occupant's) can be read.
+    if (!known && matches[game.kickoff]?.[kind]) { unmatched.push(video); continue; }
 
     // A video is filed under one game and one kind: a corrected match moves it.
     unfile(video.id, { kickoff: game.kickoff, kind });
@@ -166,6 +167,22 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
       id: video.id, title: video.title, publishedAt: video.publishedAt,
       ...(known && { durationSeconds: seconds }),
     };
+  }
+
+  // Overrides also work for videos that have left the feed (it holds only 15): a null removes a filed
+  // link, a kickoff moves it.
+  const inFeed = new Set(feed.map(v => v.id));
+  for (const [id, target] of Object.entries(overrides)) {
+    if (inFeed.has(id)) continue;
+    if (target === null) { unfile(id); continue; }
+    const game = byKickoff.get(target);
+    if (!game) continue;
+    const found = Object.values(matches).flatMap(kinds => Object.entries(kinds)).find(([, e]) => e.id === id);
+    if (!found) continue;
+    const [kind, entry] = found;
+    unfile(id);
+    matches[game.kickoff] ??= {};
+    matches[game.kickoff][kind] = entry;
   }
   return { matches, unmatched };
 }
@@ -218,10 +235,15 @@ async function main() {
   const overrides = await readJson(join(dataDir, 'video-overrides.json'), {});
   const path = join(dataDir, 'videos.json');
   const previous = await readJson(path, {});
+  if (previous === null || typeof previous !== 'object' || Array.isArray(previous)) throw new Error(`${path} must hold a JSON object; fix it or delete it.`);
 
   const durations = await loadDurations(feed, previous.games ?? {}, v => Object.hasOwn(overrides, v.id) || matchVideo(v, schedule.games) !== null);
   const { matches, unmatched } = buildVideos(feed, schedule.games, previous.games, overrides, durations);
   for (const v of unmatched) console.log(`Unmatched: ${v.publishedAt.slice(0, 10)} ${v.id} ${v.title}`);
+
+  for (const kickoff of Object.keys(matches)) {
+    if (!schedule.games.some(g => g.kickoff === kickoff)) console.log(`Orphaned links under ${kickoff}: no game has that kickoff now (kept, but not shown).`);
+  }
 
   const payload = { channel: `https://www.youtube.com/channel/${CHANNEL_ID}`, games: matches };
   const { updatedAt, ...before } = previous;

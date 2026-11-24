@@ -31,10 +31,12 @@ jobs:
       # After the schedule, since videos are matched to its games. Neither step may stop the scores
       # from being published, hence continue-on-error; a failed step shows red and the schedule keeps its previous video links.
       - name: Test the video matching
+        id: video-tests
         continue-on-error: true
         run: node --test scripts/*.test.mjs
 
       - name: Link match videos from YouTube
+        if: steps.video-tests.outcome == 'success'   # a broken change must not publish wrong links
         continue-on-error: true
         run: node scripts/update-videos.mjs
 
