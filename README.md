@@ -65,8 +65,10 @@ game's row. It runs right after the league data in the same workflow, and a
 failure there never blocks the scores.
 
 A video belongs to a game when its title names the opponent and it was
-uploaded within 14 days after kickoff. A title with the word "highlights" is
-the highlights; any other upload counts as the full match. The feed only lists
+uploaded within 14 days after kickoff. The length of the video (read from its
+YouTube page) decides what it is: **under 30 minutes is the highlights, longer
+is the full match**, and the length is shown on the button. If the length can't
+be read, the video counts as the full match. Clips under 2 minutes (Shorts) are ignored. The feed only lists
 the latest 15 uploads, so existing links are kept and never dropped. Unmatched
 videos are printed in the Action's log.
 

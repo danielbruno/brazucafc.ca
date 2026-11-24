@@ -10,7 +10,9 @@
 // failed feed never overwrites the existing data.
 //
 // A video belongs to a game when its title names the opponent and it was
-// published in the 14 days after kickoff. If the opponent was played more than
+// published in the 14 days after kickoff. Under 30 minutes it is the highlights,
+// longer it is the full match; the length comes from the video's page. With no
+// length available it is treated as the full match. If the opponent was played more than
 // once, the latest kickoff before the upload wins. Anything that can't be
 // matched is listed in the log; pin it by hand in data/video-overrides.json:
 //
@@ -26,6 +28,8 @@ const CHANNEL_ID = 'UCuhfgqcKy52XbyH6wOd0ytQ'; // youtube.com/@brazucafc_brz
 const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 const USER_AGENT = 'brazucafc.ca-sync/1.0 (+https://brazucafc.ca; tech@brazucafc.ca)';
 const MATCH_WINDOW_DAYS = 14;
+const HIGHLIGHTS_MAX_SECONDS = 30 * 60;
+const MIN_SECONDS = 2 * 60;   // anything shorter is a Short or a teaser, not a match video
 
 const dataDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
 
@@ -56,8 +60,16 @@ export const normalize = s => String(s ?? '')
   .normalize('NFD').replace(/[̀-ͯ]/g, '')
   .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
-export function videoKind(title) {
-  return /highlight|melhores momentos|resumo/i.test(title) ? 'highlights' : 'full';
+export function videoKind(seconds) {
+  return Number.isFinite(seconds) && seconds < HIGHLIGHTS_MAX_SECONDS ? 'highlights' : 'full';
+}
+
+// Length in seconds from a watch page, or null when the page doesn't say.
+export function parseDuration(html) {
+  const exact = html.match(/"lengthSeconds":"(\d+)"/);
+  if (exact) return Number(exact[1]);
+  const iso = html.match(/itemprop="duration" content="PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?"/);
+  return iso ? Number(iso[1] ?? 0) * 3600 + Number(iso[2] ?? 0) * 60 + Number(iso[3] ?? 0) : null;
 }
 
 // Returns the game (from schedule.json) a video is about, or null.
@@ -79,7 +91,7 @@ export function matchVideo(video, games) {
   return best;
 }
 
-export function buildVideos(feed, games, previous = {}, overrides = {}) {
+export function buildVideos(feed, games, previous = {}, overrides = {}, durations = {}) {
   const matches = structuredClone(previous);
   const unmatched = [];
   const byKickoff = new Map(games.map(g => [g.kickoff, g]));
@@ -93,15 +105,21 @@ export function buildVideos(feed, games, previous = {}, overrides = {}) {
       game = matchVideo(video, games);
     }
     if (!game) { unmatched.push(video); continue; }
-    // A video is filed under one game only: a corrected match moves it.
+    const seconds = durations[video.id];
+    if (Number.isFinite(seconds) && seconds < MIN_SECONDS) { unmatched.push(video); continue; }
+    const kind = videoKind(seconds);
+    // A video is filed under one game and one kind: a corrected match moves it.
     for (const [kickoff, kinds] of Object.entries(matches)) {
-      for (const [kind, entry] of Object.entries(kinds)) {
-        if (entry.id === video.id && kickoff !== game.kickoff) delete kinds[kind];
+      for (const [k, entry] of Object.entries(kinds)) {
+        if (entry.id === video.id && (kickoff !== game.kickoff || k !== kind)) delete kinds[k];
       }
       if (!Object.keys(kinds).length) delete matches[kickoff];
     }
     matches[game.kickoff] ??= {};
-    matches[game.kickoff][videoKind(video.title)] = { id: video.id, title: video.title, publishedAt: video.publishedAt };
+    matches[game.kickoff][kind] = {
+      id: video.id, title: video.title, publishedAt: video.publishedAt,
+      ...(Number.isFinite(seconds) && { durationSeconds: seconds }),
+    };
   }
   return { matches, unmatched };
 }
@@ -110,6 +128,30 @@ export function buildVideos(feed, games, previous = {}, overrides = {}) {
 
 async function readJson(path, fallback) {
   try { return JSON.parse(await readFile(path, 'utf8')); } catch { return fallback; }
+}
+
+// Lengths already stored are reused; only new videos cost a page fetch.
+async function loadDurations(feed, previous) {
+  const durations = {};
+  for (const kinds of Object.values(previous)) {
+    for (const entry of Object.values(kinds)) if (Number.isFinite(entry.durationSeconds)) durations[entry.id] = entry.durationSeconds;
+  }
+  for (const video of feed) {
+    if (video.id in durations) continue;
+    try {
+      const res = await fetch(`https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`, {
+        headers: { 'User-Agent': USER_AGENT, 'Accept-Language': 'en-US' },
+        signal: AbortSignal.timeout(30_000),
+      });
+      const seconds = res.ok ? parseDuration(await res.text()) : null;
+      if (seconds !== null) durations[video.id] = seconds;
+      else console.log(`No length for ${video.id}; counting it as the full match.`);
+    } catch (err) {
+      console.log(`No length for ${video.id} (${err.message}); counting it as the full match.`);
+    }
+    await new Promise(r => setTimeout(r, 500));
+  }
+  return durations;
 }
 
 async function main() {
@@ -124,7 +166,8 @@ async function main() {
   const path = join(dataDir, 'videos.json');
   const previous = await readJson(path, {});
 
-  const { matches, unmatched } = buildVideos(feed, schedule.games, previous.games, overrides);
+  const durations = await loadDurations(feed, previous.games ?? {});
+  const { matches, unmatched } = buildVideos(feed, schedule.games, previous.games, overrides, durations);
   for (const v of unmatched) console.log(`Unmatched: ${v.publishedAt.slice(0, 10)} ${v.id} ${v.title}`);
 
   const payload = { channel: `https://www.youtube.com/channel/${CHANNEL_ID}`, games: matches };

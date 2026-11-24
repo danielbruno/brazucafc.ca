@@ -413,6 +413,7 @@ h1, h2, h3 {
   color: var(--ink); text-decoration: none;
   transition: border-color .2s ease, color .2s ease, background-color .2s ease;
 }
+.video-link small { font-size: .95em; font-weight: 400; letter-spacing: 0; color: var(--muted); }
 .video-link svg { flex: none; width: 12px; height: 12px; color: var(--red); transition: color .2s ease; }
 .video-link:hover, .video-link:focus-visible { border-color: rgba(245, 197, 24, .55); color: var(--yellow); background: rgba(245, 197, 24, .06); }
 .video-link:hover svg, .video-link:focus-visible svg { color: var(--yellow); }

@@ -413,11 +413,12 @@
 
   // YouTube links for a finished game (data/videos.json, kept by scripts/update-videos.mjs).
   const VIDEO_LABELS = [['highlights', 'Highlights'], ['full', 'Full match']];
+  const clock = s => `${s >= 3600 ? `${Math.floor(s / 3600)}:${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
   function videoLinks(game, videos) {
     const found = videos?.games?.[game.kickoff];
     if (!found) return '';
     const links = VIDEO_LABELS.filter(([kind]) => found[kind]?.id).map(([kind, label]) =>
-      `<a class="video-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(found[kind].id)}" target="_blank" rel="noopener" aria-label="${esc(label)} of ${esc(game.opponent || 'the match')} on YouTube (opens in a new tab)">${ICONS.play}<span>${label}</span></a>`);
+      `<a class="video-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(found[kind].id)}" target="_blank" rel="noopener" aria-label="${esc(label)} of ${esc(game.opponent || 'the match')} on YouTube (opens in a new tab)">${ICONS.play}<span>${label}</span>${Number.isFinite(found[kind].durationSeconds) ? `<small>${clock(found[kind].durationSeconds)}</small>` : ''}</a>`);
     return links.length ? `<div class="fixture-videos">${links.join('')}</div>` : '';
   }
 
