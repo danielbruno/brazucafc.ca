@@ -142,6 +142,35 @@ test('a Short already linked is removed', () => {
   assert.deepEqual(matches, {});
 });
 
+test('a video that stops matching any game keeps the link it already has', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { highlights: { id: 'b', title: 'x AC Fury', publishedAt: 'x', durationSeconds: 588 } } };
+  const moved = games.map(g => g.opponent === 'AC Fury' ? { ...g, kickoff: '2026-11-05T19:00:00-07:00' } : g);
+  const { matches } = buildVideos([feed[1]], moved, previous, {}, { b: 588 });
+  assert.ok(Object.values(matches).flatMap(k => Object.values(k)).some(e => e.id === 'b'));
+});
+
+test('an unverified link (no length) can be replaced by another unverified one, a verified one cannot', () => {
+  const guess = { id: 'g', title: 't', publishedAt: 'x' };
+  const replaced = buildVideos([feed[1]], games, { '2026-11-01T19:00:00-07:00': { full: guess } }).matches;
+  assert.equal(replaced['2026-11-01T19:00:00-07:00'].full.id, 'b');
+  const verified = { id: 'g', title: 't', publishedAt: 'x', durationSeconds: 6000 };
+  const kept = buildVideos([feed[1]], games, { '2026-11-01T19:00:00-07:00': { full: verified } }).matches;
+  assert.equal(kept['2026-11-01T19:00:00-07:00'].full.id, 'g');
+});
+
+test('a link is only re-keyed onto a game whose opponent its title names', () => {
+  const link = { id: 'z', title: 'BRAZUCA FC x LUSA Heat', publishedAt: 'x' };
+  const other = [game('2026-12-01T22:00:00-07:00', 'AC Fury')];
+  assert.deepEqual(Object.keys(buildVideos([], other, { '2026-12-01T19:00:00-07:00': { full: link } }).matches), ['2026-12-01T19:00:00-07:00']);
+  const same = [game('2026-12-01T22:00:00-07:00', 'LUSA Heat')];
+  assert.deepEqual(Object.keys(buildVideos([], same, { '2026-12-01T19:00:00-07:00': { full: link } }).matches), ['2026-12-01T22:00:00-07:00']);
+});
+
+test('titleDate also reads English months', () => {
+  assert.equal(titleDate('x 13/Oct/2026'), '2026-10-13');
+  assert.equal(titleDate('x 3/may/2027'), '2027-05-03');
+});
+
 test('a video of unknown length never replaces an existing link of its kind', () => {
   const real = { id: 'c', title: 'full', publishedAt: 'x', durationSeconds: 6307 };
   const previous = { '2026-11-01T19:00:00-07:00': { full: real } };
@@ -161,7 +190,7 @@ test('a linked video of unknown length is left where it is', () => {
 });
 
 test('links follow a game whose kickoff text changed (moved, or a new UTC offset)', () => {
-  const link = { id: 'z', title: 't', publishedAt: 'x' };
+  const link = { id: 'z', title: 'BRAZUCA FC 3 X 1 AC FURY', publishedAt: 'x' };
   const moved = buildVideos([], games, { '2026-11-01T19:15:00-07:00': { full: link } }).matches;
   assert.deepEqual(moved, { '2026-11-01T19:00:00-07:00': { full: link } });
   const offset = buildVideos([], games, { '2026-11-01T18:00:00-08:00': { full: link } }).matches;   // same instant
@@ -186,8 +215,8 @@ test('an override naming a kickoff that is not in the schedule leaves the existi
 
 test('a link is only re-keyed when exactly one game is close enough', () => {
   const link = { id: 'z', title: 't', publishedAt: 'x' };
-  const twins = [game('2026-12-01T10:00:00-07:00', 'A'), game('2026-12-01T12:00:00-07:00', 'B')];
-  const kept = buildVideos([], twins, { '2026-12-01T11:00:00-07:00': { full: link } }).matches;
+  const twins = [game('2026-12-01T10:00:00-07:00', 'A'), game('2026-12-01T12:00:00-07:00', 'A')];
+  const kept = buildVideos([], twins, { '2026-12-01T11:00:00-07:00': { full: { ...link, title: 'Brazuca FC x A' } } }).matches;
   assert.deepEqual(Object.keys(kept), ['2026-12-01T11:00:00-07:00']);     // two candidates: left alone
   const far = buildVideos([], games, { '2026-11-02T19:00:00-07:00': { full: link } }).matches;
   assert.deepEqual(Object.keys(far), ['2026-11-02T19:00:00-07:00']);      // a day off: not the same game

@@ -418,7 +418,7 @@
     const found = videos?.games?.[game.kickoff];
     if (!found) return '';
     const links = VIDEO_LABELS.filter(([kind]) => found[kind]?.id).map(([kind, label]) =>
-      `<a class="video-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(found[kind].id)}" target="_blank" rel="noopener" aria-label="${esc(label)} of ${esc(game.opponent || 'the match')} on YouTube (opens in a new tab)">${ICONS.play}<span>${label}</span>${Number.isFinite(found[kind].durationSeconds) ? `<small>${clock(found[kind].durationSeconds)}</small>` : ''}</a>`);
+      `<a class="video-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(found[kind].id)}" target="_blank" rel="noopener" aria-label="${esc(label)} of ${esc(game.opponent || 'the match')} on YouTube (opens in a new tab)">${ICONS.play}<span>${label}</span>${found[kind].durationSeconds > 0 ? `<small>${clock(Math.round(found[kind].durationSeconds))}</small>` : ''}</a>`);
     return links.length ? `<div class="fixture-videos">${links.join('')}</div>` : '';
   }
 

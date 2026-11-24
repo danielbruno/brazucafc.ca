@@ -87,7 +87,8 @@ A kickoff (exactly as written in `schedule.json`) pins the video to that game;
 `null` ignores the video (and removes a link it already has). A video whose
 length can't be read never replaces a link that is already there; it waits for
 the next run. The workflow runs the tests (`node --test scripts/*.test.mjs`) in their own
-step, and a failed update shows as a warning on the run.
+step; a failing test or update shows as a red step on the run, and the scores
+are still published.
 
 ### Player stats
 

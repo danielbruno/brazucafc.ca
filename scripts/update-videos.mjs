@@ -75,11 +75,12 @@ export function parseDuration(html) {
   return exact ? Number(exact[1]) : null;
 }
 
-const PT_MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+// Month abbreviations the channel's titles can use, Portuguese and English.
+const MONTHS = [['jan'], ['fev', 'feb'], ['mar'], ['abr', 'apr'], ['mai', 'may'], ['jun'], ['jul'], ['ago', 'aug'], ['set', 'sep'], ['out', 'oct'], ['nov'], ['dez', 'dec']];
 // "17/Out/2026" in a title -> "2026-10-17", or null.
 export function titleDate(title) {
   const m = title.match(/\b(\d{1,2})\/([a-zç]{3})\/(\d{4})\b/i);
-  const month = m && PT_MONTHS.indexOf(m[2].toLowerCase());
+  const month = m && MONTHS.findIndex(names => names.includes(m[2].toLowerCase()));
   return m && month >= 0 ? `${m[3]}-${String(month + 1).padStart(2, '0')}-${m[1].padStart(2, '0')}` : null;
 }
 
@@ -109,11 +110,14 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
   const byKickoff = new Map(games.map(g => [g.kickoff, g]));
   // Links are keyed by kickoff text. When the league moves a game or rewrites its UTC offset the key
   // changes, and the feed can't rebuild old links (it holds 15 uploads), so a link whose key is gone
-  // follows the one game within 6 hours that has none. With zero or several candidates it is kept, unseen.
+  // follows the one game within 6 hours that has none and whose opponent the titles name. With zero or several candidates it is kept, unseen.
   for (const kickoff of Object.keys(matches)) {
     if (byKickoff.has(kickoff)) continue;
     const at = Date.parse(kickoff);
-    const near = games.filter(g => g.kickoff && !g.isBye && !matches[g.kickoff] && Math.abs(Date.parse(g.kickoff) - at) <= 6 * 36e5);
+    const titles = Object.values(matches[kickoff]).map(e => ` ${normalize(e.title)} `);
+    const near = games.filter(g => g.kickoff && !g.isBye && g.opponent && !matches[g.kickoff]
+      && Math.abs(Date.parse(g.kickoff) - at) <= 6 * 36e5
+      && titles.some(t => t.includes(` ${normalize(g.opponent)} `)));
     if (near.length === 1) { matches[near[0].kickoff] = matches[kickoff]; delete matches[kickoff]; }
   }
 
@@ -143,17 +147,17 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
     }
     // A length of 0 is a stream or upload still processing, not a clip: treat it as unknown.
     const seconds = durations[video.id] > 0 ? durations[video.id] : undefined;
-    if (!game || (Number.isFinite(seconds) && seconds < MIN_SECONDS)) {
-      unfile(video.id);                                                     // no longer a match (or a Short)
-      unmatched.push(video);
-      continue;
-    }
+    if (Number.isFinite(seconds) && seconds < MIN_SECONDS) { unfile(video.id); unmatched.push(video); continue; }   // a Short
+    // Not matching any game now (a moved or renamed fixture) never drops a link already filed:
+    // the feed can't rebuild it. A wrong link is removed on purpose, with a null override.
+    if (!game) { unmatched.push(video); continue; }
     const known = Number.isFinite(seconds);
-    // Without a length the kind is only a guess, so it must not replace a link that is already
-    // there, nor re-file one (unless pinned by hand): it waits for the next run, when the length may be readable.
+    // Without a length the kind is only a guess (it counts as the full match), so it must not replace
+    // a link whose length was verified, nor re-file one (unless pinned by hand): it waits for the next run, when the length may be readable.
     if (!known && !Object.hasOwn(overrides, video.id) && isFiled(video.id)) continue;
     const kind = videoKind(seconds);
-    if (!known && matches[game.kickoff]?.[kind]) { unmatched.push(video); continue; }
+    // Only a link whose length was verified is protected; an unverified one may be replaced.
+    if (!known && Number.isFinite(matches[game.kickoff]?.[kind]?.durationSeconds)) { unmatched.push(video); continue; }
 
     // A video is filed under one game and one kind: a corrected match moves it.
     unfile(video.id, { kickoff: game.kickoff, kind });
