@@ -95,30 +95,48 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
   const matches = structuredClone(previous);
   const unmatched = [];
   const byKickoff = new Map(games.map(g => [g.kickoff, g]));
+  // Games that left the schedule (rescheduled or removed) take their links with them.
+  for (const kickoff of Object.keys(matches)) if (!byKickoff.has(kickoff)) delete matches[kickoff];
+
+  // Takes a video out of wherever it is filed, optionally keeping one slot (game + kind).
+  const unfile = (id, keep) => {
+    for (const [kickoff, kinds] of Object.entries(matches)) {
+      for (const [kind, entry] of Object.entries(kinds)) {
+        if (entry.id === id && !(keep && keep.kickoff === kickoff && keep.kind === kind)) delete kinds[kind];
+      }
+      if (!Object.keys(kinds).length) delete matches[kickoff];
+    }
+  };
+  const isFiled = id => Object.values(matches).some(kinds => Object.values(kinds).some(e => e.id === id));
+
   // Oldest first, so when a game has two videos of one kind the newest wins.
   for (const video of [...feed].sort((a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt))) {
     let game;
     if (Object.hasOwn(overrides, video.id)) {
-      if (overrides[video.id] === null) continue;
+      if (overrides[video.id] === null) { unfile(video.id); continue; }   // ignored, even if linked before
       game = byKickoff.get(overrides[video.id]);
     } else {
       game = matchVideo(video, games);
     }
-    if (!game) { unmatched.push(video); continue; }
     const seconds = durations[video.id];
-    if (Number.isFinite(seconds) && seconds < MIN_SECONDS) { unmatched.push(video); continue; }
-    const kind = videoKind(seconds);
-    // A video is filed under one game and one kind: a corrected match moves it.
-    for (const [kickoff, kinds] of Object.entries(matches)) {
-      for (const [k, entry] of Object.entries(kinds)) {
-        if (entry.id === video.id && (kickoff !== game.kickoff || k !== kind)) delete kinds[k];
-      }
-      if (!Object.keys(kinds).length) delete matches[kickoff];
+    if (!game || (Number.isFinite(seconds) && seconds < MIN_SECONDS)) {
+      unfile(video.id);                                                     // no longer a match (or a Short)
+      unmatched.push(video);
+      continue;
     }
+    const known = Number.isFinite(seconds);
+    // Without a length the kind is only a guess, so it must not replace a link that is already
+    // there, nor re-file one (unless pinned by hand): it waits for the next run, when the length may be readable.
+    if (!known && !Object.hasOwn(overrides, video.id) && isFiled(video.id)) continue;
+    const kind = videoKind(seconds);
+    if (!known && matches[game.kickoff]?.[kind]) { unmatched.push(video); continue; }
+
+    // A video is filed under one game and one kind: a corrected match moves it.
+    unfile(video.id, { kickoff: game.kickoff, kind });
     matches[game.kickoff] ??= {};
     matches[game.kickoff][kind] = {
       id: video.id, title: video.title, publishedAt: video.publishedAt,
-      ...(Number.isFinite(seconds) && { durationSeconds: seconds }),
+      ...(known && { durationSeconds: seconds }),
     };
   }
   return { matches, unmatched };

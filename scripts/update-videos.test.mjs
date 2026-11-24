@@ -126,3 +126,38 @@ test('with no lengths at all, every upload counts as the full match', () => {
   const { matches } = buildVideos(feed, games);
   assert.ok(Object.values(matches).every(kinds => Object.keys(kinds).join() === 'full'));
 });
+
+test('ignoring a video also removes a link it already has', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { highlights: { id: 'b', title: 't', publishedAt: 'x', durationSeconds: 588 } } };
+  const { matches } = buildVideos([feed[1]], games, previous, { b: null }, { b: 588 });
+  assert.deepEqual(matches, {});
+});
+
+test('a Short already linked is removed', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { full: { id: 'b', title: 't', publishedAt: 'x' } } };
+  const { matches } = buildVideos([feed[1]], games, previous, {}, { b: 45 });
+  assert.deepEqual(matches, {});
+});
+
+test('a video of unknown length never replaces an existing link of its kind', () => {
+  const real = { id: 'c', title: 'full', publishedAt: 'x', durationSeconds: 6307 };
+  const previous = { '2026-11-01T19:00:00-07:00': { full: real } };
+  // b is the highlights, but its length could not be read this run.
+  const { matches, unmatched } = buildVideos([feed[1]], games, previous);
+  assert.deepEqual(matches['2026-11-01T19:00:00-07:00'], { full: real });
+  assert.equal(unmatched.length, 1);
+  // Next run the length is known and it lands in the right slot.
+  const next = buildVideos([feed[1]], games, matches, {}, { b: 588 });
+  assert.deepEqual(Object.keys(next.matches['2026-11-01T19:00:00-07:00']).sort(), ['full', 'highlights']);
+});
+
+test('a linked video of unknown length is left where it is', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { highlights: { id: 'b', title: 't', publishedAt: 'x' } } };
+  const { matches } = buildVideos([feed[1]], games, previous);
+  assert.deepEqual(Object.keys(matches['2026-11-01T19:00:00-07:00']), ['highlights']);
+});
+
+test('links of a game that left the schedule are dropped', () => {
+  const previous = { '2026-08-01T10:00:00-07:00': { full: { id: 'z', title: 't', publishedAt: 'x' } } };
+  assert.deepEqual(buildVideos([], games, previous).matches, {});
+});
