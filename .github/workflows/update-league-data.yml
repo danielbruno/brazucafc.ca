@@ -28,13 +28,15 @@ jobs:
       - name: Fetch schedule and standings from FVSL
         run: node scripts/update-league-data.mjs
 
-      # After the schedule, since videos are matched to its games. A YouTube hiccup must not
-      # stop the scores from being published, hence continue-on-error.
+      # After the schedule, since videos are matched to its games. Neither step may stop the scores
+      # from being published, hence continue-on-error; a failed test shows as a red step.
+      - name: Test the video matching
+        continue-on-error: true
+        run: node --test scripts/*.test.mjs
+
       - name: Link match videos from YouTube
         continue-on-error: true
-        run: |
-          node --test scripts/*.test.mjs
-          node scripts/update-videos.mjs || echo "::warning title=Match videos::update-videos.mjs failed; the schedule keeps its previous video links."
+        run: node scripts/update-videos.mjs || echo "::warning title=Match videos::update-videos.mjs failed; the schedule keeps its previous video links."
 
       - name: Commit changes
         id: commit

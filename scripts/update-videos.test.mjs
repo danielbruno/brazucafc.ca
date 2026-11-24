@@ -1,7 +1,7 @@
 // node --test scripts/*.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseFeed, matchVideo, buildVideos, videoKind, parseDuration, normalize } from './update-videos.mjs';
+import { parseFeed, matchVideo, buildVideos, videoKind, parseDuration, titleDate, normalize } from './update-videos.mjs';
 
 // Real titles and dates from the channel, against the real fixture list (kickoffs written
 // exactly as data/schedule.json writes them, -07:00 all season).
@@ -121,6 +121,8 @@ test('reads the length from a watch page', () => {
   assert.equal(parseDuration('<meta itemprop="duration" content="PT1H4M2S">'), 3842);
   assert.equal(parseDuration('<meta itemprop="duration" content="PT9M48S">'), 588);
   assert.equal(parseDuration('<html>nothing</html>'), null);
+  // The page's own duration tag wins over another video's lengthSeconds earlier in the page.
+  assert.equal(parseDuration('"lengthSeconds":"60" ... <meta itemprop="duration" content="PT9M48S">'), 588);
 });
 
 test('with no lengths at all, every upload counts as the full match', () => {
@@ -164,6 +166,31 @@ test('links follow a game whose kickoff text changed (moved, or a new UTC offset
   assert.deepEqual(moved, { '2026-11-01T19:00:00-07:00': { full: link } });
   const offset = buildVideos([], games, { '2026-11-01T18:00:00-08:00': { full: link } }).matches;   // same instant
   assert.deepEqual(Object.keys(offset), ['2026-11-01T19:00:00-07:00']);
+});
+
+test('a date in the title picks the game when the opponent was played twice', () => {
+  assert.equal(titleDate('Brazuca FC x Albion - 17/Out/2026 - FVSL'), '2026-10-17');
+  assert.equal(titleDate('no date here'), null);
+  // Two games a week apart against the same opponent: both are inside the 14-day window.
+  const close = [game('2026-11-13T20:45:00-07:00', 'Ridge Meadows Gunners'), game('2026-11-20T20:45:00-07:00', 'Ridge Meadows Gunners')];
+  const up = v('t', '2026-11-24', 'Brazuca FC x Ridge Meadows Gunners - 13/Nov/2026');
+  assert.equal(matchVideo(up, close).kickoff, '2026-11-13T20:45:00-07:00');
+  assert.equal(matchVideo(v('t', '2026-11-24', 'Brazuca FC x Ridge Meadows Gunners'), close).kickoff, '2026-11-20T20:45:00-07:00');
+});
+
+test('an override naming a kickoff that is not in the schedule leaves the existing link alone', () => {
+  const previous = { '2026-11-01T19:00:00-07:00': { highlights: { id: 'b', title: 't', publishedAt: 'x', durationSeconds: 588 } } };
+  const { matches } = buildVideos([feed[1]], games, previous, { b: '2026-11-01T19:00:00-0700' }, { b: 588 });
+  assert.deepEqual(Object.keys(matches), ['2026-11-01T19:00:00-07:00']);
+});
+
+test('a link is only re-keyed when exactly one game is close enough', () => {
+  const link = { id: 'z', title: 't', publishedAt: 'x' };
+  const twins = [game('2026-12-01T10:00:00-07:00', 'A'), game('2026-12-01T12:00:00-07:00', 'B')];
+  const kept = buildVideos([], twins, { '2026-12-01T11:00:00-07:00': { full: link } }).matches;
+  assert.deepEqual(Object.keys(kept), ['2026-12-01T11:00:00-07:00']);     // two candidates: left alone
+  const far = buildVideos([], games, { '2026-11-02T19:00:00-07:00': { full: link } }).matches;
+  assert.deepEqual(Object.keys(far), ['2026-11-02T19:00:00-07:00']);      // a day off: not the same game
 });
 
 test('links of a game that is gone are kept, not lost', () => {

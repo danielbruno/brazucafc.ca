@@ -68,29 +68,39 @@ export function videoKind(seconds) {
 
 // Length in seconds from a watch page, or null when the page doesn't say.
 export function parseDuration(html) {
-  const exact = html.match(/"lengthSeconds":"(\d+)"/);
-  if (exact) return Number(exact[1]);
+  // The duration meta tag belongs to the page's own video; other "lengthSeconds" in the page may not.
   const iso = html.match(/itemprop="duration" content="PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?"/);
-  return iso ? Number(iso[1] ?? 0) * 3600 + Number(iso[2] ?? 0) * 60 + Number(iso[3] ?? 0) : null;
+  if (iso) return Number(iso[1] ?? 0) * 3600 + Number(iso[2] ?? 0) * 60 + Number(iso[3] ?? 0);
+  const exact = html.match(/"lengthSeconds":"(\d+)"/);
+  return exact ? Number(exact[1]) : null;
 }
 
-// Returns the game (from schedule.json) a video is about, or null.
+const PT_MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+// "17/Out/2026" in a title -> "2026-10-17", or null.
+export function titleDate(title) {
+  const m = title.match(/\b(\d{1,2})\/([a-zç]{3})\/(\d{4})\b/i);
+  const month = m && PT_MONTHS.indexOf(m[2].toLowerCase());
+  return m && month >= 0 ? `${m[3]}-${String(month + 1).padStart(2, '0')}-${m[1].padStart(2, '0')}` : null;
+}
+
+// Returns the game (from schedule.json) a video is about, or null. When the opponent was played
+// more than once, a date written in the title picks the game; without one, the latest kickoff
+// before the upload wins.
 export function matchVideo(video, games) {
   const title = ` ${normalize(video.title)} `;
   if (!title.includes(` ${normalize(TEAM)} `)) return null;
   const published = Date.parse(video.publishedAt);
   const window = MATCH_WINDOW_DAYS * 864e5;
-  let best = null;
-  for (const game of games) {
-    if (game.isBye || !game.opponent || !game.kickoff) continue;
-    if (!title.includes(` ${normalize(game.opponent)} `)) continue;
-    const kickoff = Date.parse(game.kickoff);
-    const age = published - kickoff;
+  const candidates = games.filter(game => {
+    if (game.isBye || !game.opponent || !game.kickoff) return false;
+    if (!title.includes(` ${normalize(game.opponent)} `)) return false;
+    const age = published - Date.parse(game.kickoff);
     // Uploads can't precede the game; allow a few hours for timezone slack.
-    if (age < -6 * 36e5 || age > window) continue;
-    if (!best || kickoff > Date.parse(best.kickoff)) best = game;
-  }
-  return best;
+    return age >= -6 * 36e5 && age <= window;
+  });
+  const dated = titleDate(video.title);
+  const byDate = dated && candidates.find(game => game.kickoff.slice(0, 10) === dated);
+  return byDate || candidates.sort((a, b) => Date.parse(b.kickoff) - Date.parse(a.kickoff))[0] || null;
 }
 
 export function buildVideos(feed, games, previous = {}, overrides = {}, durations = {}) {
@@ -99,14 +109,12 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
   const byKickoff = new Map(games.map(g => [g.kickoff, g]));
   // Links are keyed by kickoff text. When the league moves a game or rewrites its UTC offset the key
   // changes, and the feed can't rebuild old links (it holds 15 uploads), so a link whose key is gone
-  // follows the nearest game within a day that has none. With no such game it is kept, unseen.
+  // follows the one game within 6 hours that has none. With zero or several candidates it is kept, unseen.
   for (const kickoff of Object.keys(matches)) {
     if (byKickoff.has(kickoff)) continue;
     const at = Date.parse(kickoff);
-    const target = games
-      .filter(g => g.kickoff && !g.isBye && !matches[g.kickoff] && Math.abs(Date.parse(g.kickoff) - at) <= 864e5)
-      .sort((a, b) => Math.abs(Date.parse(a.kickoff) - at) - Math.abs(Date.parse(b.kickoff) - at))[0];
-    if (target) { matches[target.kickoff] = matches[kickoff]; delete matches[kickoff]; }
+    const near = games.filter(g => g.kickoff && !g.isBye && !matches[g.kickoff] && Math.abs(Date.parse(g.kickoff) - at) <= 6 * 36e5);
+    if (near.length === 1) { matches[near[0].kickoff] = matches[kickoff]; delete matches[kickoff]; }
   }
 
   // Takes a video out of wherever it is filed, optionally keeping one slot (game + kind).
@@ -126,6 +134,10 @@ export function buildVideos(feed, games, previous = {}, overrides = {}, duration
     if (Object.hasOwn(overrides, video.id)) {
       if (overrides[video.id] === null) { unfile(video.id); continue; }   // ignored, even if linked before
       game = byKickoff.get(overrides[video.id]);
+      if (!game) {
+        console.log(`Override for ${video.id} names a kickoff that is not in the schedule (${overrides[video.id]}); ignoring it.`);
+        continue;
+      }
     } else {
       game = matchVideo(video, games);
     }
@@ -168,13 +180,13 @@ async function readJson(path, fallback) {
 }
 
 // Lengths already stored are reused; only new videos cost a page fetch.
-async function loadDurations(feed, previous) {
+async function loadDurations(feed, previous, relevant) {
   const durations = {};
   for (const kinds of Object.values(previous)) {
     for (const entry of Object.values(kinds)) if (Number.isFinite(entry.durationSeconds)) durations[entry.id] = entry.durationSeconds;
   }
   for (const video of feed) {
-    if (video.id in durations) continue;
+    if (video.id in durations || !relevant(video)) continue;
     try {
       const res = await fetch(`https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`, {
         headers: { 'User-Agent': USER_AGENT, 'Accept-Language': 'en-US' },
@@ -203,7 +215,7 @@ async function main() {
   const path = join(dataDir, 'videos.json');
   const previous = await readJson(path, {});
 
-  const durations = await loadDurations(feed, previous.games ?? {});
+  const durations = await loadDurations(feed, previous.games ?? {}, v => Object.hasOwn(overrides, v.id) || matchVideo(v, schedule.games) !== null);
   const { matches, unmatched } = buildVideos(feed, schedule.games, previous.games, overrides, durations);
   for (const v of unmatched) console.log(`Unmatched: ${v.publishedAt.slice(0, 10)} ${v.id} ${v.title}`);
 
