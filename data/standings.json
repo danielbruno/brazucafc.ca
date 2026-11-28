@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T07:53:29.654Z",
+  "updatedAt": "2026-11-28T08:04:51.500Z",
   "team": "Brazuca FC",
   "season": "2026/27",
   "source": "https://fraservalleysoccer.spappz.com/webapps/spappz_live/team_info?reg_year=2027&id=1073",
@@ -57,26 +57,26 @@
     {
       "pos": 5,
       "team": "Ridge Meadows Gunners",
-      "gp": 9,
+      "gp": 10,
       "w": 2,
       "d": 2,
-      "l": 5,
-      "gf": 20,
-      "ga": 33,
-      "gd": -13,
+      "l": 6,
+      "gf": 21,
+      "ga": 37,
+      "gd": -16,
       "pts": 8
     },
     {
       "pos": 6,
       "team": "Poco FC Revolution",
-      "gp": 8,
-      "w": 1,
+      "gp": 9,
+      "w": 2,
       "d": 1,
       "l": 6,
-      "gf": 7,
-      "ga": 20,
-      "gd": -13,
-      "pts": 4
+      "gf": 11,
+      "ga": 21,
+      "gd": -10,
+      "pts": 7
     },
     {
       "pos": 7,
